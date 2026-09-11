@@ -189,7 +189,18 @@ export default function NeighborhoodMap() {
             // The GeoJSON from Chicago Data Portal uses area_numbe (no 'r')
             const areaId = parseInt(f.properties.area_numbe ?? f.properties.area_num_1 ?? 0, 10)
             const row = stats.get(areaId)
-            const statValue = row ? (row[overlay] ?? 0) : 0
+            // Overlay keys ('violations', 'reports', 'crime_violent', 'crime_property')
+            // don't match the API's field names 1:1 - map them explicitly rather than
+            // indexing row[overlay] directly (that silently returned 0 for the
+            // 'violations' and 'reports' overlays since the API returns
+            // violation_count/report_count, not violations/reports).
+            const STAT_FIELD = {
+              violations: 'violation_count',
+              reports: 'report_count',
+              crime_violent: 'crime_violent',
+              crime_property: 'crime_property',
+            }
+            const statValue = row ? (row[STAT_FIELD[overlay]] ?? 0) : 0
             return {
               ...f,
               properties: {
