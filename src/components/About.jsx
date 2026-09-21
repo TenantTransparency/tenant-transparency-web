@@ -37,6 +37,13 @@ export default function About() {
       <section className="about-hero">
         <div>
           <span className="section-eyebrow">Our Story</span>
+          <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
+            <Link to="/search" className="cta-primary">Search Properties</Link>
+            <Link to="/#join-movement" className="cta-secondary">
+              Join the Movement
+            </Link>
+            <Link to="/founder" className="cta-primary">Meet the Founder</Link>
+          </div>
           <h1>Built for renters, by someone who's been one.</h1>
           <p>
             Tenant Transparency was founded in Chicago with one belief: every
@@ -48,12 +55,6 @@ export default function About() {
             verified property records, renter experiences, and tenant rights
             in plain language, all in one place and always free for renters.
           </p>
-          <div style={{ display: 'flex', gap: '12px', marginTop: '24px', flexWrap: 'wrap' }}>
-            <Link to="/search" className="cta-primary">Search Properties</Link>
-            <Link to="/#join-movement" className="cta-secondary">
-              Join the Movement
-            </Link>
-          </div>
         </div>
         <div style={{ background: 'var(--bg-warm)', borderRadius: 'var(--radius-xl)', padding: '40px', border: '1px solid var(--border)' }}>
           <div className="section-eyebrow" style={{ marginBottom: '20px' }}>Who we serve</div>
@@ -71,17 +72,6 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section style={{ marginBottom: 'var(--space-16)', background: 'var(--sage-light)', borderRadius: 'var(--radius-xl)', padding: 'var(--space-10)', border: '1px solid rgba(74,124,89,0.2)' }}>
-        <span className="section-eyebrow">Meet the Founder</span>
-        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: 'var(--space-4)' }}>Sheenita Robinson</h2>
-        <p style={{ color: 'var(--ink-soft)', fontSize: 'var(--text-md)', lineHeight: 1.7, marginBottom: 'var(--space-6)' }}>
-          Tenant Transparency grew out of 17+ moves throughout Chicago. Through lived experience with mold, rodents, unresponsive landlords, and unexpected costs, Sheenita discovered a fundamental gap: renters needed information before the lease, not after.
-        </p>
-        <Link to="/founder" className="cta-primary" style={{ display: 'inline-block' }}>
-          Read Sheenita's Story
-        </Link>
       </section>
 
       <section style={{ marginBottom: 'var(--space-16)' }}>
