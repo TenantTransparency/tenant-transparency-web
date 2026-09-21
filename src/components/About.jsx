@@ -37,7 +37,7 @@ export default function About() {
       <section className="about-hero">
         <div>
           <span className="section-eyebrow">Our Story</span>
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', alignItems: 'center' }}>
             <Link to="/search" className="cta-primary">Search Properties</Link>
             <Link to="/#join-movement" className="cta-secondary">
               Join the Movement
