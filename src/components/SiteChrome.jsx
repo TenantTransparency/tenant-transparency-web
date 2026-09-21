@@ -80,7 +80,9 @@ export default function SiteChrome({ children, hideFooter = false }) {
         <footer className="site-footer" role="contentinfo">
           <div className="footer-inner">
             <div className="footer-brand">
-              <Logo className="footer-logo" />
+              <div className="footer-logo-card">
+                <Logo className="footer-logo" />
+              </div>
               <p>
                 Founded in Chicago. Building a future where housing transparency
                 is the standard and every renter knows before they lease.

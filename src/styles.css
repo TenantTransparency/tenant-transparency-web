@@ -269,13 +269,6 @@ img { display: block; max-width: 100%; }
   background: var(--white);
   border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
-  /* Logo canvas renders at 130px tall (hardcoded in Logo.jsx) but
-     .header-inner is 84px, so centering pushes ~23px of the house
-     peak above the row. Header sits flush at the top of the page,
-     so that overflow was landing above the viewport edge and
-     getting clipped. This pulls the whole row down far enough to
-     keep it in view. */
-  padding-top: 28px;
 }
 
 /* Keeps in-page anchor targets (e.g. /about#contact, /#housing-news) from
@@ -428,12 +421,17 @@ section[id] {
   max-width: 260px;
 }
 
+.footer-logo-card {
+  display: inline-flex;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
 .footer-logo {
   height: 54px;
   width: auto;
-  /* invert logo to white for dark footer */
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
 }
 
 .footer-col h4 {
@@ -2007,6 +2005,93 @@ section[id] {
   line-height: 1.75;
 }
 
+.about-hero-photo-wrap {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-10);
+}
+
+.about-hero-photo-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.about-hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(11,20,18,0.86) 0%, rgba(11,20,18,0.55) 40%, rgba(11,20,18,0.1) 65%, rgba(11,20,18,0) 100%);
+  pointer-events: none;
+}
+
+.about-hero-photo-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: var(--space-10);
+  max-width: 600px;
+}
+
+.about-hero-photo-content .section-eyebrow {
+  color: #8ecfc2;
+  margin-bottom: var(--space-4);
+}
+
+.about-hero-photo-content h1 {
+  font-size: var(--text-3xl);
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.about-intro {
+  max-width: 720px;
+  margin-bottom: var(--space-10);
+}
+
+.about-intro p {
+  font-size: var(--text-md);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.about-intro p:first-child { color: var(--ink-soft); font-size: 1.1rem; }
+.about-intro p:last-child { color: var(--muted); }
+
+.who-we-serve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.who-we-serve-card {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.who-we-serve-card span:first-child {
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.who-we-serve-card span:last-child {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
 .about-mission-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2084,8 +2169,18 @@ section[id] {
   }
 
   .about-hero,
-  .about-mission-grid {
+  .about-mission-grid,
+  .who-we-serve-grid,
+  .founder-community-section {
     grid-template-columns: 1fr;
+  }
+
+  .founder-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-photo-wrap {
+    height: 320px;
   }
 
   .footer-inner {
@@ -2095,12 +2190,6 @@ section[id] {
 }
 
 @media (max-width: 680px) {
-  .app-header {
-    /* header-inner drops to 68px here, so the 130px logo canvas
-       overflows the row by ~31px instead of 23px */
-    padding-top: 34px;
-  }
-
   .header-inner {
     padding: 0 var(--space-5);
     height: 68px;
@@ -3037,6 +3126,76 @@ section[id] {
   font-size: var(--text-md);
   color: var(--ink);
   font-weight: 500;
+}
+
+.founder-community-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+  margin-bottom: var(--space-16);
+}
+
+.founder-community-section img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.founder-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin: var(--space-8) 0;
+}
+
+.founder-stat-card {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.founder-stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+}
+
+.founder-stat-label {
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-top: var(--space-1);
+}
+
+.founder-pullquote {
+  background: var(--teal-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  margin-bottom: var(--space-16);
+}
+
+.founder-pullquote p:first-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--teal-dark);
+  margin: 0;
+}
+
+.founder-pullquote p:last-child {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 900px) {

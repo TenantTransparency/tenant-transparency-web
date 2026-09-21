@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
 
+const WHO_WE_SERVE = [
+  'Working individuals and families',
+  'Single parents navigating tight budgets',
+  'Seniors on fixed incomes',
+  'Students renting for the first time',
+  'Veterans transitioning to civilian housing',
+  'Anyone who has ever faced hidden fees, poor conditions, or an unresponsive landlord',
+]
+
 const PHASES = [
   {
     label: 'Phase 1 — Live Now',
@@ -34,17 +43,17 @@ export default function About() {
   return (
     <div className="about-page">
 
-      <section className="about-hero">
-        <div>
-          <span className="section-eyebrow">Our Story</span>
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', alignItems: 'center' }}>
-            <Link to="/search" className="cta-primary">Search Properties</Link>
-            <Link to="/#join-movement" className="cta-secondary">
-              Join the Movement
-            </Link>
-            <Link to="/founder" className="cta-primary">Meet the Founder</Link>
+      <section style={{ marginBottom: 'var(--space-16)' }}>
+        <div className="about-hero-photo-wrap">
+          <img src="/rally.png" alt="a neighborhood gathering about renter's rights" />
+          <div className="about-hero-photo-overlay" />
+          <div className="about-hero-photo-content">
+            <span className="section-eyebrow">Our Story</span>
+            <h1>Built for renters, by someone who's been one.</h1>
           </div>
-          <h1>Built for renters, by someone who's been one.</h1>
+        </div>
+
+        <div className="about-intro">
           <p>
             Tenant Transparency was founded in Chicago with one belief: every
             renter deserves access to the same information landlords already
@@ -55,20 +64,21 @@ export default function About() {
             verified property records, renter experiences, and tenant rights
             in plain language, all in one place and always free for renters.
           </p>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <Link to="/search" className="cta-primary">Search Properties</Link>
+            <Link to="/founder" className="cta-secondary">Meet the Founder</Link>
+            <Link to="/#join-movement" className="cta-ghost">Join the Movement</Link>
+          </div>
         </div>
-        <div style={{ background: 'var(--bg-warm)', borderRadius: 'var(--radius-xl)', padding: '40px', border: '1px solid var(--border)' }}>
-          <div className="section-eyebrow" style={{ marginBottom: '20px' }}>Who we serve</div>
-          {[
-            'Working individuals and families',
-            'Single parents navigating tight budgets',
-            'Seniors on fixed incomes',
-            'Students renting for the first time',
-            'Veterans transitioning to civilian housing',
-            'Anyone who has ever faced hidden fees, poor conditions, or an unresponsive landlord',
-          ].map((item) => (
-            <div key={item} style={{ display: 'flex', gap: '10px', marginBottom: '14px', alignItems: 'flex-start' }}>
-              <span style={{ color: 'var(--teal)', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
-              <span style={{ color: 'var(--ink-soft)', fontSize: 'var(--text-sm)', lineHeight: 1.6 }}>{item}</span>
+      </section>
+
+      <section style={{ marginBottom: 'var(--space-16)' }}>
+        <span className="section-eyebrow">Who We Serve</span>
+        <div className="who-we-serve-grid">
+          {WHO_WE_SERVE.map((item) => (
+            <div key={item} className="who-we-serve-card">
+              <span>✓</span>
+              <span>{item}</span>
             </div>
           ))}
         </div>

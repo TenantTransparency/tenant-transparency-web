@@ -28,6 +28,22 @@ export default function Founder() {
           <p>
             Over the course of approximately 17 moves throughout Chicago, Sheenita experienced firsthand how little information renters can have before making one of the most consequential decisions for their families.
           </p>
+
+          <div className="founder-stat-grid">
+            <div className="founder-stat-card">
+              <div className="founder-stat-num">17+</div>
+              <div className="founder-stat-label">moves across Chicago</div>
+            </div>
+            <div className="founder-stat-card">
+              <div className="founder-stat-num">1,000+</div>
+              <div className="founder-stat-label">members in Report My Landlord</div>
+            </div>
+            <div className="founder-stat-card">
+              <div className="founder-stat-num">2</div>
+              <div className="founder-stat-label">graduate &amp; doctoral degrees in progress</div>
+            </div>
+          </div>
+
           <div style={{ marginTop: 'var(--space-8)', paddingTop: 'var(--space-8)', borderTop: '1px solid var(--border)' }}>
             <div style={{ fontSize: 'var(--text-sm)', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 'var(--space-2)' }}>
               Quick facts
@@ -53,7 +69,7 @@ export default function Founder() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 'var(--space-16)' }}>
+      <section style={{ marginBottom: 'var(--space-8)' }}>
         <span className="section-eyebrow">The Problem She Lived</span>
         <div style={{ maxWidth: 'var(--content-max)' }}>
           <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)' }}>
@@ -65,19 +81,29 @@ export default function Founder() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 'var(--space-16)' }}>
-        <span className="section-eyebrow">From Report My Landlord to Tenant Transparency</span>
-        <div style={{ maxWidth: 'var(--content-max)' }}>
-          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)', marginBottom: 'var(--space-6)' }}>
+      <div className="founder-pullquote">
+        <p>
+          "This isn't just a gap in the market. It is a fundamental information
+          imbalance that affects housing stability. Landlords get your full 
+          biography, while you get their carefully curated brochure."
+        </p>
+        <p>Sheenita Robinson</p>
+      </div>
+
+      <section className="founder-community-section">
+        <div>
+          <span className="section-eyebrow">From Report My Landlord to Tenant Transparency</span>
+          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)', marginTop: 'var(--space-5)', marginBottom: 'var(--space-6)' }}>
             Sheenita started with a simple Nextdoor group: <strong>Report My Landlord</strong>. It was a place for renters to share experiences and hold landlords accountable. It struck a nerve. The group grew to more than 1,000 members, all looking for the same thing: a way to know what they were walking into before they signed a lease.
           </p>
-          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)' }}>
+          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)', marginBottom: 'var(--space-6)' }}>
             The more the community grew, the clearer the gap became. Renters didn't just need somewhere to report problems after they happened. They needed the information beforehand, before a bad landlord, a hidden fee, or an unsafe unit became their problem to deal with.
           </p>
-          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)', marginTop: 'var(--space-6)' }}>
+          <p style={{ fontSize: 'var(--text-md)', lineHeight: 1.8, color: 'var(--ink)' }}>
             That realization became Tenant Transparency: a broader solution built on the same foundation of renters helping renters, expanded into property intelligence, renter education, transparency tools, and resources that meet people before the lease is signed, not after.
           </p>
         </div>
+        <img src="/meeting.png" alt="Sheenita with the Report My Landlord renter community" />
       </section>
 
       <section style={{ marginBottom: 'var(--space-16)' }}>

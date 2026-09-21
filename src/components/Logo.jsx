@@ -1,287 +1,126 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import iconSrc from '../assets/tt-logo-icon.png';
 
-const Logo = () => {
-    const canvasRef = useRef(null);
-    const rafIdRef = useRef(null);
-    const startTimeRef = useRef(null);
+const TITLE_TEXT = 'TENANT TRANSPARENCY';
+const TAGLINE_TEXT = 'Know Before You Lease';
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas) return;
+// The icon artwork doesn't fill its whole image canvas edge-to-edge — these
+// are the actual left edge / width of the visible house+key shape within the
+// image, as a percentage, so the text lines up under it instead of spilling
+// past either end.
+const BAND_LEFT_PCT = 13.7695;
+const BAND_WIDTH_PCT = 71.0898;
 
-        const ctx = canvas.getContext('2d');
-        const W = canvas.width;
-        const H = canvas.height;
+function buildLetters(container, text, baseDelay, stagger) {
+  container.innerHTML = '';
+  let letterIndex = 0;
+  for (const ch of text) {
+    if (ch === ' ') {
+      const space = document.createElement('span');
+      space.className = 'tt-logo-space';
+      container.appendChild(space);
+      continue;
+    }
+    const span = document.createElement('span');
+    span.className = 'tt-logo-letter';
+    span.textContent = ch;
+    span.style.animationDelay = `${baseDelay + letterIndex * stagger}s`;
+    container.appendChild(span);
+    letterIndex++;
+  }
+}
 
-        const NAVY = '#0B2265';
-        const ORANGE = '#C83803';
+// Animated Tenant Transparency logo: the house/key icon is a static image,
+// and the two lines of text below it fall into place letter-by-letter once
+// on mount, then stay put (no looping, no replay control).
+export default function Logo({ className = '' }) {
+  const titleRef = useRef(null);
+  const taglineRef = useRef(null);
 
-        const FONT_SIZE = 34;
-        const FONT_WEIGHT = '700';
-        const FONT_SPACING = 3;
-        const FONT_STR = `${FONT_WEIGHT} ${FONT_SIZE}px Georgia, 'Times New Roman', serif`;
+  useEffect(() => {
+    if (titleRef.current) buildLetters(titleRef.current, TITLE_TEXT, 0.25, 0.09);
+    if (taglineRef.current) buildLetters(taglineRef.current, TAGLINE_TEXT, 2.9, 0.07);
+  }, []);
 
-        const ease = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-        const clamp = (t) => Math.max(0, Math.min(1, t));
-        const rng = (t, a, b) => clamp((t - a) / (b - a));
-        const lerp = (a, b, t) => a + (b - a) * t;
+  return (
+    <div className={`tt-logo ${className}`}>
+      <div className="tt-logo-icon-wrap">
+        <img src={iconSrc} alt="Tenant Transparency" />
+      </div>
+      <div
+        className="tt-logo-text-band"
+        style={{ width: `${BAND_WIDTH_PCT}%`, marginLeft: `${BAND_LEFT_PCT}%` }}
+      >
+        <div className="tt-logo-title" ref={titleRef} />
+        <div className="tt-logo-tagline" ref={taglineRef} />
+      </div>
 
-        const measureWord = (text) => {
-            ctx.font = FONT_STR;
-            let w = 0;
-            for (let i = 0; i < text.length; i++) {
-                w += ctx.measureText(text[i]).width;
-                if (i < text.length - 1) w += FONT_SPACING;
-            }
-            return w;
-        };
+      <style>{`
+        .tt-logo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          aspect-ratio: 2.68 / 1;
+        }
 
-        const drawChars = (text, x, y, alpha, n) => {
-            const count = n === undefined ? text.length : Math.min(n, text.length);
-            if (count <= 0 || alpha <= 0) return;
-            ctx.save();
-            ctx.globalAlpha = clamp(alpha);
-            ctx.font = FONT_STR;
-            ctx.fillStyle = NAVY;
-            ctx.textBaseline = 'alphabetic';
-            let cx = x;
-            for (let i = 0; i < count; i++) {
-                ctx.fillText(text[i], cx, y);
-                cx += ctx.measureText(text[i]).width + (i < text.length - 1 ? FONT_SPACING : 0);
-            }
-            ctx.restore();
-        };
+        .tt-logo-icon-wrap { width: 100%; }
+        .tt-logo-icon-wrap img { width: 100%; display: block; }
 
-        const drawTypewriter = (text, x, y, T, tStart, tEnd) => {
-            const n = text.length;
-            if (n === 0) return;
-            const step = (tEnd - tStart) / n;
-            const charDur = step * 1.7;
-            ctx.save();
-            ctx.font = FONT_STR;
-            ctx.fillStyle = NAVY;
-            ctx.textBaseline = 'alphabetic';
-            let cx = x;
-            for (let i = 0; i < n; i++) {
-                const cStart = tStart + i * step;
-                const a = ease(rng(T, cStart, cStart + charDur));
-                if (a > 0) {
-                    ctx.globalAlpha = a;
-                    ctx.fillText(text[i], cx, y);
-                }
-                cx += ctx.measureText(text[i]).width + (i < n - 1 ? FONT_SPACING : 0);
-            }
-            ctx.restore();
-        };
+        .tt-logo-text-band {
+          margin-top: 2.4cqw;
+          container-type: inline-size;
+          container-name: tt-logo-band;
+        }
 
-        const strokeT = (cx, topY, Tw, stemH, sw, alpha) => {
-            if (alpha <= 0) return;
-            ctx.save();
-            ctx.globalAlpha = clamp(alpha);
-            ctx.strokeStyle = ORANGE;
-            ctx.lineWidth = sw;
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
-            ctx.beginPath();
-            ctx.moveTo(cx - Tw / 2, topY);
-            ctx.lineTo(cx + Tw / 2, topY);
-            ctx.moveTo(cx, topY);
-            ctx.lineTo(cx, topY + stemH);
-            ctx.stroke();
-            ctx.restore();
-        };
+        .tt-logo-title {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          font-family: 'Cinzel', 'Times New Roman', serif;
+          font-weight: 800;
+          font-size: clamp(9px, 7.0cqw, 46px);
+          letter-spacing: 0.01em;
+          line-height: 1;
+        }
 
-        const sline = (x1, y1, x2, y2, lw, alpha) => {
-            if ((alpha ?? 1) <= 0) return;
-            ctx.save();
-            ctx.globalAlpha = clamp(alpha ?? 1);
-            ctx.strokeStyle = ORANGE;
-            ctx.lineWidth = lw;
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
-            ctx.beginPath();
-            ctx.moveTo(x1, y1);
-            ctx.lineTo(x2, y2);
-            ctx.stroke();
-            ctx.restore();
-        };
+        .tt-logo-tagline {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          font-family: 'EB Garamond', Georgia, serif;
+          font-style: italic;
+          font-weight: 600;
+          font-size: clamp(6px, 4.3cqw, 28px);
+          margin-top: 0.5em;
+          letter-spacing: 0.01em;
+        }
 
-        const drawHouse = (lx, rx, eaveY, botY, peakX, peakY, sw, alpha) => {
-            if (alpha <= 0) return;
-            ctx.save();
-            ctx.globalAlpha = clamp(alpha);
-            ctx.strokeStyle = ORANGE;
-            ctx.lineWidth = sw;
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'miter';
-            ctx.miterLimit = 10;
-            ctx.beginPath();
-            ctx.moveTo(lx, botY);
-            ctx.lineTo(lx, eaveY);
-            ctx.lineTo(peakX, peakY);
-            ctx.lineTo(rx, eaveY);
-            ctx.lineTo(rx, botY);
-            ctx.closePath();
-            ctx.stroke();
-            ctx.restore();
-        };
+        .tt-logo-letter {
+          display: inline-block;
+          background: linear-gradient(to bottom,
+            #050b2e 0%, #122a8c 38%, #3f5fc4 48%, #122a8c 58%, #050b2e 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          -webkit-text-stroke: 0.4px rgba(5, 11, 46, 0.45);
+          filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
+          opacity: 0;
+          transform: translateY(-180px) rotate(-10deg);
+          animation-name: tt-logo-fall;
+          animation-duration: 1.05s;
+          animation-timing-function: cubic-bezier(.34, 1.4, .64, 1);
+          animation-fill-mode: forwards;
+        }
 
-        const drawDoor = (lx, rx, botY, sw, alpha) => {
-            if (alpha <= 0) return;
-            ctx.save();
-            ctx.globalAlpha = clamp(alpha);
-            ctx.fillStyle = ORANGE;
-            const houseWidth = rx - lx;
-            const doorW = houseWidth * 0.16;
-            const doorH = doorW * 1.8;
-            const doorX = (lx + rx) / 2 - doorW / 2;
-            const doorY = botY - doorH;
-            ctx.fillRect(doorX, doorY, doorW, doorH);
-            ctx.restore();
-        };
+        .tt-logo-space { display: inline-block; width: 0.32em; }
 
-        let L = null;
-        const computeLayout = () => {
-            ctx.font = FONT_STR;
-            const tenantW = measureWord('TENANT');
-            const transW = measureWord('TRANSPARENCY');
-            const Tw = ctx.measureText('T').width;
-            const capH = FONT_SIZE * 0.72;
-            const stemH = capH * 1.25;
-            const sw = FONT_SIZE * 0.11;
-            const rowGap = FONT_SIZE * 1.55;
-            const blockLeft = (W - transW) / 2;
-            const T1_x = blockLeft + (transW - tenantW) / 2;
-            const T2_x = blockLeft;
-            const T1_cx = T1_x + Tw / 2;
-            const T2_cx = T2_x + Tw / 2;
-            const T1_baseY = H / 2 - rowGap / 2 - 24;
-            const T2_baseY = T1_baseY + rowGap;
-            const T1_topY = T1_baseY - capH;
-            const T2_topY = T2_baseY - capH;
-            const pad = 29;
-            const hL = blockLeft - pad;
-            const hR = blockLeft + transW + pad;
-            const hBot = T2_baseY + pad * 1.5;
-            const hEave = T1_topY - pad * 0.5;
-            const hPeakX = (hL + hR) / 2;
-            const hPeakY = Math.max(16, hEave - (hR - hL) * 0.16);
-            return { tenantW, transW, Tw, capH, stemH, sw, rowGap, T1_x, T2_x, T1_baseY, T2_baseY, T1_topY, T2_topY, T1_cx, T2_cx, hL, hR, hBot, hEave, hPeakX, hPeakY };
-        };
-
-        const draw = (ts) => {
-            if (!startTimeRef.current) startTimeRef.current = ts;
-            const T = (ts - startTimeRef.current) / 1000;
-            if (!L) L = computeLayout();
-            ctx.clearRect(0, 0, W, H);
-
-            const { Tw, capH, stemH, sw, T1_x, T2_x, T1_baseY, T2_baseY, T1_topY, T2_topY, T1_cx, T2_cx, hL, hR, hBot, hEave, hPeakX, hPeakY } = L;
-
-            if (T < 1.60) {
-                drawHouse(hL, hR, hEave, hBot, hPeakX, hPeakY, 4, 1);
-                drawDoor(hL, hR, hBot, 4, 1);
-            }
-
-            const rotP = ease(rng(T, 1.60, 2.40));
-            const wallP = ease(rng(T, 1.90, 2.45));
-            if (T >= 1.60 && T < 2.85) {
-                const midCX = (T1_cx + T2_cx) / 2;
-                const apexX = lerp(hPeakX, midCX, rotP);
-                const apexY = lerp(hPeakY, T1_topY, rotP);
-                const lEndX = lerp(hL, T2_cx - Tw / 2, rotP);
-                const lEndY = lerp(hEave, T1_topY, rotP);
-                const rEndX = lerp(hR, T1_cx + Tw / 2, rotP);
-                const rEndY = lerp(hEave, T1_topY, rotP);
-
-                ctx.save();
-                ctx.strokeStyle = ORANGE;
-                ctx.lineWidth = sw;
-                ctx.lineCap = 'round';
-                ctx.lineJoin = 'round';
-                ctx.beginPath();
-                ctx.moveTo(lEndX, lEndY);
-                ctx.lineTo(apexX, apexY);
-                ctx.lineTo(rEndX, rEndY);
-                ctx.stroke();
-                ctx.restore();
-
-                const lWallX = lerp(hL, T2_cx, wallP);
-                sline(lWallX, T1_topY, lWallX, T1_topY + stemH, sw, 1);
-                const rWallX = lerp(hR, T1_cx, wallP);
-                sline(rWallX, T1_topY, rWallX, T1_topY + stemH, sw, 1);
-                sline(hL, hBot, hR, hBot, 4, 1 - ease(rng(T, 1.60, 2.05)));
-                drawDoor(hL, hR, hBot, 4, 1 - ease(rng(T, 1.60, 2.05)));
-            }
-
-            if (T >= 2.40) {
-                const dropP = ease(rng(T, 2.85, 3.55));
-                const t2Y = lerp(T1_topY, T2_topY, dropP);
-                const t1sA = 1 - ease(rng(T, 3.65, 3.95));
-                strokeT(T1_cx, T1_topY, Tw, stemH, sw, t1sA);
-                const t2sA = 1 - ease(rng(T, 4.60, 4.90));
-                strokeT(T2_cx, t2Y, Tw, stemH, sw, t2sA);
-            }
-
-            if (T >= 5.75) {
-                const doorAlpha = easeOut(rng(T, 5.75, 6.55)) * 0.28;
-                drawDoor(hL, hR, hBot, 4, doorAlpha);
-            }
-
-            const fontT1A = ease(rng(T, 3.65, 3.95));
-            if (fontT1A > 0) drawChars('T', T1_x, T1_baseY, fontT1A);
-
-            if (T >= 3.95) {
-                drawChars('T', T1_x, T1_baseY, 1);
-                ctx.font = FONT_STR;
-                const afterT = T1_x + ctx.measureText('T').width + FONT_SPACING;
-                drawTypewriter('ENANT', afterT, T1_baseY, T, 3.95, 4.60);
-            }
-
-            const fontT2A = ease(rng(T, 4.60, 4.90));
-            if (fontT2A > 0) drawChars('T', T2_x, T2_baseY, fontT2A);
-
-            if (T >= 4.90) {
-                drawChars('T', T2_x, T2_baseY, 1);
-                ctx.font = FONT_STR;
-                const afterT = T2_x + ctx.measureText('T').width + FONT_SPACING;
-                drawTypewriter('RANSPARENCY', afterT, T2_baseY, T, 4.90, 5.75);
-            }
-
-            if (T >= 5.75) {
-                const finalAlpha = easeOut(rng(T, 5.75, 6.55));
-                drawHouse(hL, hR, hEave, hBot, hPeakX, hPeakY, 6, finalAlpha);
-            }
-
-            if (T < 7.05) {
-                rafIdRef.current = requestAnimationFrame(draw);
-            }
-        };
-
-        const initAnimation = () => {
-            if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
-startTimeRef.current = null;
-L = null;
-ctx.clearRect(0, 0, W, H);
-rafIdRef.current = requestAnimationFrame(draw);
-};
-initAnimation();
-return () => {
-if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
-};}, []);
-return (
-<canvas
-ref={canvasRef}
-width={660}
-height={360}
-style={{
-display: 'block',
-width: '238px',
-height: '130px',
-imageRendering: 'crisp-edges',
-}}
-/>
-);
-};
-
-export default Logo;
+        @keyframes tt-logo-fall {
+          0% { opacity: 0; transform: translateY(-180px) rotate(-10deg) scale(1); }
+          55% { opacity: 1; transform: translateY(9px) rotate(2deg) scale(1.08); }
+          75% { transform: translateY(-4px) rotate(-1deg) scale(0.98); }
+          100% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+        }
+      `}</style>
+    </div>
+  );
+}
