@@ -7,6 +7,7 @@ import SiteChrome from './components/SiteChrome.jsx'
 import ReportIssue from './components/ReportIssue.jsx'
 import ResourceCenter from './components/ResourceCenter.jsx'
 import About from './components/About.jsx'
+import Founder from './components/Founder.jsx'
 import SupportTT from './components/SupportTT.jsx'
 import BetaTester from './components/BetaTester.jsx'
 import FoundingCommunity from './components/FoundingCommunity.jsx'
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/report-issue" element={<SiteChrome><div className="page-content"><ReportIssue /></div></SiteChrome>} />
         <Route path="/resources" element={<SiteChrome><ResourceCenter /></SiteChrome>} />
         <Route path="/about" element={<SiteChrome><About /></SiteChrome>} />
+        <Route path="/founder" element={<SiteChrome><Founder /></SiteChrome>} />
         <Route path="/support" element={<SiteChrome><SupportTT /></SiteChrome>} />
         <Route path="/map" element={<SiteChrome hideFooter><NeighborhoodMap /></SiteChrome>} />
         <Route path="/privacy" element={<SiteChrome><PrivacyPolicy /></SiteChrome>} />

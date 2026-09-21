@@ -73,6 +73,17 @@ export default function About() {
         </div>
       </section>
 
+      <section style={{ marginBottom: 'var(--space-16)', background: 'var(--sage-light)', borderRadius: 'var(--radius-xl)', padding: 'var(--space-10)', border: '1px solid rgba(74,124,89,0.2)' }}>
+        <span className="section-eyebrow">Meet the Founder</span>
+        <h2 style={{ fontSize: 'var(--text-2xl)', marginBottom: 'var(--space-4)' }}>Sheenita Robinson</h2>
+        <p style={{ color: 'var(--ink-soft)', fontSize: 'var(--text-md)', lineHeight: 1.7, marginBottom: 'var(--space-6)' }}>
+          Tenant Transparency grew out of 17+ moves throughout Chicago. Through lived experience with mold, rodents, unresponsive landlords, and unexpected costs, Sheenita discovered a fundamental gap: renters needed information before the lease, not after.
+        </p>
+        <Link to="/founder" className="cta-primary" style={{ display: 'inline-block' }}>
+          Read Sheenita's Story
+        </Link>
+      </section>
+
       <section style={{ marginBottom: 'var(--space-16)' }}>
         <span className="section-eyebrow">Mission &amp; Vision</span>
         <div className="about-mission-grid">

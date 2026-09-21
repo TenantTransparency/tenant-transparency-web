@@ -93,7 +93,7 @@ export default function SiteChrome({ children, hideFooter = false }) {
               <Link to="/resources">Resource Center</Link>
               <Link to="/report-issue">Report a Concern</Link>
               <Link to="/support">Support TT</Link>
-              <a href="mailto:info@tenanttransparency.com">Join the Waitlist</a>
+              <a href="/#join-movement">Join the Waitlist</a>
             </div>
             <div className="footer-col">
               <h4>Company</h4>

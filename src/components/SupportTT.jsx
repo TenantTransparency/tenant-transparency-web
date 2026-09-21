@@ -2,10 +2,9 @@ const NAVY = '#0e2540'
 const NAVY_TEXT = '#14304f'
 const ORANGE = '#f5751f'
 
-// TODO(Jessica): once Sheenita's Stripe account exists, create a Payment Link
-// (Stripe Dashboard → Payment Links → New) and paste the URL here. Until this
-// is set, the button renders as a disabled "coming soon" state.
-const STRIPE_PAYMENT_LINK = ''
+// TEST MODE payment link — swap for the live link from Sheenita's activated
+// Stripe account before launch (see her setup steps).
+const STRIPE_PAYMENT_LINK = 'https://donate.stripe.com/test_bJe14nfZN1ox4797ogdIA00'
 
 const FUNDS = [
   { title: 'Platform development', desc: 'Property records, renter experiences, and the tools that surface them.' },
