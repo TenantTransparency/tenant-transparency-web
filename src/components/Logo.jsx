@@ -8,7 +8,7 @@ const TAGLINE_TEXT = 'Know Before You Lease';
 // are the actual left edge / width of the visible house+key shape within the
 // image, as a percentage, so the text lines up under it instead of spilling
 // past either end.
-const BAND_LEFT_PCT = 13.7695;
+const BAND_LEFT_PCT = 0;
 const BAND_WIDTH_PCT = 71.0898;
 
 function buildLetters(container, text, baseDelay, stagger) {
@@ -90,8 +90,9 @@ export default function Logo({ className = '' }) {
           font-family: 'EB Garamond', Georgia, serif;
           font-style: italic;
           font-weight: 600;
-          font-size: clamp(6px, 4.3cqw, 28px);
-          margin-top: 0.5em;
+          font-size: clamp(10px, 8.5cqw, 40px);
+          line-height: 1.3;
+          margin-top: 0px;
           letter-spacing: 0.01em;
         }
 

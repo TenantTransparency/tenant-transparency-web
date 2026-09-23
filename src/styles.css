@@ -1,11 +1,11 @@
-﻿/* ============================================================
-   TENANT TRANSPARENCY â€” Design Tokens
+/* ============================================================
+   TENANT TRANSPARENCY – Design Tokens
    All color, type, spacing, and radius decisions live here.
    Swap values in :root to retheme the entire app.
    ============================================================ */
 
 :root {
-  /* Brand palette â€” warm, community-centered */
+  /* Brand palette – warm, community-centered */
   --teal:           #2a7d6e;
   --teal-dark:      #1f5e52;
   --teal-light:     #e6f4f1;
@@ -253,7 +253,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
-   SITE CHROME â€” Header
+   SITE CHROME – Header
    ============================================================ */
 
 .site-chrome {
@@ -281,7 +281,7 @@ section[id] {
   max-width: var(--content-wide);
   margin: 0 auto;
   padding: 0 var(--section-pad-x);
-  height: 84px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -393,7 +393,7 @@ section[id] {
 }
 
 /* ============================================================
-   SITE CHROME â€” Footer
+   SITE CHROME – Footer
    ============================================================ */
 
 .site-footer {
@@ -490,7 +490,7 @@ section[id] {
 }
 
 /* ============================================================
-   SITE CHROME â€” Bottom tab bar (mobile)
+   SITE CHROME – Bottom tab bar (mobile)
    ============================================================ */
 
 .bottom-tab-bar {
@@ -515,7 +515,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Hero
+   HOMEPAGE – Hero
    ============================================================ */
 
 .homepage {
@@ -674,7 +674,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Value Props
+   HOMEPAGE – Value Props
    ============================================================ */
 
 .value-props {
@@ -749,7 +749,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Search Bar Section
+   HOMEPAGE – Search Bar Section
    ============================================================ */
 
 .search-section {
@@ -829,7 +829,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Transparency Score Teaser
+   HOMEPAGE – Transparency Score Teaser
    ============================================================ */
 
 .score-teaser {
@@ -969,7 +969,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Resource Center
+   HOMEPAGE – Resource Center
    ============================================================ */
 
 .resource-section {
@@ -1064,7 +1064,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Neighborhood Hub
+   HOMEPAGE – Neighborhood Hub
    ============================================================ */
 
 .neighborhood-section {
@@ -1129,7 +1129,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Community Voices
+   HOMEPAGE – Community Voices
    ============================================================ */
 
 .voices-section {
@@ -1196,7 +1196,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Housing News
+   HOMEPAGE – Housing News
    ============================================================ */
 
 .news-section {
@@ -1274,7 +1274,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Research & Data Teaser
+   HOMEPAGE – Research & Data Teaser
    ============================================================ */
 
 .research-teaser {
@@ -1341,7 +1341,7 @@ section[id] {
 }
 
 /* ============================================================
-   HOMEPAGE â€” Join the Movement
+   HOMEPAGE – Join the Movement
    ============================================================ */
 
 .join-section {
@@ -2725,7 +2725,7 @@ section[id] {
 
 
 /* ============================================================
-   SEARCH PAGE â€” additional polish
+   SEARCH PAGE – additional polish
    ============================================================ */
 
 .results-count {
@@ -2763,7 +2763,7 @@ section[id] {
 }
 
 /* ============================================================
-   REPORT AN ISSUE â€” additional polish
+   REPORT AN ISSUE – additional polish
    ============================================================ */
 
 .report-panel-header {
