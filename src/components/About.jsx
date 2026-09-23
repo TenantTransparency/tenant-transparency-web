@@ -41,9 +41,8 @@ const PHASES = [
 
 export default function About() {
   return (
-    <div className="about-page">
-
-      <section style={{ marginBottom: 'var(--space-16)' }}>
+    <>
+      <section className="about-hero-full">
         <div className="about-hero-photo-wrap">
           <img src="/rally.png" alt="a neighborhood gathering about renter's rights" />
           <div className="about-hero-photo-overlay" />
@@ -52,7 +51,11 @@ export default function About() {
             <h1>Built for renters, by someone who's been one.</h1>
           </div>
         </div>
+      </section>
 
+      <div className="about-page">
+
+      <section style={{ marginBottom: 'var(--space-16)' }}>
         <div className="about-intro">
           <p>
             Tenant Transparency was founded in Chicago with one belief: every
@@ -174,6 +177,7 @@ export default function About() {
         </address>
       </section>
 
-    </div>
+      </div>
+    </>
   )
 }

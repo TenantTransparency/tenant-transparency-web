@@ -2005,12 +2005,17 @@ section[id] {
   line-height: 1.75;
 }
 
+.about-hero-full {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto var(--space-12);
+}
+
 .about-hero-photo-wrap {
   position: relative;
   height: 480px;
   overflow: hidden;
-  border-radius: var(--radius-xl);
-  margin-bottom: var(--space-10);
+  border-radius: 0;
 }
 
 .about-hero-photo-wrap img {

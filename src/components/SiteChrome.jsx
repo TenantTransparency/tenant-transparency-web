@@ -26,25 +26,16 @@ export default function SiteChrome({ children, hideFooter = false }) {
 
           <nav className="main-nav" aria-label="Primary navigation">
             <Link to="/">Home</Link>
-            <Link to="/search">Search Properties</Link>
+            <Link to="/search">Search</Link>
             <Link to="/map">Neighborhoods</Link>
-            <Link to="/resources">Resource Center</Link>
+            <Link to="/resources">Resources</Link>
             <Link to="/about">About</Link>
-            <Link to="/support">Get Involved</Link>
+            <Link to="/support">Support</Link>
           </nav>
 
           <div className="header-right">
-            <Link to="/report-issue" className="cta-primary" style={{ padding: '9px 18px', fontSize: '0.85rem' }}>
+            <Link to="/report-issue" className="cta-primary" style={{ padding: '8px 14px', fontSize: '0.8rem' }}>
               Report a Concern
-            </Link>
-            <Link
-              className="header-icon-btn"
-              to="/#join-movement"
-              aria-label="Get notified — join the waitlist"
-              title="Get notified"
-              onClick={() => setMenuOpen(false)}
-            >
-              🔔
             </Link>
             <button
               className="header-icon-btn menu-toggle"
