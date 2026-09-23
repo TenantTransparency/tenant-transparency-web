@@ -67,7 +67,7 @@ export default function Logo({ className = '' }) {
         .tt-logo-icon-wrap img { width: 100%; display: block; }
 
         .tt-logo-text-band {
-          margin-top: 2.4cqw;
+          margin-top: 0.3cqw;
           container-type: inline-size;
           container-name: tt-logo-band;
         }
