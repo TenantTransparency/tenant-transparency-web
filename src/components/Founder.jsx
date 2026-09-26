@@ -83,9 +83,11 @@ export default function Founder() {
 
       <div className="founder-pullquote">
         <p>
-          "This isn't just a gap in the market. It is a fundamental information
-          imbalance that affects housing stability. Landlords get your full 
-          biography, while you get their carefully curated brochure."
+          "Housing is a human right, and when the housing system lacks transparency 
+          and accountability, the people with the least power are often the ones 
+          who bear the greatest burden. Tenant Transparency was created to give 
+          renters access to information, a voice, and greater power to make informed 
+          housing decisions."
         </p>
         <p>Sheenita Robinson</p>
       </div>
