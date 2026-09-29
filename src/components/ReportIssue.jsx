@@ -159,12 +159,13 @@ export default function ReportIssue() {
           <h1>Report submitted</h1>
           <p>
             Thank you for helping keep Chicago renters informed. Your report
-            goes through moderation and PII review before it appears publicly
-            &mdash; usually within 48 hours.
+            goes through moderation and personal-information review before it
+            may appear publicly &mdash; typically within a couple of days,
+            though timing can vary.
           </p>
           <p>
-            Reports are completely anonymous. No personal information from
-            your submission will ever appear on the property page.
+            Reports are designed to be anonymous, and we work to keep personal
+            information from your submission off the property page.
           </p>
           <div className="report-success-actions">
             <Link to="/search" className="cta-primary">Search another property</Link>
@@ -184,17 +185,17 @@ export default function ReportIssue() {
           <p>
             Your report has been saved. The address you provided
             &mdash; <strong>{submittedAddress}</strong> &mdash; is not yet
-            in our database, so our team will verify it before the report
-            goes live. This usually takes a little longer than a standard
-            review: up to a few business days.
+            in our database, so our team will review it before the report
+            may go live. This can take a little longer than a standard
+            review, sometimes a few business days.
           </p>
           <p>
             Everything else about your submission is already in the moderation
             queue. No action needed on your end.
           </p>
           <p>
-            Reports are completely anonymous. No personal information from
-            your submission will ever appear publicly.
+            Reports are designed to be anonymous, and we work to keep personal
+            information from your submission from appearing publicly.
           </p>
           <div className="report-success-actions">
             <Link to="/search" className="cta-primary">Search properties</Link>
@@ -211,11 +212,11 @@ export default function ReportIssue() {
         <h1>Report an Issue</h1>
         <p className="subhead">
           Tell us what happened at a specific address. Reports are
-          anonymous and reviewed before they go live &mdash; no account required.
+          designed to be anonymous and are reviewed before they may go live &mdash; no account required.
         </p>
         <div className="report-privacy-note">
           <span>&#128274;</span>
-          Your identity is never stored or shared. We strip all personally
+          We do not ask for your name, and we work to remove personally
           identifiable information before your report is saved.
         </div>
       </div>
@@ -225,7 +226,7 @@ export default function ReportIssue() {
           Property address
           <span className="field-hint">
             Enter the full street address. If it is not in our database yet,
-            we will verify it after you submit.
+            we will review it after you submit.
           </span>
           <input
             type="text"
@@ -324,7 +325,7 @@ export default function ReportIssue() {
         {reportedToCity && (
           <label className="field-label">
             City case number
-            <span className="field-hint">Optional &mdash; helps us cross-reference public records</span>
+            <span className="field-hint">Optional &mdash; may help us cross-reference public records</span>
             <input
               type="text"
               value={cityCaseNumber}

@@ -64,8 +64,8 @@ export default function About() {
           </p>
           <p>
             We built the platform we wish had existed — one that surfaces
-            verified property records, renter experiences, and tenant rights
-            in plain language, all in one place and always free for renters.
+            public property records, renter experiences, and tenant rights
+            information in plain language, all in one place and free for renters.
           </p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <Link to="/search" className="cta-primary">Search Properties</Link>
@@ -107,20 +107,22 @@ export default function About() {
             </p>
           </div>
           <div className="about-mission-card">
-            <h3>How We Verify</h3>
+            <h3>Our Approach to Accuracy</h3>
             <p>
-              Every property record is checked against public data sources
-              including the Chicago Data Portal, Cook County Assessor, and
-              municipal violation databases. Renter reports are reviewed by
-              a moderation team before publication. We never display
-              unverified claims.
+              Property information is drawn from public data sources such as
+              the Chicago Data Portal, Cook County Assessor, and municipal
+              violation databases. Public records may be incomplete, delayed,
+              or contain errors. Renter reports are reviewed by a moderation
+              team before publication, but we cannot independently confirm
+              every statement. Nothing on this site is legal advice or a
+              finding about any person or property.
             </p>
           </div>
           <div className="about-mission-card">
             <h3>Our Commitment to Privacy</h3>
             <p>
-              Renter reports are anonymous. We strip personally identifiable
-              information before storage. We do not sell user data. Read our{' '}
+              Renter reports are designed to be anonymous. We work to remove personally
+              identifiable information before storage. We do not sell user data. Read our{' '}
               <Link to="/privacy">full Privacy Policy</Link> for details.
             </p>
           </div>

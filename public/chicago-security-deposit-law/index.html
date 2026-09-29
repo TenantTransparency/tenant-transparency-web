@@ -7,7 +7,7 @@
 <meta name="description" content="How Chicago security deposit law works under the RLTO: receipts, interest, the 45-day return deadline, itemized deductions, and the 2x penalty. Includes a free interest calculator and demand letter generator.">
 <link rel="canonical" href="https://tenanttransparency.com/chicago-security-deposit-law">
 <meta property="og:title" content="Chicago Security Deposit Law: Deadlines, Interest &amp; Penalties (2026)" />
-<meta property="og:description" content="Chicago's security deposit rules under the RLTO: what landlords must do within 30 days, how interest is calculated, and what violations you can sue for." />
+<meta property="og:description" content="Chicago's security deposit rules under the RLTO: what landlords are generally required to do within 30 days, how interest is calculated, and what remedies may be available." />
 <meta property="og:image" content="https://tenanttransparency.com/chicago-security-deposit-law/depositlaw.png" />
 <meta property="og:url" content="https://tenanttransparency.com/chicago-security-deposit-law" />
 <meta property="og:type" content="article" />
@@ -59,7 +59,7 @@
     {
       "@type": "Question",
       "name": "What happens if my Chicago landlord misses the deadline?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Under Section 5-12-080(f) of the RLTO, a landlord who violates the deposit rules, including missing the 45-day deadline, owes the tenant two times the deposit amount plus interest, attorney's fees, and court costs. The penalty is mandatory once a violation is established and does not depend on the landlord's intent." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Under Section 5-12-080(f) of the RLTO, a landlord who violates the deposit rules, including missing the 45-day deadline, may be liable for two times the deposit amount plus interest, attorney's fees, and court costs. Courts have generally treated the penalty as applying once a violation is established, but outcomes depend on the specific facts." }
     },
     {
       "@type": "Question",
@@ -69,7 +69,7 @@
     {
       "@type": "Question",
       "name": "Can my landlord keep my deposit for normal wear and tear?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Deductions are limited to unpaid rent and the reasonable cost of repairing tenant-caused damage. Ordinary wear and tear from normal use doesn't count, and the landlord must back up any damage deduction with an itemized statement and receipts." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Deductions are typically limited to unpaid rent and the reasonable cost of repairing tenant-caused damage. Ordinary wear and tear from normal use generally doesn't count, and the landlord is generally expected to back up any damage deduction with an itemized statement and receipts." }
     }
   ]
 }
@@ -254,7 +254,7 @@
 <p>Both clocks start on your actual move-out date, not your lease end date, if you vacated early with the landlord's knowledge. Keep a dated record of when you returned keys.</p>
 
 <h2 id="deductions">4. What landlords can and can't deduct</h2>
-<p>A landlord may deduct for unpaid rent and the reasonable cost of repairing damage you caused. They can't deduct for:</p>
+<p>A landlord may generally deduct for unpaid rent and the reasonable cost of repairing damage you caused. They generally can't deduct for:</p>
 <ul class="plain">
   <li>Normal wear and tear (worn carpet, minor scuffs, faded paint from years of sun exposure)</li>
   <li>Pre-existing damage that was there before you moved in</li>
@@ -263,7 +263,7 @@
 <p>If deductions are made, the itemized statement has to include actual or estimated repair costs, and the landlord must follow up with paid receipts if estimates were used initially.</p>
 
 <h2 id="penalty">5. The two-times-deposit penalty</h2>
-<p>This is the part that makes Chicago's ordinance unusually tenant-favorable: under Section 5-12-080(f), a landlord who violates any deposit requirement — wrong account, missing interest, late return, no itemized statement — owes the tenant <strong>two times the deposit amount</strong>, plus the deposit and interest itself, plus attorney's fees and court costs. Courts have treated this as a strict-liability penalty: the landlord's excuse (lost check, forgot, property manager's mistake) doesn't matter once a violation is established.</p>
+<p>This is the part that makes Chicago's ordinance unusually tenant-favorable: under Section 5-12-080(f), a landlord who violates any deposit requirement — wrong account, missing interest, late return, no itemized statement — may be liable for <strong>two times the deposit amount</strong>, plus the deposit and interest itself, plus attorney's fees and court costs. Courts have often treated this as a strict-liability penalty, meaning the landlord's excuse (lost check, forgot, property manager's mistake) may not matter once a violation is established. Results depend on the specific facts.</p>
 
 <h2 id="steps">6. If your landlord is past the deadline</h2>
 <ol class="steps">
@@ -286,7 +286,7 @@
 <h3>How long does a Chicago landlord have to return my security deposit?</h3>
 <p>45 days after you vacate. If deductions are being made, the itemized statement is due within 30 days.</p>
 <h3>What happens if my landlord misses the deadline?</h3>
-<p>You're generally entitled to two times the deposit amount plus interest, attorney's fees, and costs.</p>
+<p>You may be entitled to two times the deposit amount plus interest, attorney's fees, and costs, depending on the facts.</p>
 <h3>Do Chicago landlords have to pay interest on deposits?</h3>
 <p>Yes, on deposits held more than six months. The 2026 rate is 0.01%, set annually by the City Comptroller.</p>
 <h3>Can my landlord keep my deposit for normal wear and tear?</h3>
@@ -357,7 +357,7 @@ function runDepositTool() {
     ? '<span class="flag bad">Deadline appears missed</span>'
     : '<span class="flag ok">Deadline not yet passed</span>';
   let html = '<h3>Your numbers</h3>' + flag;
-  html += '<p><strong>Interest owed (2026 rate, 0.01%):</strong> $' + r.interestOwed.toFixed(2) + '</p>';
+  html += '<p><strong>Estimated interest (2026 rate, 0.01%):</strong> $' + r.interestOwed.toFixed(2) + '</p>';
   html += '<p><strong>45-day return deadline:</strong> ' + r.deadlineText + '</p>';
   if (r.pastDeadline) {
     html += '<p><strong>Potential statutory penalty (2x deposit):</strong> $' + penalty.toFixed(2) + ', plus the deposit itself, interest, and attorney fees — if a violation is confirmed.</p>';

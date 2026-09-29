@@ -12,17 +12,17 @@ const NEIGHBORHOODS = [
 const VOICES = [
   {
     quote: "I found out about a lead violation before I ever toured the unit. This site saved me from making a huge mistake.",
-    name: 'Verified Renter',
+    name: 'Chicago Renter',
     location: 'Logan Square',
   },
   {
     quote: "The fee breakdown alone saved me $400. I went in knowing exactly what to push back on before I even sat down.",
-    name: 'Verified Renter',
+    name: 'Chicago Renter',
     location: 'Pilsen',
   },
   {
     quote: "Finally a place to put concerns on the record. My landlord can't pretend the mold reports don't exist anymore.",
-    name: 'Verified Renter',
+    name: 'Chicago Renter',
     location: 'Bronzeville',
   },
 ]
@@ -46,7 +46,7 @@ const NEWS = [
   },
   {
     tag: 'Rights',
-    title: 'Chicago Renters: Your Landlord May Have Fixed Your Rent. Here\'s What You\'re Owed.',
+    title: 'Chicago Renters: Your Landlord May Have Fixed Your Rent. Here\'s What You May Be Owed.',
     date: 'Aug 2026',
     href: '/chicago-class-action-realpages/realpage-chicago-renters-guide.html',
     image: '/chicago-class-action-realpages/settlement.png',
@@ -55,10 +55,10 @@ const NEWS = [
 ]
 
 const RESOURCES = [
-  { icon: '⚖️', title: "Tenant Rights Guide", desc: "What Chicago law guarantees you — plain language, no jargon.", href: '/chicago-renters-rights-guide' },
-  { icon: '💸', title: "Hidden Fees", desc: "Every fee landlords don't lead with.", href: '/chicago-security-deposit-law' },
+  { icon: '⚖️', title: "Tenant Rights Guide", desc: "An overview of tenant protections under Chicago law, in plain language.", href: '/chicago-renters-rights-guide' },
+  { icon: '💸', title: "Hidden Fees", desc: "Common fees landlords may not lead with.", href: '/chicago-security-deposit-law' },
   { icon: '🚩', title: "Lease Red Flags", desc: "Know it before you sign it.", href: '/chicago-habitability-violations' },
-  { icon: '❓', title: "FAQ", desc: "Straight answers to common renter questions.", href: '/resources' },
+  { icon: '❓', title: "FAQ", desc: "Answers to common renter questions.", href: '/resources' },
 ]
 
 function SearchBar({ navigate, neighborhoods }) {
@@ -142,16 +142,16 @@ export default function Homepage() {
 
         <div className="hero-content-side">
           <div className="hero-eyebrow">
-            <span /> Trusted by Chicago Renters
+            <span /> Built for Chicago Renters
           </div>
           <h1>
             Know Before<br />
             <em>You Lease.</em>
           </h1>
           <p className="hero-sub">
-            Landlords know everything about you. It&rsquo;s time you knew
-            everything about them &mdash; verified property records, renter
-            reports, and tenant rights, all in one place.
+            Landlords often know a lot about you. It&rsquo;s time you could
+            learn more about them &mdash; public property records, renter
+            reports, and tenant rights information, all in one place.
           </p>
 
           <form className="hero-search" onSubmit={handleHeroSearch}>
@@ -177,14 +177,14 @@ export default function Homepage() {
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M7 1L9 5.5H13.5L9.75 8.5L11 13L7 10.25L3 13L4.25 8.5L0.5 5.5H5L7 1Z" fill="currentColor"/>
               </svg>
-              Verified Records
+              Public Records
             </div>
             <div className="trust-item">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <rect x="2" y="6" width="10" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" fill="none"/>
                 <path d="M4.5 6V4.5a2.5 2.5 0 0 1 5 0V6" stroke="currentColor" strokeWidth="1.5" fill="none"/>
               </svg>
-              Anonymous &amp; Secure
+              Privacy-Focused
             </div>
             <div className="trust-item">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -201,20 +201,21 @@ export default function Homepage() {
         <div className="value-props-inner">
           <div className="value-props-header">
             <span className="section-eyebrow">Why Tenant Transparency</span>
-            <h2>Not a listings site. An accountability system.</h2>
+            <h2>Not a listings site. A transparency resource.</h2>
             <p>
-              We built the platform renters have always needed &mdash; one that
-              puts verified information, not landlord marketing copy, at the center.
+              We built the platform we wish renters had &mdash; one that
+              puts public-record information, not landlord marketing copy, at the center.
             </p>
           </div>
           <div className="value-props-grid">
             <div className="value-card">
               <div className="value-card-icon">✓</div>
-              <h3>Verified, not vibes</h3>
+              <h3>Grounded in public records</h3>
               <p>
-                Every claim is checked against public record. No landlord
-                marketing copy, no unverified claims &mdash; just what the
-                data actually shows.
+                We draw on public records and review renter reports before
+                they are published. Information is provided for general
+                reference, may be incomplete or out of date, and is not a
+                substitute for your own research.
               </p>
             </div>
             <div className="value-card">
@@ -229,8 +230,8 @@ export default function Homepage() {
               <div className="value-card-icon">🏛️</div>
               <h3>A public record</h3>
               <p>
-                Renters report. It stays on the record. Property owners
-                can&rsquo;t make verified renter reports disappear.
+                Renters share their experiences, and reports that meet our
+                guidelines are kept on the property&rsquo;s page.
               </p>
             </div>
           </div>
@@ -273,7 +274,7 @@ export default function Homepage() {
               {[
                 { label: 'Violations', pct: 65, warn: true },
                 { label: 'Reports', pct: 90, warn: false },
-                { label: 'Verified', pct: 80, warn: false },
+                { label: 'Reviewed', pct: 80, warn: false },
                 { label: 'Response', pct: 70, warn: false },
               ].map((b) => (
                 <div className="score-bar-row" key={b.label}>
@@ -294,15 +295,16 @@ export default function Homepage() {
             <span className="phase-tag coming">Coming Phase 2</span>
             <h2>The Transparency Score&trade;</h2>
             <p>
-              One number. Every violation, every report, every red flag
-              &mdash; compiled into a single score so you can compare
-              properties at a glance before you ever schedule a tour.
+              A single at-a-glance indicator, based on public records and
+              renter reports, that may help you compare properties as one
+              part of your research. Scores are informational only. The
+              example shown is illustrative.
             </p>
             <ul className="score-features">
               <li>Building code violations from public records</li>
-              <li>Verified renter reports and sentiment</li>
-              <li>Landlord responsiveness history</li>
-              <li>Ownership transparency and LLC chain resolution</li>
+              <li>Moderated renter reports and sentiment</li>
+              <li>Reported landlord responsiveness</li>
+              <li>Ownership information, including LLC structures where available</li>
             </ul>
             <a href="#join-movement" className="cta-primary">
               Get notified at launch
@@ -412,7 +414,7 @@ export default function Homepage() {
           <div className="section-header">
             <div>
               <span className="section-eyebrow">Community Voices</span>
-              <h2>Real renters. Real experiences.</h2>
+              <h2>Renter voices.</h2>
             </div>
             <Link to="/report-issue" className="cta-secondary">Share your experience</Link>
           </div>
@@ -438,9 +440,8 @@ export default function Homepage() {
             <span className="phase-tag coming">Coming Phase 3</span>
             <h2>Research &amp; Data</h2>
             <p>
-              The data dashboard policymakers and journalists don&rsquo;t
-              currently have &mdash; aggregated, anonymized, and built on
-              verified public records.
+              A planned data dashboard for policymakers and journalists
+              &mdash; aggregated, anonymized, and built on public records.
             </p>
             <a href="#join-movement" className="cta-secondary">
               Join the waitlist

@@ -63,7 +63,7 @@
       "name": "How much interest does a Chicago landlord owe on my security deposit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For deposits held during 2026, the City Comptroller set the required interest rate at 0.01%, the same minimum rate that has applied since 2015. Landlords must pay this annually on deposits held more than six months and provide the current rate summary with every lease."
+        "text": "For deposits held during 2026, the City Comptroller set the required interest rate at 0.01%, the same minimum rate that has applied since 2015. Landlords are generally required to pay this annually on deposits held more than six months and provide the current rate summary with every lease."
       }
     },
     {
@@ -79,7 +79,7 @@
       "name": "Can my landlord evict me without going to court?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Self-help evictions, such as changing locks, removing belongings, or shutting off utilities to force a tenant out, are illegal in Chicago. A landlord must file in Cook County court and get a court order before a sheriff can remove a tenant."
+        "text": "No. Self-help evictions, such as changing locks, removing belongings, or shutting off utilities to force a tenant out, are generally not permitted in Chicago. A landlord must generally file in Cook County court and get a court order before a sheriff can remove a tenant."
       }
     }
   ]
@@ -297,7 +297,7 @@
 <p><a href="#cluster">Full breakdown: Security deposit law in Chicago →</a></p>
 
 <h2 id="habitability">4. Habitability and repairs</h2>
-<p>Landlords must keep the unit in compliance with the city's building code: working plumbing, structurally sound floors and stairs, functioning locks, no pest infestations, and no exposed hazards like lead paint in poor condition. When something breaks that affects habitability, tenants generally have to give written notice and a reasonable window to fix it before pursuing remedies like repair-and-deduct.</p>
+<p>Landlords are generally required to keep the unit in compliance with the city's building code: working plumbing, structurally sound floors and stairs, functioning locks, no pest infestations, and no exposed hazards like lead paint in poor condition. When something breaks that affects habitability, tenants generally have to give written notice and a reasonable window to fix it before pursuing remedies like repair-and-deduct.</p>
 <p><a href="#cluster">Full breakdown: What counts as a habitability violation →</a></p>
 
 <h2 id="heat-utilities">5. Heat and utilities</h2>
@@ -310,7 +310,7 @@
 <p><a href="#cluster">Full breakdown: Heat law and utility complaints →</a></p>
 
 <h2 id="eviction">6. Eviction basics</h2>
-<p>A landlord cannot lock you out, remove your belongings, or shut off utilities to force you out — these "self-help" evictions are illegal. Eviction has to go through Cook County court, starting with a written notice (the type and length depend on the reason), then a filed case, then a court judgment before a sheriff can remove anyone.</p>
+<p>A landlord cannot lock you out, remove your belongings, or shut off utilities to force you out — these "self-help" evictions are generally not permitted. Eviction has to go through Cook County court, starting with a written notice (the type and length depend on the reason), then a filed case, then a court judgment before a sheriff can remove anyone.</p>
 <p><a href="#cluster">Full breakdown: How eviction actually works in Cook County →</a></p>
 
 <h2 id="moving-out">7. Moving out the right way</h2>
@@ -335,7 +335,7 @@
 <h3>What temperature is my landlord legally required to maintain?</h3>
 <p>68°F during the day and 66°F overnight, from September 15 through June 1.</p>
 <h3>Can my landlord evict me without going to court?</h3>
-<p>No. Self-help evictions are illegal. Eviction requires a Cook County court order.</p>
+<p>Generally no. Self-help evictions are generally not permitted. Eviction generally requires a Cook County court order.</p>
 
 <footer>
   Sources: Chicago Municipal Code Chapter 5-12 (RLTO); Chicago Heat Ordinance, Chapter 13-196; City of Chicago Department of Housing security deposit interest rate notices. This page is for general information only and is not a substitute for advice from a licensed attorney.
@@ -354,16 +354,16 @@ function computeResult(units, issue, name) {
   lines.push("Main issue: " + issue);
   lines.push("");
   if (!covered) {
-    lines.push("Your building is likely OWNER-OCCUPIED with 6 or fewer units, which is generally EXEMPT from most RLTO provisions. Some baseline protections (like the ban on illegal lockouts) may still apply under state law.");
+    lines.push("Your building may be OWNER-OCCUPIED with 6 or fewer units, which is generally EXEMPT from most RLTO provisions; confirm your specific situation. Some baseline protections (like the ban on illegal lockouts) may still apply under state law.");
   } else {
     lines.push("Your building is likely COVERED by the Chicago RLTO.");
   }
   lines.push("");
   const details = {
-    deposit: "Deposit interest rate for 2026: 0.01%, owed annually on deposits held 6+ months. Deposit must be in a separate account with a signed receipt. Violations can carry damages up to 2x the deposit plus fees.",
-    repairs: "Landlord must maintain code-compliant conditions. Give written notice of the issue and a reasonable time to fix before pursuing remedies like repair-and-deduct.",
+    deposit: "Deposit interest rate for 2026: 0.01%, owed annually on deposits held 6+ months. Deposit must be in a separate account with a signed receipt. Violations may carry damages up to 2x the deposit plus fees.",
+    repairs: "Landlords are generally required to maintain code-compliant conditions. Give written notice of the issue and a reasonable time to fix before pursuing remedies like repair-and-deduct.",
     heat: "Required temps Sept 15–June 1: 68°F (8:30am–10:30pm) and 66°F (10:30pm–8:30am). Document temps and call 311 to report violations.",
-    eviction: "Self-help eviction (lockouts, shutting off utilities) is illegal. Eviction must go through Cook County court with proper written notice first.",
+    eviction: "Self-help eviction (lockouts, shutting off utilities) is generally not permitted. Eviction generally goes through Cook County court with proper written notice first.",
     moveout: "Photograph and date-stamp the unit's condition before handing back keys. Send written notice of your move-out date.",
     general: "This summary covers the basics. See the full guide sections for deposits, habitability, heat, and eviction."
   };

@@ -7,8 +7,8 @@ const GUIDES = [
     slug: 'chicago-renters-rights-guide',
     label: 'Start Here',
     icon: '⚖️',
-    title: "Chicago Renters' Rights: The Complete Guide",
-    description: 'The full RLTO breakdown — deposits, habitability, heat, eviction — plus a free rights checker tool.',
+    title: "Chicago Renters' Rights: A General Guide",
+    description: 'A general overview of the RLTO — deposits, habitability, heat, eviction — plus a free rights checker tool.',
     tool: 'RLTO Coverage Checker',
   },
   {
@@ -16,7 +16,7 @@ const GUIDES = [
     label: 'Deposits',
     icon: '💰',
     title: 'Chicago Security Deposit Law',
-    description: 'Deadlines, interest, and the two-times-deposit penalty, with a free interest calculator and demand letter generator.',
+    description: 'Typical deadlines, interest, and potential penalties, with a free interest calculator and demand letter generator.',
     tool: 'Deposit Interest Calculator',
   },
   {
@@ -24,7 +24,7 @@ const GUIDES = [
     label: 'Repairs',
     icon: '🔧',
     title: 'What Counts as a Habitability Violation',
-    description: 'What landlords are legally required to fix, and how to document a violation properly.',
+    description: 'What landlords may be legally required to fix, and how to document a possible violation.',
     tool: 'Violation Checklist',
   },
   {
@@ -32,15 +32,15 @@ const GUIDES = [
     label: 'Heat & Utilities',
     icon: '🌡️',
     title: 'Heat Law and Utility Complaints',
-    description: "Chicago's minimum temperature requirements and how to report a violation to the city.",
+    description: "Chicago's general minimum temperature requirements and how to report a concern to the city.",
     tool: 'Complaint Letter Generator',
   },
   {
     slug: 'cook-county-eviction-process',
     label: 'Eviction',
     icon: '🏛️',
-    title: 'How Eviction Actually Works in Cook County',
-    description: 'The real court process, notice requirements, and why self-help evictions are illegal.',
+    title: 'How Eviction Generally Works in Cook County',
+    description: 'An overview of the court process, notice requirements, and why self-help evictions are generally not allowed.',
     tool: 'Eviction Timeline Guide',
   },
   {
@@ -48,7 +48,7 @@ const GUIDES = [
     label: 'Moving Out',
     icon: '📷',
     title: 'How to Document Issues Before Moving Out',
-    description: 'Protecting your deposit with the right photos, timestamps, and written notice.',
+    description: 'Ways to help protect your deposit with photos, timestamps, and written notice.',
     tool: 'Move-Out Checklist',
   },
   {
@@ -56,7 +56,7 @@ const GUIDES = [
     label: 'Disputes',
     icon: '📋',
     title: "What to Do If Your Landlord Won't Return Your Deposit",
-    description: 'Step-by-step recourse when the 45-day deadline has already passed.',
+    description: 'General steps to consider when the 45-day deadline has already passed.',
     tool: 'Demand Letter Template',
   },
 ]
@@ -69,14 +69,14 @@ export default function ResourceCenter() {
         <span className="section-eyebrow">Free for all renters</span>
         <h1>Housing Resource Center</h1>
         <p>
-          Plain-language guides to Chicago tenant rights — every one free,
+          General-information guides to Chicago tenant rights — every one free,
           no signup required, each with an interactive tool you can use and
           download right now.
         </p>
         <div className="resource-center-trust">
           <span>✓ No account required</span>
           <span>✓ Free to download</span>
-          <span>✓ Updated for 2026</span>
+          <span>✓ Last reviewed 2026</span>
         </div>
       </div>
 
@@ -102,8 +102,8 @@ export default function ResourceCenter() {
         <div className="resource-center-callout-text">
           <h3>Facing a specific issue right now?</h3>
           <p>
-            Search your address to see public violations and renter reports,
-            or file an anonymous report about your property.
+            Search your address to see public violation records and renter reports,
+            or submit a report about your property.
           </p>
         </div>
         <div className="resource-center-callout-actions">

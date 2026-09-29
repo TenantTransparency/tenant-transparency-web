@@ -46,6 +46,11 @@ export default function PropertyDetail({ propertyId, onBack }) {
               {detail.property_type.replace('_', ' ')}
               {detail.unit_count ? ` · ${detail.unit_count} units` : ''}
             </p>
+            <p className="empty-state">
+              Information is compiled from public records and renter reports
+              for general reference only. It may be incomplete or out of date
+              and is not legal advice.
+            </p>
           </div>
 
           <section className="detail-section">
@@ -60,9 +65,9 @@ export default function PropertyDetail({ propertyId, onBack }) {
                   {owner.entity_type} · {owner.relationship_type}
                   {' · '}
                   {owner.verification_status === 'verified' ? (
-                    <span className="verified">Verified</span>
+                    <span className="verified">Matches public record</span>
                   ) : (
-                    <span className="pending">Unverified</span>
+                    <span className="pending">Not yet confirmed</span>
                   )}
                 </div>
               </div>
@@ -72,7 +77,7 @@ export default function PropertyDetail({ propertyId, onBack }) {
           <section className="detail-section">
             <h2>Building Violations ({detail.violations.length})</h2>
             {detail.violations.length === 0 && (
-              <p className="empty-state">No violations on record for this property.</p>
+              <p className="empty-state">No violations appear in the public records we have reviewed for this property. This may not reflect current or unreported conditions.</p>
             )}
             {detail.violations.map((v) => (
               <div className="violation-row" key={v.violation_id}>
@@ -90,8 +95,8 @@ export default function PropertyDetail({ propertyId, onBack }) {
             <h2>Renter Reports ({detail.published_reports.length})</h2>
             {detail.published_reports.length === 0 && (
               <p className="empty-state">
-                No published renter reports yet. Reports are held for
-                moderation before appearing here.
+                No published renter reports yet. Reports are reviewed
+                before appearing here.
               </p>
             )}
             {detail.published_reports.map((r) => (

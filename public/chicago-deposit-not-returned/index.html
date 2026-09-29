@@ -55,7 +55,7 @@
     {
       "@type": "Question",
       "name": "What can I sue for if my Chicago landlord won't return my deposit?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Generally, the deposit itself, any interest owed, plus statutory damages of two times the deposit amount, plus attorney's fees and court costs, if a violation of the RLTO's deposit rules is established." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Generally, the deposit itself, any interest that may be owed, plus statutory damages of two times the deposit amount, plus attorney's fees and court costs, if a violation of the RLTO's deposit rules is established." }
     },
     {
       "@type": "Question",
@@ -276,7 +276,7 @@
 
 <h2 id="faq">7. FAQ</h2>
 <h3>What can I sue for?</h3>
-<p>Generally the deposit, interest owed, statutory damages of two times the deposit, plus attorney's fees and costs, once a violation is established.</p>
+<p>Generally the deposit, any interest that may be owed, statutory damages of two times the deposit, plus attorney's fees and costs, if a violation is established. Outcomes depend on the facts of your situation.</p>
 <h3>Where do I file in Cook County?</h3>
 <p>The Pro Se Small Claims Division of the Circuit Court of Cook County, commonly at the Daley Center or a suburban branch.</p>
 <h3>Do I need a lawyer?</h3>
@@ -324,7 +324,7 @@ function runDisputeTool() {
   let html = '<h3>Your potential claim</h3>';
   html += '<table>' +
     '<tr><td>Deposit</td><td>$' + r.deposit.toFixed(2) + '</td></tr>' +
-    '<tr><td>Interest owed</td><td>$' + r.interest.toFixed(2) + '</td></tr>' +
+    '<tr><td>Estimated interest</td><td>$' + r.interest.toFixed(2) + '</td></tr>' +
     '<tr><td>Statutory damages (2x deposit)</td><td>$' + r.statutory.toFixed(2) + '</td></tr>' +
     '<tr><th>Potential total</th><th>$' + r.total.toFixed(2) + '</th></tr>' +
   '</table>';
