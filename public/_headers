@@ -1,0 +1,17 @@
+# Cloudflare Pages response headers (same host-specific convention as
+# _redirects; GitHub Pages ignores this file).
+#
+# Baseline hardening that can't break anything on the page. A full
+# Content-Security-Policy is deliberately NOT set here yet -- it needs the
+# API origin, map tile/font hosts, and Google Fonts enumerated first, and a
+# wrong CSP silently breaks the map.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+# The admin console should never be indexed or cached by shared caches.
+/admin*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

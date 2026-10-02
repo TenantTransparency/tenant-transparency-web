@@ -80,17 +80,17 @@
 
   <!-- Housing News — pre-rendered static HTML, fully crawlable -->
   <url>
-    <loc>https://www.tenanttransparency.com/chicago-tenant-ordinances-updates/chicago-protecting-renters-ordinance.html</loc>
+    <loc>https://www.tenanttransparency.com/chicago-tenant-ordinances-updates/chicago-protecting-renters-ordinance</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.tenanttransparency.com/chicago-tenant-ordinances-updates/chicago-fair-ordinance.html</loc>
+    <loc>https://www.tenanttransparency.com/chicago-tenant-ordinances-updates/chicago-fair-ordinance</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.tenanttransparency.com/chicago-class-action-realpages/realpage-chicago-renters-guide.html</loc>
+    <loc>https://www.tenanttransparency.com/chicago-class-action-realpages/realpage-chicago-renters-guide</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
