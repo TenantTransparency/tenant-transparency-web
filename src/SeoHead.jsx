@@ -89,7 +89,7 @@ export default function SeoHead() {
     const path = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname
     // Property pages set their own title, description and canonical once the
     // property has loaded (PropertyDetail.jsx).
-    if (path.startsWith('/property/')) return
+    if (path.startsWith('/property/') || path.startsWith('/neighborhood')) return
     const page = PAGES[path] || PAGES['/']
     const url = `${SITE}${path === '/' ? '/' : path}`
 

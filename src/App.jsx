@@ -15,6 +15,7 @@ import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import TermsOfUse from './components/TermsOfUse.jsx'
 import AuthCallback from './components/AuthCallback.jsx'
 import SeoHead from './SeoHead.jsx'
+import Neighborhood, { NeighborhoodIndex } from './components/Neighborhoods.jsx'
 import { propertyPath, propertyIdFromSlug } from './propertyUrl.js'
 
 // Code-split: MapLibre is most of the bundle weight and only /map needs
@@ -78,6 +79,8 @@ export default function App() {
         <Route path="/" element={<SiteChrome><Homepage /></SiteChrome>} />
         <Route path="/search" element={<SiteChrome><div className="page-content"><RenterSearchFlow /></div></SiteChrome>} />
         <Route path="/property/:slug" element={<SiteChrome><div className="page-content"><PropertyPage /></div></SiteChrome>} />
+        <Route path="/neighborhoods" element={<SiteChrome><NeighborhoodIndex /></SiteChrome>} />
+        <Route path="/neighborhood/:slug" element={<SiteChrome><Neighborhood /></SiteChrome>} />
         <Route path="/report-issue" element={<SiteChrome><div className="page-content"><ReportIssue /></div></SiteChrome>} />
         <Route path="/resources" element={<SiteChrome><ResourceCenter /></SiteChrome>} />
         <Route path="/about" element={<SiteChrome><About /></SiteChrome>} />

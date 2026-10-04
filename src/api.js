@@ -44,6 +44,10 @@ export function getCommunityAreaStats() {
   return request('/api/map/community-areas')
 }
 
+export function getAreaTopProperties(areaId) {
+  return request(`/api/map/community-areas/${areaId}/properties`)
+}
+
 export async function submitReport(payload) {
   // Surfaces the status code so callers can distinguish 201 (resolved) from
   // 202 (saved but address is pending admin verification).

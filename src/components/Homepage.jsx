@@ -9,6 +9,18 @@ const NEIGHBORHOODS = [
   'South Shore', 'Humboldt Park', 'Bridgeport', 'Edgewater',
 ]
 
+// Popular names -> the official Chicago community area page that covers them.
+// Bronzeville spans several community areas, so it goes to the full list.
+const NEIGHBORHOOD_LINKS = {
+  Lakeview: '/neighborhood/lake-view',
+  Pilsen: '/neighborhood/lower-west-side',
+  'West Loop': '/neighborhood/near-west-side',
+  'Wicker Park': '/neighborhood/west-town',
+  Bronzeville: '/neighborhoods',
+}
+const neighborhoodLink = (name) =>
+  NEIGHBORHOOD_LINKS[name] || `/neighborhood/${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+
 const VOICES = [
   {
     quote: "I found out about a lead violation before I ever toured the unit. This site saved me from making a huge mistake.",
@@ -392,18 +404,17 @@ export default function Homepage() {
             <span className="section-eyebrow">Chicago Neighborhood Hub</span>
             <h2>Find your neighborhood.</h2>
             <p>
-              Full interactive map coming in Phase 3. Until then, browse by
-              neighborhood to see what renters are reporting and what
-              public records show in your area.
+              Browse by neighborhood to see what public records show in your
+              area, then search a specific building before you lease.
             </p>
             <div className="neighborhood-chips">
               {NEIGHBORHOODS.map((n) => (
-                <Link key={n} to={`/search?neighborhood=${encodeURIComponent(n)}`} className="neighborhood-chip">
+                <Link key={n} to={neighborhoodLink(n)} className="neighborhood-chip">
                   {n}
                 </Link>
               ))}
             </div>
-            <Link to="/search" className="cta-primary">Explore all neighborhoods</Link>
+            <Link to="/neighborhoods" className="cta-primary">Explore all neighborhoods</Link>
           </div>
         </div>
       </section>

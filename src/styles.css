@@ -3276,3 +3276,9 @@ section[id] {
   line-height: 1.7;
 }
 .safety-section a { color: var(--amber-dark); font-weight: 600; }
+
+/* Neighborhood pages */
+.neighborhood-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px 16px; }
+.neighborhood-grid li { display: flex; flex-direction: column; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.neighborhood-stats, .neighborhood-properties { padding-left: 1.2rem; }
+.neighborhood-stats li, .neighborhood-properties li { margin: 6px 0; }

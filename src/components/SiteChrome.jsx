@@ -27,7 +27,7 @@ export default function SiteChrome({ children, hideFooter = false }) {
           <nav className="main-nav" aria-label="Primary navigation">
             <Link to="/">Home</Link>
             <Link to="/search">Search</Link>
-            <Link to="/map">Neighborhoods</Link>
+            <Link to="/neighborhoods">Neighborhoods</Link>
             <Link to="/resources">Resources</Link>
             <Link to="/about">About</Link>
             <Link to="/support">Support</Link>
@@ -52,7 +52,7 @@ export default function SiteChrome({ children, hideFooter = false }) {
           <nav className="mobile-menu" aria-label="Mobile navigation">
             <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
             <Link to="/search" onClick={() => setMenuOpen(false)}>Search Properties</Link>
-            <Link to="/map" onClick={() => setMenuOpen(false)}>Neighborhoods</Link>
+            <Link to="/neighborhoods" onClick={() => setMenuOpen(false)}>Neighborhoods</Link>
             <Link to="/resources" onClick={() => setMenuOpen(false)}>Resource Center</Link>
             <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
             <Link to="/report-issue" onClick={() => setMenuOpen(false)}>Report a Concern</Link>
