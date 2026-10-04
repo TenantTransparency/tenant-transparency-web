@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { submitReport } from '../api.js'
-import { getReporterId } from '../reporterId.js'
 
 const CATEGORY_TAGS = [
   { value: 'security_deposit',  label: 'Security Deposit' },
@@ -47,6 +46,10 @@ const ASSISTANCE_QUESTIONS = [
   { key: 'assistanceWouldChooseAgain',           label: 'If you knew then what you know now, would you still have chosen this property?' },
 ]
 
+// Mirrors REQUIRES_CITY_RECORD in the API's handlers.rs -- serious,
+// inspectable claims must carry a city case / violation number.
+const REQUIRES_CITY_RECORD = ['heat_utilities', 'habitability']
+
 function triToBool(value) {
   if (value === 'yes') return true
   if (value === 'no') return false
@@ -55,6 +58,8 @@ function triToBool(value) {
 
 export default function ReportIssue() {
   const [submittedAddress, setSubmittedAddress] = useState('')
+  const [reporterName, setReporterName] = useState('')
+  const [reporterEmail, setReporterEmail] = useState('')
 
   const [sentiment, setSentiment] = useState('negative')
   const [tags, setTags] = useState([])
@@ -85,6 +90,8 @@ export default function ReportIssue() {
   }
 
   const showAssistanceQuestions = ASSISTED_TYPES.includes(housingAssistanceType)
+  const needsCaseNumber = tags.some((t) => REQUIRES_CITY_RECORD.includes(t))
+  const showCaseNumber = reportedToCity || needsCaseNumber
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -94,9 +101,26 @@ export default function ReportIssue() {
       setSubmitError('Please enter a full street address.')
       return
     }
+    if (!reporterName.trim()) {
+      setSubmitStatus('error')
+      setSubmitError('Please enter your name. It is kept private and never shown with your report.')
+      return
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(reporterEmail.trim())) {
+      setSubmitStatus('error')
+      setSubmitError('Please enter a valid email address.')
+      return
+    }
     if (tags.length === 0) {
       setSubmitStatus('error')
       setSubmitError('Select at least one issue category.')
+      return
+    }
+    if (needsCaseNumber && !cityCaseNumber.trim()) {
+      setSubmitStatus('error')
+      setSubmitError(
+        'Heat, utility, and habitability reports need the 311 or building violation number so the claim can be verified.'
+      )
       return
     }
     if (description.trim().length < 50) {
@@ -119,13 +143,14 @@ export default function ReportIssue() {
       const result = await submitReport({
         submitted_address: submittedAddress.trim(),
         entity_id: null,
-        reporter_id: getReporterId(),
+        reporter_name: reporterName.trim(),
+        reporter_email: reporterEmail.trim(),
         report_sentiment: sentiment,
         category_tags: tags,
         description: description.trim(),
         incident_date: incidentDate,
-        reported_to_city: reportedToCity,
-        city_case_number: reportedToCity && cityCaseNumber.trim() ? cityCaseNumber.trim() : null,
+        reported_to_city: showCaseNumber && !!cityCaseNumber.trim(),
+        city_case_number: showCaseNumber && cityCaseNumber.trim() ? cityCaseNumber.trim() : null,
         resolution_status: resolutionStatus,
         would_rent_again: wouldRentAgain === '' ? null : wouldRentAgain === 'yes',
         evidence_file_refs: null,
@@ -211,13 +236,15 @@ export default function ReportIssue() {
       <div className="report-panel-header">
         <h1>Report an Issue</h1>
         <p className="subhead">
-          Tell us what happened at a specific address. Reports are
-          designed to be anonymous and are reviewed before they may go live &mdash; no account required.
+          Tell us what happened at a specific address. Published reports
+          never show who wrote them, and every report is reviewed before it
+          may go live &mdash; no account required.
         </p>
         <div className="report-privacy-note">
           <span>&#128274;</span>
-          We do not ask for your name, and we work to remove personally
-          identifiable information before your report is saved.
+          We ask for your name and email so we can stand behind your report
+          if it is ever challenged. They are stored separately from the
+          report and are never displayed publicly.
         </div>
       </div>
 
@@ -235,6 +262,30 @@ export default function ReportIssue() {
             onChange={(e) => setSubmittedAddress(e.target.value)}
             aria-label="Property address"
             autoFocus
+          />
+        </label>
+
+        <label className="field-label">
+          Your name
+          <span className="field-hint">Private &mdash; never shown on the report</span>
+          <input
+            type="text"
+            autoComplete="name"
+            maxLength={200}
+            value={reporterName}
+            onChange={(e) => setReporterName(e.target.value)}
+          />
+        </label>
+
+        <label className="field-label">
+          Your email
+          <span className="field-hint">Private &mdash; only used if we need to follow up</span>
+          <input
+            type="email"
+            autoComplete="email"
+            maxLength={320}
+            value={reporterEmail}
+            onChange={(e) => setReporterEmail(e.target.value)}
           />
         </label>
 
@@ -322,10 +373,14 @@ export default function ReportIssue() {
           I also reported this to the City of Chicago
         </label>
 
-        {reportedToCity && (
+        {showCaseNumber && (
           <label className="field-label">
             City case number
-            <span className="field-hint">Optional &mdash; may help us cross-reference public records</span>
+            <span className="field-hint">
+              {needsCaseNumber
+                ? <>Required for heat, utility, and habitability reports &mdash; the 311 service request or building violation number. We check it against city records before the report can go live.</>
+                : <>Optional &mdash; reports backed by a city record are marked as verified</>}
+            </span>
             <input
               type="text"
               value={cityCaseNumber}

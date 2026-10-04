@@ -13,6 +13,18 @@ import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { getCommunityAreaStats } from '../api.js'
 
+// Popup content goes through setHTML (raw innerHTML), and the values come
+// from the API/GeoJSON rather than being hardcoded -- escape them so a bad
+// row in the database can't become script on the page.
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 // Chicago center
 const CHICAGO_CENTER = [-87.6298, 41.8781]
 const CHICAGO_ZOOM = 10.5
@@ -275,9 +287,9 @@ export default function NeighborhoodMap() {
               .setLngLat(e.lngLat)
               .setHTML(`
                 <div class="map-popup-inner">
-                  <strong>${props.community_name}</strong>
-                  <div>${props.violation_count} violations · ${props.report_count} reports</div>
-                  <div>${props.crime_violent} violent · ${props.crime_property} property crimes</div>
+                  <strong>${escapeHtml(props.community_name)}</strong>
+                  <div>${escapeHtml(props.violation_count)} violations · ${escapeHtml(props.report_count)} reports</div>
+                  <div>${escapeHtml(props.crime_violent)} violent · ${escapeHtml(props.crime_property)} property crimes</div>
                 </div>
               `)
               .addTo(map.current)

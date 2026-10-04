@@ -3,7 +3,7 @@
 // via VITE_API_BASE_URL so dev (localhost:3000) and prod (wherever the
 // API actually deploys to) don't require code changes.
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
+import { API_BASE } from './config.js'
 
 async function request(path) {
   const res = await fetch(`${API_BASE}${path}`)

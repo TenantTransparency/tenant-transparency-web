@@ -9,6 +9,7 @@ export default function AdminModerationQueue({ onLoggedOut }) {
   // report_id, so approving one report doesn't disable the whole list.
   const [notesByReport, setNotesByReport] = useState({})
   const [workingReportId, setWorkingReportId] = useState(null)
+  const [verifiedByReport, setVerifiedByReport] = useState({})
 
   async function loadQueue() {
     setStatus('loading')
@@ -34,8 +35,11 @@ export default function AdminModerationQueue({ onLoggedOut }) {
   async function handleDecision(reportId, decision) {
     setWorkingReportId(reportId)
     try {
-      const action = decision === 'approve' ? approveReport : rejectReport
-      await action(reportId, notesByReport[reportId])
+      if (decision === 'approve') {
+        await approveReport(reportId, notesByReport[reportId], !!verifiedByReport[reportId])
+      } else {
+        await rejectReport(reportId, notesByReport[reportId])
+      }
       // Remove it from the list on success rather than re-fetching the
       // whole queue — the queue can be long, and the decision already
       // tells us what changed.
@@ -94,6 +98,33 @@ export default function AdminModerationQueue({ onLoggedOut }) {
               </div>
 
               <p className="description">{r.description_clean}</p>
+
+              <div className="evidence-block">
+                {r.city_case_number ? (
+                  <>
+                    City case number: <strong>{r.city_case_number}</strong>
+                    {r.evidence_status === 'verified_city_record' ? (
+                      <span className="evidence-ok"> · matched automatically against this property&rsquo;s violation records</span>
+                    ) : (
+                      <label className="evidence-verify">
+                        <input
+                          type="checkbox"
+                          checked={!!verifiedByReport[r.report_id]}
+                          onChange={(e) =>
+                            setVerifiedByReport((prev) => ({ ...prev, [r.report_id]: e.target.checked }))
+                          }
+                        />
+                        I looked this number up on the city portal and it matches this address
+                      </label>
+                    )}
+                  </>
+                ) : (
+                  <span>No city case number &mdash; will publish as a firsthand account.</span>
+                )}
+                {r.requires_city_record && r.evidence_status !== 'verified_city_record' && !verifiedByReport[r.report_id] && (
+                  <div className="pii-flag">Heat/habitability claim: can&rsquo;t publish until the case number is verified.</div>
+                )}
+              </div>
 
               <label className="notes-label">
                 Moderator notes (optional)

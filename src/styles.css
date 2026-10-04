@@ -1596,6 +1596,30 @@ section[id] {
   margin-top: var(--space-3);
 }
 
+/* Report weight: verified (backed by a city record) vs firsthand account. */
+.evidence-badge {
+  border-radius: var(--radius-full);
+  padding: 1px 8px;
+  font-weight: 600;
+}
+.evidence-verified_city_record,
+.evidence-moderator_verified {
+  background: var(--sage-light);
+  color: var(--sage);
+}
+.evidence-none {
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.queue-card .evidence-block {
+  font-size: var(--text-sm);
+  margin: var(--space-3) 0;
+}
+.queue-card .evidence-ok { color: var(--sage); font-weight: 600; }
+.queue-card .evidence-verify { display: flex; gap: var(--space-2); align-items: center; margin-top: var(--space-2); }
+
 .tag {
   background: var(--teal-light);
   color: var(--teal-dark);
@@ -3238,3 +3262,17 @@ section[id] {
     max-width: 100%;
   }
 }
+
+/* Property page: links out to the official sex offender registries. */
+.safety-section {
+  border-left: 4px solid var(--amber);
+  background: var(--amber-light);
+  padding: var(--space-4);
+  border-radius: var(--radius-md, 8px);
+}
+.safety-section .safety-links {
+  margin: var(--space-2) 0 var(--space-3);
+  padding-left: 1.2em;
+  line-height: 1.7;
+}
+.safety-section a { color: var(--amber-dark); font-weight: 600; }

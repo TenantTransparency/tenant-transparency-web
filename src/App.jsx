@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import Homepage from './components/Homepage.jsx'
 import PropertySearch from './components/PropertySearch.jsx'
@@ -11,10 +11,17 @@ import Founder from './components/Founder.jsx'
 import SupportTT from './components/SupportTT.jsx'
 import BetaTester from './components/BetaTester.jsx'
 import FoundingCommunity from './components/FoundingCommunity.jsx'
-import NeighborhoodMap from './components/NeighborhoodMap.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import TermsOfUse from './components/TermsOfUse.jsx'
-import AdminApp from './AdminApp.jsx'
+import AuthCallback from './components/AuthCallback.jsx'
+import SeoHead from './SeoHead.jsx'
+
+// Code-split: MapLibre is most of the bundle weight and only /map needs
+// it; the admin console is only ever opened by moderators. Neither should
+// be downloaded by every visitor to the homepage.
+const NeighborhoodMap = lazy(() => import('./components/NeighborhoodMap.jsx'))
+const AdminApp = lazy(() => import('./AdminApp.jsx'))
+const routeFallback = <p className="status-line">Loading…</p>
 
 // Handles in-app anchor links (e.g. /about#contact, /#housing-news) since
 // react-router doesn't scroll to a hash target on its own the way a plain
@@ -54,6 +61,7 @@ export default function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToHash />
+      <SeoHead />
       <Routes>
         <Route path="/" element={<SiteChrome><Homepage /></SiteChrome>} />
         <Route path="/search" element={<SiteChrome><div className="page-content"><RenterSearchFlow /></div></SiteChrome>} />
@@ -62,11 +70,12 @@ export default function App() {
         <Route path="/about" element={<SiteChrome><About /></SiteChrome>} />
         <Route path="/founder" element={<SiteChrome><Founder /></SiteChrome>} />
         <Route path="/support" element={<SiteChrome><SupportTT /></SiteChrome>} />
-        <Route path="/map" element={<SiteChrome hideFooter><NeighborhoodMap /></SiteChrome>} />
+        <Route path="/map" element={<SiteChrome hideFooter><Suspense fallback={routeFallback}><NeighborhoodMap /></Suspense></SiteChrome>} />
         <Route path="/privacy" element={<SiteChrome><PrivacyPolicy /></SiteChrome>} />
         <Route path="/terms" element={<SiteChrome><TermsOfUse /></SiteChrome>} />
         <Route path="/beta" element={<SiteChrome><BetaTester /></SiteChrome>} />
         <Route path="/founding-community" element={<SiteChrome><FoundingCommunity /></SiteChrome>} />
+        <Route path="/auth/callback" element={<SiteChrome><AuthCallback /></SiteChrome>} />
         <Route
           path="/admin"
           element={
@@ -77,7 +86,9 @@ export default function App() {
                 </Link>
               </header>
               <main className="app-main page-content">
-                <AdminApp />
+                <Suspense fallback={routeFallback}>
+                  <AdminApp />
+                </Suspense>
               </main>
             </div>
           }

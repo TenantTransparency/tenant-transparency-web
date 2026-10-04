@@ -3,7 +3,7 @@
 // token and 401s mean "log in again", not "show an error banner" —
 // different failure handling than the public search endpoints.
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'
+import { API_BASE } from './config.js'
 
 const ACCESS_TOKEN_KEY = 'tt_admin_access_token'
 const REFRESH_TOKEN_KEY = 'tt_admin_refresh_token'
@@ -100,11 +100,11 @@ export function listPendingReports() {
   return authedRequest('/api/admin/reports/pending')
 }
 
-export function approveReport(reportId, notes) {
+export function approveReport(reportId, notes, evidenceVerified = false) {
   return authedRequest(`/api/admin/reports/${reportId}/approve`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ notes: notes || null }),
+    body: JSON.stringify({ notes: notes || null, evidence_verified: evidenceVerified }),
   })
 }
 

@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react'
 import { getPropertyDetail } from '../api.js'
 
+// Weight of a published report. Verified ones are backed by a city record
+// someone can look up; firsthand accounts are real warnings that simply
+// don't have a paper trail (e.g. inappropriate conduct).
+const EVIDENCE_LABELS = {
+  verified_city_record: 'Verified against city records',
+  moderator_verified: 'City case number verified',
+  none: 'Firsthand account',
+}
+
 export default function PropertyDetail({ propertyId, onBack }) {
   const [detail, setDetail] = useState(null)
   const [status, setStatus] = useState('loading') // loading | error | ready
@@ -103,7 +112,10 @@ export default function PropertyDetail({ propertyId, onBack }) {
               <div className="report-row" key={r.report_id}>
                 <div className="top-line">
                   <span>{r.report_sentiment}</span>
-                  <span>{r.incident_date}</span>
+                  <span>{r.incident_month}</span>
+                  <span className={`evidence-badge evidence-${r.evidence_status}`}>
+                    {EVIDENCE_LABELS[r.evidence_status] || EVIDENCE_LABELS.none}
+                  </span>
                 </div>
                 <div className="description">{r.description_clean}</div>
                 <div className="tag-list">
@@ -115,6 +127,36 @@ export default function PropertyDetail({ propertyId, onBack }) {
                 </div>
               </div>
             ))}
+          </section>
+
+          {/* Links out to the official registries rather than TT asserting
+              anything itself: the renter searches this address and the
+              landlord / manager names above against the source directly. */}
+          <section className="detail-section safety-section">
+            <h2>Safety Check</h2>
+            <p>
+              Before you sign, look up this address and the names of the landlord, property
+              manager, and anyone else who will have access to your unit on the official
+              sex offender registries:
+            </p>
+            <ul className="safety-links">
+              <li>
+                <a href="https://sor.isp.illinois.gov/" target="_blank" rel="noopener noreferrer">
+                  Illinois State Police Sex Offender Registry
+                </a>{' '}
+                &mdash; search by name or by address and radius
+              </li>
+              <li>
+                <a href="https://www.nsopw.gov/" target="_blank" rel="noopener noreferrer">
+                  National Sex Offender Public Website (U.S. DOJ)
+                </a>{' '}
+                &mdash; searches every state, for owners or managers who live elsewhere
+              </li>
+            </ul>
+            <p className="field-hint">
+              You have the right to ask who holds keys to your unit and when they may enter.
+              Chicago landlords generally must give notice before non-emergency entry.
+            </p>
           </section>
         </>
       )}
