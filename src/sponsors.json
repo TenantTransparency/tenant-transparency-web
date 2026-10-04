@@ -1,0 +1,4 @@
+{
+  "_readme": "Hand-approved sponsorships. Add an entry only after the advertiser and creative are approved (see AD_AND_SPONSORSHIP_DESIGN.md). An entry shows only while approved is true and today is between startDate and endDate. placement must be one of the keys in src/components/SponsoredSlot.jsx. Leave the list empty and nothing is shown.",
+  "sponsorships": []
+}

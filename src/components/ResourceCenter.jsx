@@ -2,6 +2,8 @@
 // loads via <a href>, not React Router <Link>, so crawlers get the
 // pre-rendered HTML and schema markup directly.
 
+import SponsoredSlot from './SponsoredSlot.jsx'
+
 const GUIDES = [
   {
     slug: 'chicago-renters-rights-guide',
@@ -111,6 +113,8 @@ export default function ResourceCenter() {
           <a href="/report-issue" className="cta-secondary">Report an Issue</a>
         </div>
       </div>
+
+      <SponsoredSlot placement="resource_footer" />
 
     </div>
   )

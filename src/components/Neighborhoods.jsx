@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getCommunityAreaStats, getAreaTopProperties } from '../api.js'
 import { setMeta, metaTag, SITE, DEFAULT_IMAGE } from '../SeoHead.jsx'
 import { propertyPath, titleCaseAddress } from '../propertyUrl.js'
+import SponsoredSlot from './SponsoredSlot.jsx'
 import {
   areaDisplayName,
   findAreaBySlug,
@@ -155,6 +156,8 @@ export default function Neighborhood() {
           not legal advice.
         </p>
       </section>
+
+      <SponsoredSlot placement="neighborhood_panel" />
 
       <section className="detail-section">
         <h2>Buildings in {name} with the most violations on record</h2>
