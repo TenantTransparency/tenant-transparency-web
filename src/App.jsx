@@ -70,9 +70,11 @@ function PropertyPage() {
 // filling them out can jump back to the rest of the site if they need to
 // recheck something) but stay direct-link-only — Sheenita asked that they
 // not appear as links anywhere in the main navigation itself.
-export default function App() {
+// Routes only, so the build-time prerender (entry-server.jsx) can render the
+// same tree inside a StaticRouter.
+export function AppRoutes() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <>
       <ScrollToHash />
       <SeoHead />
       <Routes>
@@ -110,6 +112,14 @@ export default function App() {
           }
         />
       </Routes>
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <AppRoutes />
     </BrowserRouter>
   )
 }

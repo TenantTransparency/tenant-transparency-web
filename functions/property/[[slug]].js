@@ -24,7 +24,7 @@ ${owners ? `<h2>Ownership on file</h2><ul>${owners}</ul>` : ''}
 <h2>Building violations (${seo.violations})</h2>${recent ? `<ul>${recent}</ul>` : '<p>No violations appear in the public records we reviewed.</p>'}
 <h2>Renter reports (${seo.reports})</h2>
 <p>Information is compiled from public records and moderated renter reports for general reference only. It may be incomplete or out of date and is not legal advice.</p>
-<p><a href="/search">Search Chicago properties</a></p>
+<p><a href="/search">Search Chicago properties</a> &middot; <a href="/neighborhoods">Browse Chicago neighborhoods</a></p>
 </main>`
 }
 

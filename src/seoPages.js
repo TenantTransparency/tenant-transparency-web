@@ -21,6 +21,15 @@ export const PAGES = {
       ['/report-issue', 'Report a housing concern'],
     ],
   },
+  '/neighborhoods': {
+    title: 'Chicago Neighborhoods: Renter Guides for All 77 Community Areas | Tenant Transparency',
+    description:
+      'Browse all 77 Chicago community areas. See public building violation counts, renter reports and tenant-rights resources for each neighborhood before you lease.',
+    h1: 'Chicago Neighborhoods',
+    intro:
+      'Pick a community area to see what public records show for renters there, then search a specific building before you lease.',
+    links: [['/map', 'View the interactive map']],
+  },
   '/search': {
     title: 'Search Chicago Properties and Landlords | Tenant Transparency',
     description:

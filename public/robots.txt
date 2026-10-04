@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /_prerender/
 
 Sitemap: https://tenanttransparency.com/sitemap.xml
 Sitemap: https://tenanttransparency.com/sitemap-properties.xml

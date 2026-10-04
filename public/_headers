@@ -15,3 +15,9 @@
 /admin*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
+
+# Build-time prerendered copies of the main pages, served by functions/_middleware.js.
+# Not meant to be found or indexed at these URLs.
+/_prerender/*
+  X-Robots-Tag: noindex, nofollow
+  X-Prerendered: 1
