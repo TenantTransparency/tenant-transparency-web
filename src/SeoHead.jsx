@@ -6,8 +6,8 @@ import { useLocation } from 'react-router-dom'
 // crawler. Updates the head on each navigation. Googlebot renders JS and
 // picks these up. The static guides in /public carry their own head tags.
 
-const SITE = 'https://tenanttransparency.com'
-const DEFAULT_IMAGE = `${SITE}/logo.png`
+export const SITE = 'https://tenanttransparency.com'
+export const DEFAULT_IMAGE = `${SITE}/logo.png`
 
 const PAGES = {
   '/': {
@@ -63,7 +63,7 @@ const PAGES = {
   '/admin': { title: 'Admin | Tenant Transparency', noindex: true },
 }
 
-function setMeta(selector, create, value) {
+export function setMeta(selector, create, value) {
   let el = document.head.querySelector(selector)
   if (value == null) {
     el?.remove()
@@ -76,7 +76,7 @@ function setMeta(selector, create, value) {
   el.setAttribute(el.tagName === 'LINK' ? 'href' : 'content', value)
 }
 
-const metaTag = (attr, key) => () => {
+export const metaTag = (attr, key) => () => {
   const el = document.createElement('meta')
   el.setAttribute(attr, key)
   return el
@@ -87,6 +87,9 @@ export default function SeoHead() {
 
   useEffect(() => {
     const path = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname
+    // Property pages set their own title, description and canonical once the
+    // property has loaded (PropertyDetail.jsx).
+    if (path.startsWith('/property/')) return
     const page = PAGES[path] || PAGES['/']
     const url = `${SITE}${path === '/' ? '/' : path}`
 

@@ -102,10 +102,10 @@ export default function PropertySearch({ onSelectProperty }) {
               <div
                 key={p.property_id}
                 className="result-card"
-                onClick={() => onSelectProperty(p.property_id)}
+                onClick={() => onSelectProperty(p.property_id, p.address)}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && onSelectProperty(p.property_id)}
+                onKeyDown={(e) => e.key === 'Enter' && onSelectProperty(p.property_id, p.address)}
               >
                 <div className="address">{p.address}</div>
                 <div className="meta">

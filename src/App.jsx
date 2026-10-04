@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import Homepage from './components/Homepage.jsx'
 import PropertySearch from './components/PropertySearch.jsx'
 import PropertyDetail from './components/PropertyDetail.jsx'
@@ -15,6 +15,7 @@ import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import TermsOfUse from './components/TermsOfUse.jsx'
 import AuthCallback from './components/AuthCallback.jsx'
 import SeoHead from './SeoHead.jsx'
+import { propertyPath, propertyIdFromSlug } from './propertyUrl.js'
 
 // Code-split: MapLibre is most of the bundle weight and only /map needs
 // it; the admin console is only ever opened by moderators. Neither should
@@ -42,13 +43,24 @@ function ScrollToHash() {
 }
 
 function RenterSearchFlow() {
-  const [selectedPropertyId, setSelectedPropertyId] = useState(null)
+  const navigate = useNavigate()
+  // Each property has its own URL so it can be bookmarked, shared and indexed.
+  return <PropertySearch onSelectProperty={(id, address) => navigate(propertyPath(id, address))} />
+}
 
-  return selectedPropertyId ? (
-    <PropertyDetail propertyId={selectedPropertyId} onBack={() => setSelectedPropertyId(null)} />
-  ) : (
-    <PropertySearch onSelectProperty={setSelectedPropertyId} />
-  )
+function PropertyPage() {
+  const { slug } = useParams()
+  const navigate = useNavigate()
+  const propertyId = propertyIdFromSlug(slug)
+  if (!propertyId) {
+    return (
+      <div className="detail-panel">
+        <p className="status-line error">That property link is not valid.</p>
+        <Link to="/search">Search properties</Link>
+      </div>
+    )
+  }
+  return <PropertyDetail propertyId={propertyId} onBack={() => navigate('/search')} />
 }
 
 // "/" and all public-facing routes get full site chrome (nav + footer).
@@ -65,6 +77,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<SiteChrome><Homepage /></SiteChrome>} />
         <Route path="/search" element={<SiteChrome><div className="page-content"><RenterSearchFlow /></div></SiteChrome>} />
+        <Route path="/property/:slug" element={<SiteChrome><div className="page-content"><PropertyPage /></div></SiteChrome>} />
         <Route path="/report-issue" element={<SiteChrome><div className="page-content"><ReportIssue /></div></SiteChrome>} />
         <Route path="/resources" element={<SiteChrome><ResourceCenter /></SiteChrome>} />
         <Route path="/about" element={<SiteChrome><About /></SiteChrome>} />

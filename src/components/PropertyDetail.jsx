@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getPropertyDetail } from '../api.js'
+import { setMeta, metaTag, SITE, DEFAULT_IMAGE } from '../SeoHead.jsx'
+import { propertyPath, propertySeo } from '../propertyUrl.js'
 
 // Weight of a published report. Verified ones are backed by a city record
 // someone can look up; firsthand accounts are real warnings that simply
@@ -37,6 +39,30 @@ export default function PropertyDetail({ propertyId, onBack }) {
       cancelled = true
     }
   }, [propertyId])
+
+  // Head tags for this property. The edge function sets the same values in the
+  // server-rendered HTML; this keeps them right when navigating in the app.
+  useEffect(() => {
+    if (!detail) return
+    const seo = propertySeo(detail)
+    const url = `${SITE}${propertyPath(detail.property_id, detail.address)}`
+    document.title = seo.title
+    setMeta('meta[name="description"]', metaTag('name', 'description'), seo.description)
+    setMeta('meta[name="robots"]', metaTag('name', 'robots'), seo.indexable ? null : 'noindex, follow')
+    setMeta('meta[property="og:title"]', metaTag('property', 'og:title'), seo.title)
+    setMeta('meta[property="og:description"]', metaTag('property', 'og:description'), seo.description)
+    setMeta('meta[property="og:url"]', metaTag('property', 'og:url'), url)
+    setMeta('meta[property="og:image"]', metaTag('property', 'og:image'), DEFAULT_IMAGE)
+    setMeta(
+      'link[rel="canonical"]',
+      () => {
+        const el = document.createElement('link')
+        el.setAttribute('rel', 'canonical')
+        return el
+      },
+      url,
+    )
+  }, [detail])
 
   return (
     <div className="detail-panel">
