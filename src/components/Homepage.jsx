@@ -21,24 +21,6 @@ const NEIGHBORHOOD_LINKS = {
 const neighborhoodLink = (name) =>
   NEIGHBORHOOD_LINKS[name] || `/neighborhood/${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
 
-const VOICES = [
-  {
-    quote: "I found out about a lead violation before I ever toured the unit. This site saved me from making a huge mistake.",
-    name: 'Chicago Renter',
-    location: 'Logan Square',
-  },
-  {
-    quote: "The fee breakdown alone saved me $400. I went in knowing exactly what to push back on before I even sat down.",
-    name: 'Chicago Renter',
-    location: 'Pilsen',
-  },
-  {
-    quote: "Finally a place to put concerns on the record. My landlord can't pretend the mold reports don't exist anymore.",
-    name: 'Chicago Renter',
-    location: 'Bronzeville',
-  },
-]
-
 const NEWS = [
   {
     tag: 'Policy',
@@ -415,31 +397,6 @@ export default function Homepage() {
               ))}
             </div>
             <Link to="/neighborhoods" className="cta-primary">Explore all neighborhoods</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Community Voices ── */}
-      <section className="voices-section" id="community-voices">
-        <div className="voices-section-inner">
-          <div className="section-header">
-            <div>
-              <span className="section-eyebrow">Community Voices</span>
-              <h2>Renter voices.</h2>
-            </div>
-            <Link to="/report-issue" className="cta-secondary">Share your experience</Link>
-          </div>
-          <div className="voices-grid">
-            {VOICES.map((v, i) => (
-              <div className="voice-card" key={i}>
-                <div className="voice-quote-mark">&ldquo;</div>
-                <blockquote>{v.quote}</blockquote>
-                <div className="voice-meta">
-                  <strong>{v.name}</strong>
-                  <span>{v.location}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
