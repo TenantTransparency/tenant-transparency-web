@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/chicago-move-out-documentation/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -66,6 +66,16 @@
       "@type": "Question",
       "name": "How does move-out documentation help if my deposit is wrongly withheld?",
       "acceptedAnswer": { "@type": "Answer", "text": "Chicago RLTO Section 5-12-080 requires landlords to support any damage deduction with an itemized statement and receipts. Dated photos and a written condition report from move-out let you directly contest deductions for damage that wasn't there, or that qualifies as normal wear and tear rather than tenant-caused damage." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I never documented my move-in condition?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Build a baseline from old rental listing photos, your move-in paperwork, early photos on your phone, and early messages that mention existing problems, then document your move-out condition thoroughly with dated photos and a narrated video." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I prove the date I moved out of a Chicago rental?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Return the keys to a named person and get a written acknowledgment, or send them by a traced delivery method. Keep the receipt and send your forwarding address in writing the same day, since the move-out date starts the 30-day and 45-day deposit clocks." }
     }
   ]
 }
@@ -104,8 +114,7 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #moveout-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #moveout-tool h2 { border: none; margin-top: 0; }
+  #moveout-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -127,6 +136,25 @@
   #result-box h3 { margin-top: 0; }
   #result-box pre { white-space: pre-wrap; font-family: inherit; font-size: 0.9rem; }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+
+  figure.lead-image { margin: 0 0 24px; }
+  .lead-image img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .lead-image figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 20px; margin: 20px 0 28px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.05rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  .callout { background: var(--card); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem; }
+  .callout strong.t { display: block; margin-bottom: 4px; }
+  .example { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.95rem; }
+  .example strong.t { display: block; color: var(--accent); margin-bottom: 4px; }
+  .scroll-x { overflow-x: auto; }
+  .note { color: var(--muted); font-size: 0.85rem; }
+  .err { color: #a13327; font-weight: 600; }
+  th, td { vertical-align: top; }
+  .room-card select, .room-card input[type=number] { padding: 7px 8px; border: 1px solid var(--line); border-radius: 6px; font-size: 0.9rem; font-family: inherit; }
+  .room-meta { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; margin-bottom: 8px; }
+  .room-card textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; font-family: inherit; font-size: 0.92rem; }
 </style>
 </head>
 <body>
@@ -174,36 +202,81 @@
   This article explains general best practices for informational purposes only. If your landlord has already withheld part of your deposit, see our companion article on disputing a wrongful deduction, or consult a licensed Illinois attorney.
 </div>
 
+<div class="glance">
+  <h2>At a glance</h2>
+  <ul>
+    <li>The day you return keys starts the 30-day and 45-day deposit clocks. Make that date provable.</li>
+    <li>A landlord can deduct only for unpaid rent and for damage you caused beyond normal wear. Dated photos are how you show which is which.</li>
+    <li>Photograph and video every room, close and wide, with a date visible, and compare to your move-in record.</li>
+    <li>Ask for a walkthrough in writing before you leave, and get any agreed checklist signed or confirmed by email.</li>
+  </ul>
+</div>
+
 <nav class="toc" aria-label="Table of contents">
   <h2>What's in this article</h2>
   <ol>
     <li><a href="#why">Why documentation matters</a></li>
+    <li><a href="#movein">If you did not document move-in</a></li>
     <li><a href="#what-to-do">What to do before you hand back keys</a></li>
+    <li><a href="#rooms">What to capture, room by room</a></li>
     <li><a href="#moveout-tool">Free tool: move-out condition report</a></li>
-    <li><a href="#inspection">Requesting a pre-move-out walkthrough</a></li>
+    <li><a href="#cleaning">Cleaning, repairs and utilities</a></li>
+    <li><a href="#inspection">The walkthrough with your landlord</a></li>
+    <li><a href="#files">Keeping your evidence safe</a></li>
     <li><a href="#timeline">Timeline checklist</a></li>
+    <li><a href="#example">A worked example</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ol>
 </nav>
 
 <h2 id="why">1. Why documentation matters</h2>
-<p>Under RLTO Section 5-12-080, a landlord can only deduct from your deposit for unpaid rent or tenant-caused damage beyond normal wear and tear, and any deduction has to come with an itemized statement backed by receipts. In a dispute, the tenant with dated photos, a written condition record, and a paper trail of communication has a dramatically stronger position than one relying on memory. This works both ways: good documentation protects tenants who did nothing wrong, and clarifies genuine damage disputes faster for everyone.</p>
+<p>Under RLTO Section 5-12-080, a landlord can only deduct from your deposit for unpaid rent or for damage you caused beyond normal wear and tear. Any deduction has to come with an itemized statement within 30 days of your move-out, and the deposit, less lawful deductions, is due within 45 days. In a dispute, the person with dated photos, a written condition record and a trail of messages starts from a much stronger place than the person relying on memory.</p>
+<p>It helps to think about who needs to prove what. A landlord who deducts has to be able to justify each item. You do not have to prove the unit was perfect, but you need evidence for the moment a deduction does not match what you left behind. Good documentation works both ways. It protects tenants who did nothing wrong, and it settles genuine damage disputes faster for everyone.</p>
 
-<h2 id="what-to-do">2. What to do before you hand back keys</h2>
+<h2 id="movein">2. If you did not document move-in</h2>
+<p>Move-out photos are strongest when you can compare them with move-in photos. If you do not have those, you can still build a baseline:</p>
+<ul class="plain">
+  <li><strong>Look for the listing.</strong> Old rental listing photos, including archived or cached versions, can show the condition before you arrived.</li>
+  <li><strong>Check your move-in paperwork.</strong> Many landlords hand over a condition checklist at move-in. Look in your lease packet and email.</li>
+  <li><strong>Search your phone.</strong> Early photos taken for another reason, such as showing furniture placement or a video call, can show walls, floors and fixtures.</li>
+  <li><strong>Collect messages.</strong> Emails or texts from early in the tenancy that mention existing problems, like a stained ceiling or a broken blind, are useful.</li>
+  <li><strong>Ask neighbors or former tenants,</strong> if they are willing to confirm the condition of similar units.</li>
+</ul>
+<p>If you are a current tenant who has not yet moved out, take a full set of photos now. Dated photos of your unit today are valuable even if the tenancy is already underway.</p>
+
+<h2 id="what-to-do">3. What to do before you hand back keys</h2>
 <ol class="steps">
-  <li><strong>Photograph every room</strong> — wide shots of the whole room plus close-ups of floors, walls, appliances, fixtures, and any existing damage or wear.</li>
-  <li><strong>Get a timestamp in frame</strong> or use a phone camera with location/date stamping enabled, so the date isn't just metadata that can be questioned.</li>
-  <li><strong>Record a short walkthrough video</strong> narrating the date and describing each room as you go.</li>
-  <li><strong>Compare to your move-in documentation</strong> if you have it — this is the clearest way to show what changed and what didn't.</li>
-  <li><strong>Fill out a written condition report</strong> room by room (use the tool below) and keep a copy for yourself.</li>
-  <li><strong>Note the date you returned keys</strong> in writing — this is what starts the 45-day deposit return clock.</li>
+  <li><strong>Finish moving first.</strong> Photograph the unit only after it is empty and cleaned, so the images show its final condition.</li>
+  <li><strong>Photograph every room.</strong> Wide shots of the whole room from each corner, plus close-ups of floors, walls, ceilings, appliances, fixtures and any existing damage or wear.</li>
+  <li><strong>Show a date.</strong> Use a phone camera setting that burns in the date, or include a phone screen showing the date in the first frame of each room. The date should be provable, not just metadata that can be questioned.</li>
+  <li><strong>Record a walkthrough video.</strong> Narrate the date and describe each room as you move through it. Say what is damaged and what is not. A continuous, unedited video is hard to dispute.</li>
+  <li><strong>Compare to your move-in record</strong> if you have it. This is the clearest way to show what changed and what did not.</li>
+  <li><strong>Fill out a written condition report</strong> room by room. Use the tool below and keep a copy.</li>
+  <li><strong>Return the keys in a way you can prove.</strong> Hand them to a named person and get a written acknowledgment, or send them by traced delivery. Write down the date. That date starts the deposit clocks.</li>
+  <li><strong>Send your forwarding address in writing</strong> the same day.</li>
 </ol>
 
-<h2 id="moveout-tool">3. Free tool: Move-Out Condition Report Generator</h2>
-<p class="tool-sub">No signup. Runs in your browser. Add a room, note its condition, and repeat for every room in the unit. Download the finished report to keep alongside your photos.</p>
+<h2 id="rooms">4. What to capture, room by room</h2>
+<div class="scroll-x">
+<table>
+  <tr><th>Area</th><th>Capture</th></tr>
+  <tr><td>Entry and hallway</td><td>Door and frame, locks, flooring, walls, light fixtures, smoke and carbon monoxide detectors, closet doors</td></tr>
+  <tr><td>Living room</td><td>Floors and corners, walls and any holes or marks, windows and blinds, outlets and switches, ceiling, radiators or vents</td></tr>
+  <tr><td>Kitchen</td><td>Inside the oven, stove top, refrigerator and freezer, dishwasher, sink and faucet, cabinet interiors, counters, floor under where appliances sat, exhaust fan</td></tr>
+  <tr><td>Bathroom</td><td>Tub or shower, tiles and grout, toilet, sink and vanity, mirror, exhaust fan, floor, ceiling for water stains</td></tr>
+  <tr><td>Bedrooms</td><td>Floors, closet interiors, walls, windows and screens, ceiling, blinds</td></tr>
+  <tr><td>Storage, balcony or porch</td><td>Floors, railings, storage unit interior, anything the landlord provided</td></tr>
+  <tr><td>Appliances and fixtures</td><td>Make and model labels where visible, with each appliance on and working if you can show it</td></tr>
+  <tr><td>Utility meters</td><td>Final readings with the date, for gas, electric and water if separately metered</td></tr>
+</table>
+</div>
+<p>When you photograph a flaw, include something that shows scale, such as a coin or a ruler, and take one wider shot that shows where it is in the room. A close-up of a scuff on its own cannot be placed. A pair of photos can.</p>
 
-<div id="moveout-tool">
+<h2 id="moveout-tool">5. Free tool: Move-Out Condition Report Generator</h2>
+<p class="tool-sub">No signup. Runs in your browser. For every room, pick its condition, count your photos and videos, and add notes. Download the finished report and keep it with your photos.</p>
+
+<div id="moveout-tool-box">
   <div class="q-row">
     <div class="q-block">
       <label for="q-name">Your name</label>
@@ -229,43 +302,102 @@
   <div id="result-box"></div>
 </div>
 
-<h2 id="inspection">4. Requesting a pre-move-out walkthrough</h2>
-<p>Asking your landlord for a walkthrough before your final move-out gives you a preview of what they might flag, so you can address small things or document a disagreement in advance — before your deposit is on the line. Put the request in writing (email is fine) when you send your move-out notice, and keep a copy.</p>
+<h2 id="cleaning">6. Cleaning, repairs and utilities</h2>
+<h3>Cleaning</h3>
+<p>Your lease is the best guide to what cleaning is expected, and the common standard is returning the unit in the condition you received it, apart from normal wear. Clean thoroughly, then photograph the result. Keep receipts if you pay for professional cleaning or rent equipment. A landlord who bills you for cleaning after your photos show a clean unit has a hard time justifying it.</p>
+<h3>Repairs</h3>
+<p>Fix small things you caused, like a cracked outlet cover or a missing blind slat, if you can do it properly and cheaply. Do not paint, patch or alter things you are not sure about, because the lease may require written consent for alterations. If you are not sure whether something is your responsibility, ask in writing before you leave.</p>
+<h3>Utilities</h3>
+<p>Final bills in your name should be settled and service transferred or closed on the right date. Unpaid utility bills can turn into a dispute later. Keep your final meter readings and the closing confirmations with your move-out file.</p>
 
-<h2 id="timeline">5. Timeline checklist</h2>
+<h2 id="inspection">7. The walkthrough with your landlord</h2>
+<p>Asking your landlord for a walkthrough before your final move-out gives you a preview of what they might flag, so you can fix small things or document a disagreement in advance, while the deposit is not yet at stake. Put the request in writing when you send your move-out notice, and keep a copy.</p>
+<div class="callout">
+  <strong class="t">A simple request you can send</strong>
+  "Hello, I will be moving out on [date]. I would like to schedule a walkthrough of the unit on [date or window] so we can review its condition together. Please let me know what times work for you. I will return the keys on [date] and can provide my forwarding address at that time. Thank you."
+</div>
+<p>If the landlord does the walkthrough, ask for a written list of anything they plan to charge for. If they will not put it in writing, send a summary yourself by email afterward: "Thanks for walking through the unit today. As I understood it, you did not identify any issues, other than [item]. Please let me know if I missed anything." A calm recap in writing creates a record of what was said.</p>
+<p>If the landlord refuses to do a walkthrough, or does not respond, your own documentation is what you rely on. Note the date and manner of your request, and carry on.</p>
+
+<h2 id="files">8. Keeping your evidence safe</h2>
+<ul class="plain">
+  <li><strong>Back it up twice.</strong> Copy photos and video to cloud storage and to a second location the same day.</li>
+  <li><strong>Do not edit the originals.</strong> Filters, crops and compression can raise questions about authenticity. Keep the original files untouched and work on copies if you need to.</li>
+  <li><strong>Name files consistently.</strong> For example, 2026-10-31_kitchen_oven-interior_01.jpg. A judge or mediator can follow a folder organized by room and date.</li>
+  <li><strong>Keep the original device if you can.</strong> The metadata on photos, such as the time and the device, can matter if a date is questioned.</li>
+  <li><strong>Keep the paper too.</strong> Save the condition report, the key return receipt, the forwarding address email and any landlord replies in one folder.</li>
+</ul>
+
+<h2 id="timeline">9. Timeline checklist</h2>
+<div class="scroll-x">
 <table>
   <tr><th>When</th><th>Do this</th></tr>
-  <tr><td>2–4 weeks before move-out</td><td>Send written move-out notice; request a walkthrough</td></tr>
-  <tr><td>Final week</td><td>Address anything from the walkthrough you're responsible for</td></tr>
-  <tr><td>Move-out day</td><td>Photograph and video every room; complete the condition report; note the date keys are returned</td></tr>
-  <tr><td>Within 30 days after</td><td>Watch for the landlord's itemized statement, if any deductions are claimed</td></tr>
-  <tr><td>Within 45 days after</td><td>Deposit and interest are due back in full, or with the itemized statement</td></tr>
+  <tr><td>2 to 4 weeks before move-out</td><td>Send written move-out notice as your lease requires. Request a walkthrough. Look up your deposit receipt and bank information.</td></tr>
+  <tr><td>Final 2 weeks</td><td>Address anything from the walkthrough that you are responsible for. Schedule utility transfers or closures.</td></tr>
+  <tr><td>Day before move-out</td><td>Clean the unit and remove everything. Gather keys, fobs and garage openers.</td></tr>
+  <tr><td>Move-out day</td><td>Photograph and video every room. Complete the condition report. Take final meter readings. Return keys and get acknowledgment. Send your forwarding address.</td></tr>
+  <tr><td>Day 30 after move-out</td><td>The itemized statement is due, if any deductions are claimed. Note whether one arrived and when.</td></tr>
+  <tr><td>Day 45 after move-out</td><td>The deposit and interest are due back in full, or in full less lawful deductions. If nothing has arrived, see our <a href="/chicago-deposit-not-returned">deposit dispute guide</a>.</td></tr>
 </table>
+</div>
 
-<h2 id="related">6. Related articles</h2>
+<h2 id="example">10. A worked example</h2>
+<div class="example">
+  <strong class="t">Priya disputes a $450 carpet charge</strong>
+  Priya lived in a one-bedroom for three years and moved out on August 31. Her move-out photos, taken after cleaning, show the carpet with light wear near the doorway and no stains. Her deposit was $1,600.<br><br>
+  <strong>Oct 1:</strong> She receives a statement, 31 days after move-out, that deducts $450 for "carpet replacement." It includes no invoice and no age for the carpet.<br>
+  <strong>Her response:</strong> She emails the landlord, attaches three photos, and asks for the invoice, the date the work was done, and the age of the carpet. She notes that the statement arrived after the 30-day deadline and that the carpet shows ordinary wear after three years.<br>
+  <strong>Result:</strong> The landlord cannot provide the invoice and the charge is dropped. Priya's condition report and dated photos did the work, and the late statement gave her extra leverage.
+</div>
+<p>Priya did not need a lawsuit. She needed a record the landlord could not easily answer.</p>
+
+<h2 id="related">11. Related articles</h2>
 <div class="related">
   <a href="/chicago-deposit-not-returned"><span class="label">Deep dive</span>What to do if your landlord won't return your deposit</a>
   <a href="/chicago-security-deposit-law"><span class="label">Deep dive</span>Security deposit law in Chicago</a>
+  <a href="/chicago-lease-red-flags"><span class="label">Deep dive</span>Chicago lease red flags: clauses and fees that can't be enforced</a>
   <a href="/chicago-habitability-violations"><span class="label">Deep dive</span>What counts as a habitability violation</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">7. FAQ</h2>
+<h2 id="faq">12. FAQ</h2>
 <h3>What should I photograph before moving out?</h3>
-<p>Every room — wide shots and close-ups, including floors, walls, appliances, and any pre-existing damage — with a visible date, plus a narrated walkthrough video.</p>
+<p>Every room, wide shots and close-ups, including floors, walls, appliances, fixtures and any existing damage, with a visible date, plus a narrated walkthrough video.</p>
 <h3>Can I request a pre-move-out inspection?</h3>
 <p>Yes. Ask in writing, ideally alongside your move-out notice, so you know what your landlord may flag before it affects your deposit.</p>
 <h3>How does this help if my deposit is wrongly withheld?</h3>
-<p>Landlords are generally expected to back up deductions with an itemized statement and receipts. Your own dated photos and condition report may help you contest deductions for damage that wasn't there or that's normal wear and tear.</p>
+<p>Landlords are generally expected to back up deductions with an itemized statement and receipts. Your own dated photos and condition report may help you contest deductions for damage that was not there or that is normal wear and tear.</p>
+<h3>What if I never documented move-in?</h3>
+<p>Build a baseline from the old listing photos, your move-in paperwork, early photos on your phone and early messages mentioning existing problems. Then document your move-out thoroughly.</p>
+<h3>What counts as normal wear and tear?</h3>
+<p>The ordinary effects of living in a unit: light carpet wear in walkways, faded paint, small nail holes and minor scuffs. Damage from neglect, accidents or misuse, such as large holes, pet stains or burns, is different.</p>
+<h3>How do I prove the date I moved out?</h3>
+<p>Return keys to a named person and get a written acknowledgment, or send them by a traced method. Keep the receipt, and send your forwarding address in writing the same day.</p>
+<h3>What if my landlord refuses a walkthrough?</h3>
+<p>Keep your written request and rely on your own dated photos, video and condition report. Send a short email summarizing the condition of the unit when you leave.</p>
 
 <footer>
-  Sources: Chicago Municipal Code Section 5-12-080 (RLTO Security Deposits). This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: Chicago Municipal Code Section 5-12-080 (RLTO Security Deposits); City of Chicago Department of Housing, "Chicago Rents Right" RLTO summary. This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
 
 </div>
 
 <script>
 let roomCount = 0;
+
+function escAttr(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+const CONDITIONS = {
+  clean: 'Clean, no damage',
+  wear: 'Normal wear and tear only',
+  preexisting: 'Pre-existing damage (also present at move-in)',
+  damage: 'Damage to discuss'
+};
 
 function addRoom(defaultName) {
   roomCount++;
@@ -275,23 +407,35 @@ function addRoom(defaultName) {
   div.id = id;
   div.innerHTML =
     '<div class="room-card-head">' +
-      '<input type="text" class="room-name" value="' + (defaultName || ('Room ' + roomCount)) + '">' +
-      '<button class="room-remove" onclick="document.getElementById(\'' + id + '\').remove()">Remove</button>' +
+      '<input type="text" class="room-name" aria-label="Room name" value="' + escAttr(defaultName || ('Room ' + roomCount)) + '">' +
+      '<button type="button" class="room-remove" onclick="document.getElementById(\'' + id + '\').remove()">Remove</button>' +
     '</div>' +
-    '<textarea class="room-notes" rows="2" placeholder="Condition notes — e.g. all walls clean, no damage; small scuff on closet door (pre-existing, see photo #4)"></textarea>';
+    '<div class="room-meta">' +
+      '<select class="room-cond" aria-label="Condition">' +
+        '<option value="clean">' + CONDITIONS.clean + '</option>' +
+        '<option value="wear">' + CONDITIONS.wear + '</option>' +
+        '<option value="preexisting">' + CONDITIONS.preexisting + '</option>' +
+        '<option value="damage">' + CONDITIONS.damage + '</option>' +
+      '</select>' +
+      '<input type="number" class="room-media" min="0" step="1" placeholder="Photos and videos" aria-label="Number of photos and videos">' +
+    '</div>' +
+    '<textarea class="room-notes" rows="2" placeholder="Condition notes, for example: walls clean; small scuff on closet door, also present at move-in, see photo 4"></textarea>';
   document.getElementById('room-list').appendChild(div);
 }
 
-// seed with common rooms
-['Living Room', 'Kitchen', 'Bedroom', 'Bathroom'].forEach(r => addRoom(r));
+// seed with common areas
+['Entry and Hallway', 'Living Room', 'Kitchen', 'Bedroom', 'Bathroom', 'Closets and Storage'].forEach(r => addRoom(r));
 
 function collectReport() {
   const name = document.getElementById('q-name').value.trim();
   const address = document.getElementById('q-address').value.trim();
   const moveoutdate = document.getElementById('q-moveoutdate').value;
   const rooms = Array.from(document.querySelectorAll('.room-card')).map(card => {
+    const media = parseInt(card.querySelector('.room-media').value, 10);
     return {
       name: card.querySelector('.room-name').value.trim() || 'Unnamed room',
+      cond: card.querySelector('.room-cond').value,
+      media: isNaN(media) ? null : media,
       notes: card.querySelector('.room-notes').value.trim() || '(no notes entered)'
     };
   });
@@ -299,20 +443,36 @@ function collectReport() {
 }
 
 function buildReportText(r) {
-  let lines = [];
+  const lines = [];
   lines.push("Move-Out Condition Report");
   lines.push("Generated: " + new Date().toLocaleDateString());
   lines.push("Tenant: " + (r.name || "[Your Name]"));
   lines.push("Address: " + (r.address || "[Rental Address]"));
   lines.push("Move-out date: " + (r.moveoutdate || "[not entered]"));
   lines.push("");
+
+  const counts = { clean: 0, wear: 0, preexisting: 0, damage: 0 };
+  let totalMedia = 0;
+  r.rooms.forEach(room => { counts[room.cond]++; if (room.media) totalMedia += room.media; });
+  lines.push("Summary: " + r.rooms.length + " areas documented. " +
+    counts.clean + " clean, " + counts.wear + " normal wear only, " +
+    counts.preexisting + " with pre-existing damage, " + counts.damage + " with damage to discuss.");
+  lines.push("Total photos and videos listed: " + totalMedia);
+  lines.push("");
   lines.push("Room-by-room condition:");
   lines.push("");
   r.rooms.forEach(room => {
-    lines.push("• " + room.name + ": " + room.notes);
+    lines.push("* " + room.name);
+    lines.push("    Condition: " + CONDITIONS[room.cond]);
+    lines.push("    Photos and videos: " + (room.media === null ? "[not entered]" : room.media));
+    lines.push("    Notes: " + room.notes);
+    lines.push("");
   });
+  lines.push("Keys returned: [date, time and to whom]");
+  lines.push("Forwarding address sent: [date and method]");
+  lines.push("Final meter readings: [gas / electric / water]");
   lines.push("");
-  lines.push("Attach dated photos and video for each room referenced above.");
+  lines.push("Attach dated photos and video for each area referenced above.");
   lines.push("");
   lines.push("This report is a personal record created by the tenant for informational purposes and is not a legal document or legal advice.");
   return lines.join("\n");
@@ -322,7 +482,7 @@ function previewReport() {
   const r = collectReport();
   const box = document.getElementById('result-box');
   box.style.display = 'block';
-  box.innerHTML = '<h3>Preview</h3><pre>' + buildReportText(r).replace(/</g,'&lt;') + '</pre>';
+  box.innerHTML = '<h3>Preview</h3><pre>' + escHtml(buildReportText(r)) + '</pre>';
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 

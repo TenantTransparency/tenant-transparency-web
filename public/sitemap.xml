@@ -77,6 +77,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://tenanttransparency.com/chicago-lease-red-flags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tenanttransparency.com/chicago-landlord-entry-retaliation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Housing News — pre-rendered static HTML, fully crawlable -->
   <url>

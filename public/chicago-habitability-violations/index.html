@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/chicago-habitability-violations/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -65,12 +65,22 @@
     {
       "@type": "Question",
       "name": "Is there a dollar limit on repair-and-deduct in Chicago?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Repair-and-deduct is limited to conditions where the reasonable cost of repair doesn't exceed the greater of $500 or one-half of one month's rent, after 14 days' written notice and the landlord's failure to repair." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Repair-and-deduct is limited to conditions where the reasonable cost of repair doesn't exceed the greater of $500 or one-half of one month's rent, and the City's summary adds that it cannot exceed one month's rent. It applies after 14 days' written notice and the landlord's failure to repair, and the tenant must give the landlord receipts." }
     },
     {
       "@type": "Question",
       "name": "Can I just stop paying rent if my landlord won't fix something?",
       "acceptedAnswer": { "@type": "Answer", "text": "Not safely. Rent withholding under the RLTO has to follow the notice-and-cure process, and the amount withheld has to reasonably reflect the reduced value of the unit. Withholding rent without following the process can expose a tenant to a nonpayment eviction, so documentation and written notice matter." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a faster process for essential services like heat or water?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The City of Chicago's plain-language RLTO summary describes a separate track for essential services: after written notice, a tenant may have the service restored and deduct the cost with paid receipts, and may withhold rent after requesting a 24-hour correction. Because withholding carries risk, tenants should document everything and consider talking to a tenant rights organization or attorney first." }
+    },
+    {
+      "@type": "Question",
+      "name": "When does the 14-day repair notice period start?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The clock starts when the landlord actually receives the written notice, not when the tenant sends it, so certified mail with a return receipt or another provable delivery method helps protect the tenant." }
     }
   ]
 }
@@ -109,8 +119,7 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #habitability-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #habitability-tool h2 { border: none; margin-top: 0; }
+  #habitability-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -127,6 +136,22 @@
   #result-box pre { white-space: pre-wrap; font-family: inherit; font-size: 0.9rem; }
   .flag { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; background: var(--card); color: var(--ink); }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+
+  figure.lead-image { margin: 0 0 24px; }
+  .lead-image img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .lead-image figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 20px; margin: 20px 0 28px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.05rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  .callout { background: var(--card); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem; }
+  .callout strong.t { display: block; margin-bottom: 4px; }
+  .example { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.95rem; }
+  .example strong.t { display: block; color: var(--accent); margin-bottom: 4px; }
+  .scroll-x { overflow-x: auto; }
+  .note { color: var(--muted); font-size: 0.85rem; }
+  .err { color: #a13327; font-weight: 600; }
+  th, td { vertical-align: top; }
 </style>
 </head>
 <body>
@@ -174,13 +199,28 @@
   This article explains general rules under the Chicago RLTO for informational purposes only. Withholding rent or making repair-and-deduct decisions incorrectly can expose you to an eviction claim, so if you're facing a serious habitability issue, consult a licensed Illinois attorney or a tenant rights organization before acting.
 </div>
 
+<div class="glance">
+  <h2>At a glance</h2>
+  <ul>
+    <li>Landlords must keep a unit code compliant and fit to live in. That includes heat, water, plumbing, electrical systems, structure, locks and pests.</li>
+    <li>For ordinary repairs, you give written notice and 14 days. For essential services like heat and water, the City describes a faster track.</li>
+    <li>Repair-and-deduct is capped at the greater of $500 or half a month's rent, and the City's summary adds that it cannot exceed one month's rent. You must give the landlord receipts.</li>
+    <li>Withholding rent without following the process can expose you to an eviction case. Follow the notice steps and keep records.</li>
+  </ul>
+</div>
+
 <nav class="toc" aria-label="Table of contents">
   <h2>What's in this article</h2>
   <ol>
     <li><a href="#what-counts">What counts as a violation</a></li>
+    <li><a href="#tracks">Two tracks: repairs and essential services</a></li>
     <li><a href="#notice">The 14-day notice requirement</a></li>
-    <li><a href="#remedies">Your three remedies</a></li>
+    <li><a href="#remedies">Your remedies</a></li>
     <li><a href="#habitability-tool">Free tool: remedy picker &amp; notice generator</a></li>
+    <li><a href="#writing-notice">Writing a notice that works</a></li>
+    <li><a href="#choosing">Choosing a remedy</a></li>
+    <li><a href="#examples">Worked examples</a></li>
+    <li><a href="#city">Getting the City involved</a></li>
     <li><a href="#caps">Dollar limits and what can go wrong</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -188,37 +228,81 @@
 </nav>
 
 <h2 id="what-counts">1. What counts as a violation</h2>
-<p>RLTO Section 5-12-110 defines a habitability violation broadly. It covers a landlord's failure to:</p>
+<p>RLTO Section 5-12-110 defines a habitability problem broadly. It covers a landlord's failure to:</p>
 <ul class="plain">
   <li>Comply with applicable building code requirements</li>
-  <li>Maintain and repair equipment the landlord supplies (heating systems, plumbing fixtures, appliances included in the lease)</li>
+  <li>Maintain and repair equipment the landlord supplies, such as heating systems, plumbing fixtures and appliances included in the lease</li>
   <li>Keep the dwelling unit and common areas in a fit and habitable condition</li>
 </ul>
-<p>In practice, this covers things like: no heat or heat below the legal minimum, no working hot or cold water, broken locks or security hazards, structural problems (unsafe stairs, floors, ceilings), pest infestations, exposed electrical hazards, and mold from unaddressed leaks. It does not cover cosmetic issues or problems the tenant caused.</p>
-
-<h2 id="notice">2. The 14-day notice requirement</h2>
-<p>Before you can use any remedy, you generally need to give the landlord <strong>written notice</strong> specifying the exact condition, and a reasonable opportunity to fix it — the ordinance sets this at <strong>14 days</strong> for most repair and withholding remedies. If you're moving toward lease termination for a serious violation, the notice has to state that the agreement will terminate in not less than 14 days unless the landlord fixes the problem.</p>
-<p>The clock for rent withholding or repair-and-deduct starts when the landlord actually receives your notice, not when you send it — certified mail or another method that documents delivery may help protect you here.</p>
-
-<h2 id="remedies">3. Your three remedies</h2>
+<p>In practice, that reaches a wide range of conditions. Here is how common problems tend to line up:</p>
+<div class="scroll-x">
 <table>
-  <tr><th>Remedy</th><th>When it applies</th></tr>
-  <tr><td><strong>Repair-and-deduct</strong></td><td>Cost of repair is under the greater of $500 or half a month's rent. After 14 days' notice and no fix, you can pay for the repair yourself and deduct the cost from rent.</td></tr>
-  <tr><td><strong>Rent withholding</strong></td><td>You can withhold an amount that "reasonably reflects the reduced value" of the unit while the problem continues — this has to be defensible, not arbitrary.</td></tr>
-  <tr><td><strong>Lease termination</strong></td><td>For material noncompliance that isn't fixed after proper notice, you can terminate and vacate, and you may be entitled to your prepaid rent and security deposit plus interest back.</td></tr>
+  <tr><th>Condition</th><th>Usually a habitability issue?</th><th>Notes</th></tr>
+  <tr><td>No heat or heat below the legal minimum</td><td>Yes</td><td>See our <a href="/chicago-heat-law-utility-complaints">heat law guide</a></td></tr>
+  <tr><td>No running water or hot water</td><td>Yes</td><td>An essential service</td></tr>
+  <tr><td>Broken or missing locks, security hazards</td><td>Yes</td><td>Document the date you reported it</td></tr>
+  <tr><td>Unsafe stairs, floors, railings or ceilings</td><td>Yes</td><td>Structural and code issues</td></tr>
+  <tr><td>Exposed wiring, sparking outlets, failed circuits</td><td>Yes</td><td>Treat as urgent and call 311</td></tr>
+  <tr><td>Leaks causing water damage or mold</td><td>Yes</td><td>The leak is the underlying problem to fix</td></tr>
+  <tr><td>Rodents, roaches, bed bugs or other infestations</td><td>Often</td><td>Responsibility can depend on cause and the lease</td></tr>
+  <tr><td>Broken landlord-supplied appliance</td><td>Often</td><td>If the lease says the landlord provides it</td></tr>
+  <tr><td>Peeling paint, worn carpet, cosmetic wear</td><td>Usually not</td><td>Unless it creates a hazard, such as deteriorating lead paint</td></tr>
+  <tr><td>Problems you or your guests caused</td><td>No</td><td>The landlord may charge you for these</td></tr>
 </table>
+</div>
+<p>If something falls in the gray zone, document it and send a written notice anyway. A notice costs nothing, and it starts the clock.</p>
 
-<h2 id="habitability-tool">4. Free tool: Habitability Remedy Picker &amp; Notice Generator</h2>
+<h2 id="tracks">2. Two tracks: repairs and essential services</h2>
+<p>The City's plain-language summary of the RLTO describes two different paths, depending on what is wrong.</p>
+<div class="scroll-x">
+<table>
+  <tr><th></th><th>Minor defects and repairs</th><th>Essential services</th></tr>
+  <tr><td><strong>Examples</strong></td><td>Leaky faucet, broken cabinet, failed appliance, damaged door</td><td>Heat, running water, hot water, electricity, gas</td></tr>
+  <tr><td><strong>First step</strong></td><td>Written repair request</td><td>Written notice</td></tr>
+  <tr><td><strong>Wait period</strong></td><td>14 days without repairs</td><td>The summary describes requesting correction within 24 hours</td></tr>
+  <tr><td><strong>Then you may</strong></td><td>Have the work done and deduct the cost, within the cap, with code-compliant work and receipts to the landlord</td><td>Have the service restored and deduct the cost with paid receipts, or withhold rent after requesting the 24-hour correction</td></tr>
+</table>
+</div>
+<p>The faster track exists because living without heat or water is a safety issue. Even so, use it carefully. Withholding rent is the riskiest remedy, and a mistake can give a landlord a nonpayment argument. If heat is out in cold weather, call 311 first, then send your written notice the same day. Both create records.</p>
+
+<h2 id="notice">3. The 14-day notice requirement</h2>
+<p>Before you use a remedy for an ordinary defect, you generally need to give the landlord <strong>written notice</strong> specifying the exact condition, and a reasonable opportunity to fix it. The ordinance sets this at <strong>14 days</strong> for most repair and withholding remedies. If you are moving toward lease termination for a serious violation, the notice has to state that the agreement will terminate in not less than 14 days unless the landlord fixes the problem.</p>
+<p>The clock starts when the landlord actually receives your notice, not when you send it. Certified mail with a return receipt, or another method that documents delivery, protects you. Email is useful as a second copy, but do not rely on it alone.</p>
+<div class="example">
+  <strong class="t">Counting the 14 days</strong>
+  Taylor sends a written notice about a leaking kitchen sink by certified mail on March 3. The return receipt shows delivery on March 6. The 14 days run from March 6, so the landlord's window ends on March 20. Taylor waits until after that date before using any remedy, and calendars March 21 as the first day to act.
+</div>
+
+<h2 id="remedies">4. Your remedies</h2>
+<div class="scroll-x">
+<table>
+  <tr><th>Remedy</th><th>When it applies</th><th>Key limits</th></tr>
+  <tr><td><strong>Repair-and-deduct</strong></td><td>After 14 days' written notice with no repair, you can have the work done and deduct the cost from rent</td><td>Capped at the greater of $500 or half a month's rent, and the City's summary says it cannot exceed one month's rent. Work must comply with the building code, and you must give the landlord receipts.</td></tr>
+  <tr><td><strong>Rent withholding</strong></td><td>You can withhold an amount that reasonably reflects the reduced value of the unit while the problem continues</td><td>Must follow the notice process, be defensible and not arbitrary. Withholding too much can lead to a nonpayment case.</td></tr>
+  <tr><td><strong>Lease termination</strong></td><td>For material noncompliance that is not fixed after proper notice, you can terminate and move out</td><td>The notice must state the lease will end in not less than 14 days unless the landlord fixes the problem. You may be entitled to your prepaid rent and deposit with interest back.</td></tr>
+  <tr><td><strong>Damages and fees</strong></td><td>A tenant who prevails under the ordinance can recover costs and reasonable attorney's fees</td><td>Under Section 5-12-180</td></tr>
+</table>
+</div>
+
+<h2 id="habitability-tool">5. Free tool: Habitability Remedy Picker &amp; Notice Generator</h2>
 <p class="tool-sub">No signup. Runs in your browser. Describe the issue and its estimated repair cost to see which remedy generally fits, then download a written notice to send your landlord that starts the 14-day clock.</p>
 
-<div id="habitability-tool">
+<div id="habitability-tool-box">
   <div class="q-block">
     <label for="q-issue">Describe the issue</label>
     <textarea id="q-issue" rows="3" placeholder="e.g. Kitchen sink has been leaking under the cabinet for 3 weeks, causing water damage"></textarea>
   </div>
+  <div class="q-block">
+    <label for="q-type">What kind of problem is it?</label>
+    <select id="q-type">
+      <option value="minor">A repair or defect (leak, broken fixture, appliance, door, lock)</option>
+      <option value="essential">An essential service is out (heat, water, hot water, electricity, gas)</option>
+      <option value="serious">A serious or ongoing condition affecting safety or use of the home (mold, major leak, infestation, unsafe structure)</option>
+    </select>
+  </div>
   <div class="q-row">
     <div class="q-block">
-      <label for="q-cost">Estimated repair cost ($) — leave blank if unsure</label>
+      <label for="q-cost">Estimated repair cost ($), leave blank if unsure</label>
       <input type="number" id="q-cost" min="0" placeholder="e.g. 300">
     </div>
     <div class="q-block">
@@ -247,41 +331,108 @@
   <div id="result-box"></div>
 </div>
 
-<h2 id="caps">5. Dollar limits and what can go wrong</h2>
+<h2 id="writing-notice">6. Writing a notice that works</h2>
+<p>The generator above produces a solid starting letter. A few details separate a notice that helps you from one that does not:</p>
 <ul class="plain">
-  <li><strong>Repair-and-deduct cap:</strong> limited to the greater of $500 or half a month's rent. Going over that amount without a clear basis risks the deduction being challenged.</li>
-  <li><strong>Withholding without notice:</strong> the most common mistake. Withholding rent before giving proper written notice and the 14-day window can expose you to a nonpayment eviction, since the landlord may not know the withholding is protected.</li>
-  <li><strong>No documentation:</strong> photos, dated written notice, and records of landlord communication are what make these remedies defensible if it ends up in court.</li>
-  <li><strong>Utility outages beyond the landlord's control:</strong> if a utility provider itself can't provide service, withholding and termination remedies generally don't apply to that specific failure.</li>
+  <li><strong>Be specific.</strong> "The kitchen sink under-cabinet pipe has leaked since February 10, causing water damage to the cabinet floor" is better than "plumbing problems."</li>
+  <li><strong>State dates.</strong> When it started, when you first reported it, and every earlier attempt to get it fixed.</li>
+  <li><strong>Attach photos.</strong> Show the condition and the date.</li>
+  <li><strong>Offer access.</strong> Give the landlord times they can come, and ask for notice of any entry. See our <a href="/chicago-landlord-entry-retaliation">entry rules guide</a>.</li>
+  <li><strong>Send it so delivery is provable.</strong> Certified mail with a return receipt, plus a copy by email.</li>
+  <li><strong>Keep your own copy,</strong> the receipt and a log of every reply.</li>
+</ul>
+<div class="callout">
+  <strong class="t">You are protected for asking</strong>
+  Asking for required repairs, and complaining to the City, are activities the RLTO protects from retaliation. If your landlord responds with a rent increase, a non-renewal or an eviction threat, see our guide to <a href="/chicago-landlord-entry-retaliation">retaliation and the one-year presumption</a>.
+</div>
+
+<h2 id="choosing">7. Choosing a remedy</h2>
+<div class="scroll-x">
+<table>
+  <tr><th>Situation</th><th>A remedy that often fits</th><th>Main risk</th></tr>
+  <tr><td>One repair, cost under the cap, landlord has gone quiet</td><td>Repair-and-deduct after 14 days</td><td>Work that is not code compliant, or missing receipts</td></tr>
+  <tr><td>A condition continues and cannot be fixed by one repair</td><td>Rent withholding in a defensible amount</td><td>Withholding too much, or too early</td></tr>
+  <tr><td>Heat, water or another essential service is out</td><td>The essential services track, with a 311 report</td><td>Skipping written notice</td></tr>
+  <tr><td>The unit is unsafe and the landlord will not act</td><td>Termination notice, ideally with legal advice</td><td>Moving out without a proper notice and proof</td></tr>
+  <tr><td>You want the building on record</td><td>311 or Department of Buildings complaint</td><td>None, and it does not replace written notice to the landlord</td></tr>
+</table>
+</div>
+<p>Withholding rent comes with an extra consideration in Chicago. The standard lease says that if you withhold more rent than the law allows and are sued, the excess must be deposited with the court. That makes accuracy matter: withhold a defensible amount, document why, and keep records.</p>
+
+<h2 id="examples">8. Worked examples</h2>
+<div class="example">
+  <strong class="t">A $300 leak repair on $1,500 rent</strong>
+  Jordan sends a written notice about a leaking pipe and gets no response in 14 days. The cap on repair-and-deduct is the greater of $500 or half of $1,500, which is $750, and it cannot exceed one month's rent. A licensed plumber quotes $300, within the cap. Jordan has the repair done, keeps the receipt and gives the landlord a copy, then deducts $300 from the next rent payment with a short written explanation.
+</div>
+<div class="example">
+  <strong class="t">No heat in January</strong>
+  The boiler fails on a cold night. Sam calls 311 the same day to request an inspection, then sends a written notice to the landlord with the date, time and indoor temperature readings from the <a href="/chicago-heat-law-utility-complaints">heat tool</a>. This is an essential service, so Sam uses the faster track the City's summary describes and documents everything. If heat is not restored, Sam talks to a tenant rights organization about the next step, rather than guessing.
+</div>
+<div class="example">
+  <strong class="t">A persistent leak and mold</strong>
+  A roof leak keeps causing mold in a bedroom. Alex sends notice, the landlord patches it twice, and it returns. The bedroom is unusable for six weeks. Alex documents the dates, takes photos and keeps a diary of when the room could not be used. A defensible rent reduction might reflect the share of the home that was lost, for example a bedroom out of three rooms, for the weeks it was unusable. There is no fixed formula, so Alex consults an attorney before withholding and records the reasoning.
+</div>
+
+<h2 id="city">9. Getting the City involved</h2>
+<p>A written notice to your landlord and a complaint to the City do different jobs. The notice starts the clock for your remedies. The City complaint puts an independent inspector in the unit and creates a public record.</p>
+<ul class="plain">
+  <li><strong>Call 311</strong> or file online to request a building inspection. Describe the condition and give your address and unit.</li>
+  <li><strong>Be present or give access</strong> for the inspection, and ask for the inspection result in writing.</li>
+  <li><strong>Keep the violation notice,</strong> which shows what the City found and any deadlines it gave the landlord.</li>
+  <li><strong>Check the building's record</strong> on our <a href="/search">property search</a> to see violation history that others have faced there.</li>
+  <li><strong>Tell us what happened.</strong> You can add a moderated report through <a href="/report-issue">Report an Issue</a>, which helps future renters.</li>
 </ul>
 
-<h2 id="related">6. Related articles</h2>
+<h2 id="caps">10. Dollar limits and what can go wrong</h2>
+<ul class="plain">
+  <li><strong>Repair-and-deduct cap:</strong> the greater of $500 or half a month's rent, not exceeding one month's rent. Going over that amount without a clear basis risks the deduction being challenged.</li>
+  <li><strong>Withholding without notice:</strong> the most common mistake. Withholding rent before giving proper written notice and the 14-day window can expose you to a nonpayment eviction, since the landlord may not know the withholding is protected.</li>
+  <li><strong>No documentation:</strong> photos, dated written notice and records of landlord communication are what make these remedies defensible in court.</li>
+  <li><strong>Work that is not up to code:</strong> a repair you arrange has to comply with the building code. Use a qualified professional, not a favor from a friend, and keep the invoice.</li>
+  <li><strong>Missing receipts:</strong> give the landlord copies of the receipts for any repair you deduct.</li>
+  <li><strong>Utility outages beyond the landlord's control:</strong> if a utility provider itself cannot provide service, withholding and termination remedies generally do not apply to that specific failure.</li>
+  <li><strong>Caused by the tenant:</strong> the landlord may charge you for problems you or your guests caused, so do not use these remedies for those.</li>
+</ul>
+
+<h2 id="related">11. Related articles</h2>
 <div class="related">
   <a href="/chicago-heat-law-utility-complaints"><span class="label">Deep dive</span>Heat law and utility complaints</a>
+  <a href="/chicago-landlord-entry-retaliation"><span class="label">Deep dive</span>Landlord entry, retaliation and your right to complain</a>
   <a href="/chicago-move-out-documentation"><span class="label">Deep dive</span>How to document issues before moving out</a>
   <a href="/cook-county-eviction-process"><span class="label">Deep dive</span>How eviction actually works in Cook County</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">7. FAQ</h2>
+<h2 id="faq">12. FAQ</h2>
 <h3>What counts as a habitability violation?</h3>
-<p>Building code noncompliance, failure to maintain supplied equipment, or failure to keep the unit fit and habitable — things like no heat, broken plumbing, structural hazards, or pest infestations.</p>
+<p>Building code noncompliance, failure to maintain supplied equipment, or failure to keep the unit fit and habitable, such as no heat, broken plumbing, structural hazards or pest infestations.</p>
 <h3>How much notice do I have to give before withholding rent?</h3>
-<p>Generally 14 days' written notice describing the specific problem, given before you withhold or repair-and-deduct.</p>
+<p>Generally 14 days of written notice describing the specific problem, given before you withhold or use repair-and-deduct. The City's summary describes a faster track for essential services.</p>
 <h3>Is there a dollar limit on repair-and-deduct?</h3>
-<p>Yes — the greater of $500 or half a month's rent.</p>
+<p>Yes. The greater of $500 or half a month's rent, and the City's summary adds that it cannot exceed one month's rent. You must give the landlord receipts.</p>
 <h3>Can I just stop paying rent if my landlord won't fix something?</h3>
-<p>Not safely — you need to follow the notice-and-cure process first, or you risk a nonpayment eviction claim.</p>
+<p>Not safely. You need to follow the notice-and-cure process first, or you risk a nonpayment eviction claim.</p>
+<h3>Does it matter how I send the notice?</h3>
+<p>Yes. The clock starts when the landlord receives it, so use certified mail with a return receipt, and send an email copy as well.</p>
+<h3>Can my landlord retaliate if I ask for repairs?</h3>
+<p>Retaliation for requesting required repairs or complaining to the City is prohibited, and protected activity within a year before a landlord's act creates a presumption of retaliation. See our retaliation guide.</p>
+<h3>What if the landlord says I caused the problem?</h3>
+<p>Landlords can charge for tenant-caused damage. Your photos and your move-in record help show what was there before. Dated documentation of when the problem began matters most.</p>
 
 <footer>
-  Sources: Chicago Municipal Code Section 5-12-110 (RLTO Tenant Remedies); Chicago Municipal Code Section 5-12-070 (Landlord Maintenance Obligations). This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: Chicago Municipal Code Sections 5-12-070 (Landlord maintenance obligations), 5-12-110 (Tenant remedies) and 5-12-180 (Attorney's fees); City of Chicago Department of Housing, "Chicago Rents Right" RLTO summary. This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
 
 </div>
 
 <script>
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function computeHabitability() {
   const issue = document.getElementById('q-issue').value.trim();
+  const type = document.getElementById('q-type').value;
   const costRaw = document.getElementById('q-cost').value;
   const rentRaw = document.getElementById('q-rent').value;
   const name = document.getElementById('q-name').value.trim();
@@ -291,25 +442,33 @@ function computeHabitability() {
   const cost = costRaw ? parseFloat(costRaw) : null;
   const rent = rentRaw ? parseFloat(rentRaw) : null;
 
+  // Greater of $500 or half a month's rent, and not more than one month's rent (per the City's RLTO summary).
   let cap = null;
   let underCap = null;
   if (rent && !isNaN(rent)) {
-    cap = Math.max(500, rent / 2);
+    cap = Math.min(Math.max(500, rent / 2), rent);
   }
   if (cost !== null && !isNaN(cost) && cap !== null) {
     underCap = cost <= cap;
   }
 
   let recommendation;
-  if (underCap === true) {
-    recommendation = "Repair-and-deduct likely fits — estimated cost is within the greater of $500 or half a month's rent.";
+  if (type === 'essential') {
+    recommendation = "Essential services follow a faster track in the City's RLTO summary: written notice, a request for correction within 24 hours, and then remedies such as having the service restored and deducting the cost with paid receipts, or withholding rent. If heat is out in cold weather, call 311 the same day. Because withholding carries risk, consider speaking with a tenant rights organization or attorney first.";
+    if (underCap === true) {
+      recommendation += " Your estimated cost is within the repair-and-deduct cap.";
+    }
+  } else if (type === 'serious') {
+    recommendation = "A serious or ongoing condition may support rent withholding in a defensible amount, or lease termination if the landlord does not fix it after proper written notice. Document everything, report it to 311 for an inspection record, and consider legal advice before withholding or moving out.";
+  } else if (underCap === true) {
+    recommendation = "Repair-and-deduct likely fits. Your estimated cost is within the cap (the greater of $500 or half a month's rent, not more than one month's rent). Use a qualified professional so the work is code compliant, and give the landlord the receipts.";
   } else if (underCap === false) {
-    recommendation = "Repair-and-deduct's dollar cap likely doesn't fit this cost. Rent withholding or, for serious/persistent issues, lease termination may be more appropriate.";
+    recommendation = "Repair-and-deduct's dollar cap likely does not fit this cost. Rent withholding or, for serious or persistent issues, lease termination may be more appropriate.";
   } else {
     recommendation = "Enter both an estimated cost and your monthly rent to see whether repair-and-deduct fits, or consider rent withholding or lease termination for more serious issues.";
   }
 
-  return { issue, cost, rent, cap, underCap, recommendation, name, address, landlord };
+  return { issue, type, cost, rent, cap, underCap, recommendation, name, address, landlord };
 }
 
 function runHabitabilityTool() {
@@ -320,8 +479,8 @@ function runHabitabilityTool() {
   if (r.cap !== null) {
     html += '<span class="flag">Repair-and-deduct cap: $' + r.cap.toFixed(2) + '</span>';
   }
-  html += '<p>' + r.recommendation + '</p>';
-  html += '<p style="color:#5b6470;font-size:0.85rem;">This is a general estimate for informational purposes only, not a legal determination. All remedies require written notice and a 14-day opportunity to repair first.</p>';
+  html += '<p>' + esc(r.recommendation) + '</p>';
+  html += '<p style="color:#5b6470;font-size:0.85rem;">This is a general estimate for informational purposes only, not a legal determination. Remedies require written notice first, and rent withholding in particular carries risk.</p>';
   box.innerHTML = html;
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
@@ -331,14 +490,15 @@ function buildNoticeText(r) {
   const name = r.name || "[Your Name]";
   const address = r.address || "[Rental Address]";
   const landlord = r.landlord || "[Landlord / Property Manager Name]";
-  const issue = r.issue || "[Describe the condition]";
+  const issue = r.issue || "[Describe the condition, when it started, and any earlier reports]";
+  const essential = r.type === 'essential';
 
   let lines = [];
   lines.push(today);
   lines.push("");
   lines.push(landlord);
   lines.push("");
-  lines.push("Re: Written Notice of Habitability Condition — " + address);
+  lines.push("Re: Written Notice of Habitability Condition at " + address);
   lines.push("");
   lines.push("Dear " + landlord + ",");
   lines.push("");
@@ -346,15 +506,19 @@ function buildNoticeText(r) {
   lines.push("");
   lines.push(issue);
   lines.push("");
-  lines.push("Please repair this condition within 14 days of your receipt of this notice. If the condition is not remedied within that time, I may exercise my remedies under the RLTO, which can include repair-and-deduct, withholding rent in an amount reasonably reflecting the reduced value of the unit, or terminating the rental agreement, depending on the circumstances.");
+  if (essential) {
+    lines.push("This condition involves an essential service. Please restore it within 24 hours of your receipt of this notice. If it is not restored, I may exercise my remedies under the RLTO, which can include having the service restored and deducting the cost, withholding rent, or terminating the rental agreement, depending on the circumstances.");
+  } else {
+    lines.push("Please repair this condition within 14 days of your receipt of this notice. If the condition is not remedied within that time, I may exercise my remedies under the RLTO, which can include repair-and-deduct, withholding rent in an amount reasonably reflecting the reduced value of the unit, or terminating the rental agreement, depending on the circumstances.");
+  }
   lines.push("");
-  lines.push("Please contact me to arrange access for repairs or to discuss timing.");
+  lines.push("I am available to give access for repairs on the following days and times: [list times]. Please give me notice of any entry as the ordinance requires. Photos of the condition are attached.");
   lines.push("");
   lines.push("Sincerely,");
   lines.push(name);
   lines.push("");
-  lines.push("---");
-  lines.push("This letter is a general template generated for informational purposes and is not legal advice. Consider having it reviewed by an attorney before sending, and keep a copy plus proof of delivery (e.g., certified mail).");
+  lines.push("-----");
+  lines.push("This letter is a general template generated for informational purposes and is not legal advice. Consider having it reviewed by an attorney before sending, and keep a copy plus proof of delivery (for example, certified mail with a return receipt).");
   return lines.join("\n");
 }
 
@@ -365,7 +529,7 @@ function downloadNotice() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'chicago-habitability-14-day-notice.txt';
+  a.download = 'chicago-habitability-notice.txt';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

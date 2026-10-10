@@ -7,7 +7,7 @@
 <meta name="description" content="How Chicago security deposit law works under the RLTO: receipts, interest, the 45-day return deadline, itemized deductions, and the 2x penalty. Includes a free interest calculator and demand letter generator.">
 <link rel="canonical" href="https://tenanttransparency.com/chicago-security-deposit-law/">
 <meta property="og:title" content="Chicago Security Deposit Law: Deadlines, Interest &amp; Penalties (2026)" />
-<meta property="og:description" content="Chicago's security deposit rules under the RLTO: what landlords are generally required to do within 30 days, how interest is calculated, and what remedies may be available." />
+<meta property="og:description" content="Chicago's security deposit rules under the RLTO: the 30-day itemized statement and 45-day return deadlines, how interest is calculated, and what remedies may be available." />
 <meta property="og:image" content="https://tenanttransparency.com/chicago-security-deposit-law/depositlaw.png" />
 <meta property="og:url" content="https://tenanttransparency.com/chicago-security-deposit-law/" />
 <meta property="og:type" content="article" />
@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/chicago-security-deposit-law/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -70,6 +70,16 @@
       "@type": "Question",
       "name": "Can my landlord keep my deposit for normal wear and tear?",
       "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Deductions are typically limited to unpaid rent and the reasonable cost of repairing tenant-caused damage. Ordinary wear and tear from normal use generally doesn't count, and the landlord is generally expected to back up any damage deduction with an itemized statement and receipts." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my deposit as my last month's rent?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not without your landlord's consent. The standard Chicago lease says so, and doing it anyway leaves your final rent unpaid, which can give the landlord a legitimate deduction." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I never received a receipt or bank information for my deposit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ask for both in writing. Under Section 5-12-080 the landlord must provide a signed receipt and disclose the Illinois bank holding the deposit, and a failure to do so is an independent violation that can matter in a later dispute." }
     }
   ]
 }
@@ -108,8 +118,7 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #deposit-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #deposit-tool h2 { border: none; margin-top: 0; }
+  #deposit-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -128,6 +137,22 @@
   .flag.ok { background: #e3f4e8; color: #1f6b3a; }
   .flag.bad { background: #fbe6e4; color: #a13327; }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+
+  figure.lead-image { margin: 0 0 24px; }
+  .lead-image img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .lead-image figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 20px; margin: 20px 0 28px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.05rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  .callout { background: var(--card); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem; }
+  .callout strong.t { display: block; margin-bottom: 4px; }
+  .example { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.95rem; }
+  .example strong.t { display: block; color: var(--accent); margin-bottom: 4px; }
+  .scroll-x { overflow-x: auto; }
+  .note { color: var(--muted); font-size: 0.85rem; }
+  .err { color: #a13327; font-weight: 600; }
+  th, td { vertical-align: top; }
 </style>
 </head>
 <body>
@@ -167,7 +192,7 @@
 
 <figure class="lead-image">
   <img src="depositlaw.png" alt="A calendar marked with the 30-day security deposit return deadline alongside a Chicago lease and a check" />
-  <figcaption>Chicago landlords have strict statutory deadlines for returning deposits and paying interest — missing them triggers automatic penalties.</figcaption>
+  <figcaption>Chicago landlords have strict statutory deadlines for returning deposits and paying interest, and missing them can trigger penalties.</figcaption>
 </figure>
 
 <div class="disclaimer">
@@ -175,14 +200,29 @@
   This article explains general rules under the Chicago RLTO for informational purposes only. If your landlord has missed a deadline or is disputing your deposit, consult a licensed Illinois attorney or a tenant rights organization about your specific case.
 </div>
 
+<div class="glance">
+  <h2>At a glance</h2>
+  <ul>
+    <li>Itemized statement of deductions: due within 30 days after you move out.</li>
+    <li>Deposit plus interest, less lawful deductions: due within 45 days after you move out.</li>
+    <li>The 2026 interest rate is 0.01%, so interest is tiny. The deadlines and procedures are what carry the real money.</li>
+    <li>A landlord who violates the deposit rules can owe damages of two times the deposit plus interest, and the prevailing tenant can recover attorney's fees and costs.</li>
+  </ul>
+</div>
+
 <nav class="toc" aria-label="Table of contents">
   <h2>What's in this article</h2>
   <ol>
     <li><a href="#basics">The basic rules</a></li>
+    <li><a href="#interest">How interest works, with real numbers</a></li>
     <li><a href="#deposit-tool">Free tool: interest calculator &amp; demand letter</a></li>
     <li><a href="#deadlines">The 45-day and 30-day deadlines</a></li>
+    <li><a href="#timeline">A sample timeline, day by day</a></li>
     <li><a href="#deductions">What landlords can and can't deduct</a></li>
     <li><a href="#penalty">The two-times-deposit penalty</a></li>
+    <li><a href="#mistakes">Common landlord mistakes</a></li>
+    <li><a href="#special">Special situations</a></li>
+    <li><a href="#tenant-mistakes">Tenant mistakes that hurt claims</a></li>
     <li><a href="#steps">If your landlord is past the deadline</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -190,19 +230,34 @@
 </nav>
 
 <h2 id="basics">1. The basic rules</h2>
-<p>Under RLTO Section 5-12-080, a landlord who collects a security deposit on a covered Chicago unit has to:</p>
+<p>Section 5-12-080 of the Chicago Residential Landlord and Tenant Ordinance (RLTO) sets the ground rules for any covered unit where a landlord collects a security deposit. It applies to most Chicago rentals. Owner-occupied buildings with six or fewer units are generally exempt from most of the ordinance, so check coverage with our <a href="/chicago-renters-rights-guide#rlto-checker-tool">rights checker</a> if you are not sure.</p>
+<p>A landlord who holds a deposit has to:</p>
 <ul class="plain">
-  <li>Give a signed receipt naming the landlord, the date, the amount, and a description of the unit.</li>
-  <li>Hold the deposit in a federally insured, interest-bearing account at an Illinois financial institution — not mixed with the landlord's own funds.</li>
-  <li>Disclose the name and address of that bank, either in the lease or in writing within 14 days if there's no written lease.</li>
-  <li>Pay interest annually on deposits or prepaid rent held more than six months, within 30 days after each 12-month period.</li>
+  <li><strong>Give you a signed receipt.</strong> It should name the landlord, the date, the amount and the unit. If you paid electronically, an electronic receipt is acceptable. If you never got one, ask for it in writing now. It is the first document anyone will look for in a dispute.</li>
+  <li><strong>Hold the money properly.</strong> The deposit goes in a federally insured, interest-bearing account at an Illinois financial institution, kept apart from the landlord's own funds. A landlord who mixes your deposit with operating money has broken the rule even if every dollar is still there.</li>
+  <li><strong>Tell you where it is.</strong> You are entitled to the name and address of the bank, in the lease or in writing within 14 days of the landlord receiving the deposit. If your lease and paperwork never mention the bank, that is a red flag.</li>
+  <li><strong>Pay interest.</strong> On deposits and prepaid rent held more than six months, interest is paid annually, within 30 days after each 12-month period.</li>
 </ul>
-<p>These aren't formalities — a missed step on any one of them can trigger the statutory penalty covered below.</p>
+<p>These are not formalities. A missed step on any one of them can support the statutory penalty covered below, which is why it is worth checking each one the day you move in, not the day you move out.</p>
 
-<h2 id="deposit-tool">2. Free tool: Deposit Interest &amp; Demand Letter Generator</h2>
+<h2 id="interest">2. How interest works, with real numbers</h2>
+<p>The City Comptroller publishes the required interest rate each year. For 2026 the rate is <strong>0.01%</strong>. That is the same minimum that has applied for years, so the numbers are small.</p>
+<div class="scroll-x">
+<table>
+  <tr><th>Deposit</th><th>Held</th><th>Interest at 0.01% per year</th></tr>
+  <tr><td>$1,000</td><td>1 year</td><td>$0.10</td></tr>
+  <tr><td>$1,500</td><td>2 years</td><td>$0.30</td></tr>
+  <tr><td>$2,400</td><td>3 years</td><td>$0.72</td></tr>
+  <tr><td>$3,000</td><td>5 years</td><td>$1.50</td></tr>
+</table>
+</div>
+<p>It is easy to dismiss that as pocket change, and many landlords do, which is exactly why unpaid interest is one of the most common deposit violations. The amount is trivial. The legal consequence is not. A landlord who ignores the interest rule has violated Section 5-12-080, and a violation is what opens the door to the penalty. When a tenant is owed $0.30 in interest on a $1,500 deposit, the real exposure for the landlord is the $3,000 penalty that comes with the missing $0.30.</p>
+<p>Each year's interest is calculated at the rate published for that year. The calculator below uses the 2026 rate as a simple estimate for any holding period. If you were a tenant in earlier years, the rate for each year may differ, and your landlord's records should show what was paid.</p>
+
+<h2 id="deposit-tool">3. Free tool: Deposit Interest &amp; Demand Letter Generator</h2>
 <p class="tool-sub">No signup. Runs in your browser. Enter your deposit amount and move-out date to see the interest owed, whether your landlord has missed the return deadline, and download a ready-to-send demand letter.</p>
 
-<div id="deposit-tool">
+<div id="deposit-tool-box">
   <div class="q-row">
     <div class="q-block">
       <label for="q-deposit">Security deposit amount ($)</label>
@@ -244,68 +299,162 @@
   <div id="result-box"></div>
 </div>
 
-<h2 id="deadlines">3. The 45-day and 30-day deadlines</h2>
+<h2 id="deadlines">4. The 45-day and 30-day deadlines</h2>
+<div class="scroll-x">
 <table>
   <tr><th>Requirement</th><th>Deadline</th></tr>
-  <tr><td>Return deposit + interest in full (no deductions)</td><td>45 days after move-out</td></tr>
-  <tr><td>Send itemized statement of damages, if deducting</td><td>30 days after move-out</td></tr>
-  <tr><td>Pay annual interest during tenancy</td><td>Within 30 days after each 12-month period</td></tr>
+  <tr><td>Itemized statement of damages, if deducting (with estimated or actual costs)</td><td>30 days after move-out</td></tr>
+  <tr><td>Paid receipts for repairs, if the statement used estimates</td><td>Promptly, as the work is done and billed</td></tr>
+  <tr><td>Return deposit plus interest, less lawful deductions</td><td>45 days after move-out</td></tr>
+  <tr><td>Pay annual interest during the tenancy</td><td>Within 30 days after each 12-month period</td></tr>
+  <tr><td>Return after a fire (building made uninhabitable)</td><td>7 days after the tenant's termination notice</td></tr>
 </table>
-<p>Both clocks start on your actual move-out date, not your lease end date, if you vacated early with the landlord's knowledge. Keep a dated record of when you returned keys.</p>
+</div>
+<p>Both main clocks start on the day you actually vacate and return the keys, not the day your lease ends. If you left early with the landlord's knowledge, your move-out date is the date you gave up possession. Keep a dated record of when you returned keys. A text or email from the landlord confirming it is ideal.</p>
+<p>Two practical points. First, count calendar days, and do not assume a deadline that lands on a weekend or holiday moves. Second, give the landlord your forwarding address in writing when you leave. The landlord's obligations do not disappear if you forget, but a written forwarding address removes the easiest excuse for a missed mailing.</p>
 
-<h2 id="deductions">4. What landlords can and can't deduct</h2>
-<p>A landlord may generally deduct for unpaid rent and the reasonable cost of repairing damage you caused. They generally can't deduct for:</p>
+<h2 id="timeline">5. A sample timeline, day by day</h2>
+<div class="example">
+  <strong class="t">Maya moves out on January 31</strong>
+  <strong>Jan 31:</strong> Maya returns the keys, photographs every room and emails her new address to the landlord. Her deposit is $1,800.<br>
+  <strong>March 2:</strong> The 30-day deadline for an itemized statement. Nothing arrives.<br>
+  <strong>March 17:</strong> The 45-day deadline to return the deposit and interest. Nothing arrives.<br>
+  <strong>March 18:</strong> Maya checks the dates, then sends a written demand using the generator above, asking for payment within seven days and citing Section 5-12-080.<br>
+  <strong>March 26:</strong> No response. Maya files in the Pro Se Small Claims Division, claiming the deposit, interest and statutory damages. See <a href="/chicago-deposit-not-returned">what to do if your landlord won't return your deposit</a>.
+</div>
+<p>In that example, the landlord missed two separate deadlines. Each is an independent problem. A landlord who returns the deposit on day 44 but never sent an itemized statement for the amount deducted has still missed the statement deadline.</p>
+
+<h2 id="deductions">6. What landlords can and can't deduct</h2>
+<p>A landlord may generally deduct for unpaid rent and for the reasonable cost of repairing damage you caused beyond normal wear and tear. The difficult cases sit in the middle, so here are common examples side by side.</p>
+<div class="scroll-x">
+<table>
+  <tr><th>Usually deductible</th><th>Usually not deductible</th></tr>
+  <tr><td>Unpaid rent, including a final partial month you owe</td><td>Normal wear and tear from ordinary living</td></tr>
+  <tr><td>Holes in walls larger than normal picture-hanging nail holes</td><td>Small nail holes and faded or scuffed paint from years of use</td></tr>
+  <tr><td>Pet urine stains or burns in carpet or flooring</td><td>Carpet worn from walking, or a carpet already at the end of its useful life</td></tr>
+  <tr><td>Broken windows, doors, fixtures or appliances you damaged</td><td>Appliances that failed from age, or fixtures that were already broken at move-in</td></tr>
+  <tr><td>Cleaning needed to return the unit to its move-in condition</td><td>Routine turnover cleaning the landlord does for every unit</td></tr>
+  <tr><td>Missing items the lease says you must return, such as keys or provided furniture</td><td>Damage that was already present, shown in your move-in photos or inspection</td></tr>
+</table>
+</div>
+<h3>The useful-life idea</h3>
+<p>Even where something is damaged, the amount a landlord can charge is generally tied to what it was worth. A ten-year-old carpet that is ruined may have very little value left, so a landlord who bills you for brand-new carpeting is charging for an upgrade, not a repair. Housing agencies and courts generally consider the age and condition of the item. Ask the landlord for the age of anything they charge you for.</p>
+<h3>What the itemized statement has to look like</h3>
+<p>The statement should list each deduction with the actual or estimated cost of repair. If it uses estimates, the landlord should follow with paid receipts once the work is done. A statement that just says "damages: $900" is not an itemized statement. Ask for the breakdown, the invoices and the dates the work was done. If the landlord never did the repair, ask what the deduction was for.</p>
+<h3>Last month's rent</h3>
+<p>Do not treat the deposit as your last month's rent. The standard Chicago lease says you cannot do that without the landlord's consent, and doing it means your final rent is unpaid, which gives the landlord a legitimate deduction and a nonpayment argument.</p>
+
+<h2 id="penalty">7. The two-times-deposit penalty</h2>
+<p>This is the part that makes Chicago's ordinance unusually tenant-favorable. Under Section 5-12-080, a landlord who violates the deposit requirements may be liable for damages equal to <strong>two times the deposit plus interest</strong>. The prevailing tenant can also recover court costs and reasonable attorney's fees under Section 5-12-180.</p>
+<p>What counts as a violation is broad: no signed receipt, mixing the deposit with the landlord's funds, no bank disclosure, no annual interest, a missed statement deadline, a missed return deadline, or deductions for things the ordinance does not allow. Courts have often treated this as close to strict liability. In plain terms, the landlord's explanation, such as a lost check, a property manager's mistake or a late closing on a building, may not matter once a violation is shown. Results always depend on the specific facts.</p>
+<div class="callout">
+  <strong class="t">How the totals add up</strong>
+  The ordinance sets the penalty at two times the deposit plus interest. Whether a judge also orders the original deposit returned on top of that depends on whether the landlord still has it. How a particular judge adds these pieces together is a question for a court-based legal aid desk or an attorney. Treat any total, including the estimates in our calculators, as an upper-end figure rather than a prediction.
+</div>
+
+<h2 id="mistakes">8. Common landlord mistakes</h2>
+<div class="scroll-x">
+<table>
+  <tr><th>What went wrong</th><th>Why it matters</th><th>What to do</th></tr>
+  <tr><td>No receipt or bank information</td><td>The disclosure rules in 5-12-080 were not followed</td><td>Request both in writing and keep the request</td></tr>
+  <tr><td>Deposit held in the landlord's operating account</td><td>The deposit must be held separately in an interest-bearing Illinois account</td><td>Ask which bank holds it and whether it is a separate account</td></tr>
+  <tr><td>Interest never paid</td><td>A tiny amount, but an independent violation</td><td>Ask for the interest statement for each year</td></tr>
+  <tr><td>Deductions with no statement</td><td>The 30-day itemization deadline was missed</td><td>Note the date the statement arrived, if ever</td></tr>
+  <tr><td>Deposit kept for "painting" or "cleaning" with no detail</td><td>Not itemized, and may be wear and tear</td><td>Ask for invoices and the age of the item</td></tr>
+  <tr><td>"Non-refundable deposit" in the lease</td><td>A deposit must be accounted for under the ordinance</td><td>See our <a href="/chicago-lease-red-flags">lease red flags guide</a></td></tr>
+  <tr><td>Check mailed to an old address</td><td>It still missed your deadline in effect</td><td>Send your forwarding address in writing and keep proof</td></tr>
+</table>
+</div>
+
+<h2 id="special">9. Special situations</h2>
 <ul class="plain">
-  <li>Normal wear and tear (worn carpet, minor scuffs, faded paint from years of sun exposure)</li>
-  <li>Pre-existing damage that was there before you moved in</li>
-  <li>Repairs the landlord can't back up with an itemized statement and receipts</li>
+  <li><strong>Fire or major damage.</strong> If the building becomes uninhabitable, the deposit deadline is shorter. The City's summary puts it at seven days after the tenant's termination notice.</li>
+  <li><strong>Roommates.</strong> The lease controls who gets the money. With several tenants on one lease, the landlord generally returns the deposit as one payment, and you settle shares among yourselves. Agree on one forwarding address.</li>
+  <li><strong>The building was sold.</strong> If ownership changed during your tenancy, ask both the old and new owner in writing who holds your deposit, and keep the dates of every answer.</li>
+  <li><strong>Owner-occupied buildings of six or fewer units.</strong> The RLTO deposit rules may not apply. State law and your lease still matter. Ask a tenant rights organization.</li>
+  <li><strong>Subsidized housing.</strong> Federal program rules may add or change requirements. Check with your housing authority or program administrator.</li>
 </ul>
-<p>If deductions are made, the itemized statement has to include actual or estimated repair costs, and the landlord must follow up with paid receipts if estimates were used initially.</p>
 
-<h2 id="penalty">5. The two-times-deposit penalty</h2>
-<p>This is the part that makes Chicago's ordinance unusually tenant-favorable: under Section 5-12-080(f), a landlord who violates any deposit requirement — wrong account, missing interest, late return, no itemized statement — may be liable for <strong>two times the deposit amount</strong>, plus the deposit and interest itself, plus attorney's fees and court costs. Courts have often treated this as a strict-liability penalty, meaning the landlord's excuse (lost check, forgot, property manager's mistake) may not matter once a violation is established. Results depend on the specific facts.</p>
+<h2 id="tenant-mistakes">10. Tenant mistakes that hurt claims</h2>
+<ul class="plain">
+  <li><strong>Skipping move-out photos.</strong> Without dated images, a damage deduction becomes your word against the landlord's. Our <a href="/chicago-move-out-documentation">move-out documentation guide</a> shows what to capture.</li>
+  <li><strong>Treating the deposit as last month's rent.</strong> It creates an unpaid-rent problem for you.</li>
+  <li><strong>Leaving without returning keys in a way you can prove.</strong> Your move-out date is the start of both clocks.</li>
+  <li><strong>Waiting too long.</strong> Deposit claims are generally subject to a limitations period. Do not let months slip by. Talk to an attorney or tenant rights organization if you are not sure how much time you have.</li>
+  <li><strong>Making oral requests only.</strong> Put every request in writing and keep a copy.</li>
+</ul>
 
-<h2 id="steps">6. If your landlord is past the deadline</h2>
+<h2 id="steps">11. If your landlord is past the deadline</h2>
 <ol class="steps">
   <li><strong>Confirm your move-out date</strong> and count 45 days forward. Use the tool above to check.</li>
-  <li><strong>Check your email and mail</strong> for any itemized statement — it may have been sent to an old address.</li>
-  <li><strong>Send a written demand letter</strong> referencing Section 5-12-080 and giving a deadline (the tool above generates one).</li>
-  <li><strong>Keep records</strong> of your original receipt, lease, move-out photos, and any correspondence.</li>
-  <li><strong>Consult an attorney or file in small claims</strong> if the landlord doesn't respond — many attorneys take these cases on contingency because of the fee-shifting provision.</li>
+  <li><strong>Check your email and mail</strong> for any itemized statement. It may have been sent to an old address.</li>
+  <li><strong>Send a written demand letter</strong> referencing Section 5-12-080 and giving a deadline. The tool above generates one.</li>
+  <li><strong>Keep records</strong> of your original receipt, lease, move-out photos and all correspondence.</li>
+  <li><strong>Consult an attorney or file in small claims</strong> if the landlord does not respond. Many attorneys take these cases on contingency because of the fee-shifting provision. The next steps are in <a href="/chicago-deposit-not-returned">our deposit dispute guide</a>.</li>
 </ol>
 
-<h2 id="related">7. Related articles</h2>
+<h2 id="related">12. Related articles</h2>
 <div class="related">
   <a href="/chicago-deposit-not-returned"><span class="label">Deep dive</span>What to do if your landlord won't return your deposit</a>
   <a href="/chicago-move-out-documentation"><span class="label">Deep dive</span>How to document issues before moving out</a>
+  <a href="/chicago-lease-red-flags"><span class="label">Deep dive</span>Chicago lease red flags: clauses and fees that can't be enforced</a>
   <a href="/chicago-habitability-violations"><span class="label">Deep dive</span>What counts as a habitability violation</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">8. FAQ</h2>
+<h2 id="faq">13. FAQ</h2>
 <h3>How long does a Chicago landlord have to return my security deposit?</h3>
 <p>45 days after you vacate. If deductions are being made, the itemized statement is due within 30 days.</p>
 <h3>What happens if my landlord misses the deadline?</h3>
-<p>You may be entitled to two times the deposit amount plus interest, attorney's fees, and costs, depending on the facts.</p>
+<p>You may be entitled to damages of two times the deposit plus interest, plus attorney's fees and costs, depending on the facts.</p>
 <h3>Do Chicago landlords have to pay interest on deposits?</h3>
-<p>Yes, on deposits held more than six months. The 2026 rate is 0.01%, set annually by the City Comptroller.</p>
+<p>Yes, on deposits held more than six months. The 2026 rate is 0.01%, set annually by the City Comptroller. The amount is small, but failing to pay it is still a violation.</p>
 <h3>Can my landlord keep my deposit for normal wear and tear?</h3>
 <p>No. Deductions are limited to unpaid rent and tenant-caused damage, backed by an itemized statement and receipts.</p>
+<h3>Can I use my deposit as my last month's rent?</h3>
+<p>Not without your landlord's consent. The standard Chicago lease says so, and doing it anyway leaves your final rent unpaid.</p>
+<h3>What if I never got a receipt or bank information?</h3>
+<p>Ask for both in writing. Missing receipts and bank disclosures are independent deposit violations that can matter in a later dispute.</p>
+<h3>Who gets the deposit when there are roommates?</h3>
+<p>The lease controls. Usually the landlord returns one payment and the roommates divide it, so agree on one forwarding address.</p>
+<h3>Do I need to give a forwarding address?</h3>
+<p>You should. The landlord's duties do not depend on it, but a written forwarding address removes the easiest excuse for a missed mailing.</p>
 
 <footer>
-  Sources: Chicago Municipal Code Section 5-12-080 (RLTO); City of Chicago Department of Housing security deposit interest rate notices. This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: Chicago Municipal Code Sections 5-12-080, 5-12-081 and 5-12-180 (RLTO); City of Chicago Department of Housing, "Chicago Rents Right" RLTO summary and security deposit interest rate notices; Chicago Association of REALTORS standard lease form. This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
 
 </div>
 
 <script>
 const RATE_2026 = 0.0001; // 0.01%
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 
 function monthsFromSelect(v) {
   if (v === "under6") return 0;
   if (v === "1yr") return 12;
   if (v === "2yr") return 24;
   return 36;
+}
+
+// Parse a yyyy-mm-dd string as a calendar date (no time zone or daylight saving drift).
+function parseDay(str) {
+  const p = str.split("-");
+  return Date.UTC(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10));
+}
+function addDays(ms, n) { return ms + n * DAY_MS; }
+function todayUTC() {
+  const t = new Date();
+  return Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
+}
+function fmt(ms) {
+  const d = new Date(ms);
+  const m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return m[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear();
 }
 
 function computeDeposit() {
@@ -324,24 +473,36 @@ function computeDeposit() {
   const months = monthsFromSelect(heldSel);
   const interestOwed = months >= 6 ? (deposit * RATE_2026 * (months / 12)) : 0;
 
-  let deadlineText = "Enter your move-out date to check the 45-day deadline.";
+  let returnText = "Enter your move-out date to check the 45-day deadline.";
+  let statementText = "Enter your move-out date to check the 30-day itemized statement deadline.";
   let pastDeadline = false;
+  let pastStatement = false;
   let daysPast = null;
+  let returnDeadlineStr = "";
   if (moveoutStr) {
-    const moveout = new Date(moveoutStr + "T00:00:00");
-    const deadline = new Date(moveout.getTime() + 45 * 24 * 60 * 60 * 1000);
-    const today = new Date();
-    if (today > deadline) {
+    const moveout = parseDay(moveoutStr);
+    const today = todayUTC();
+    const returnDeadline = addDays(moveout, 45);
+    const statementDeadline = addDays(moveout, 30);
+    returnDeadlineStr = fmt(returnDeadline);
+    if (today > returnDeadline) {
       pastDeadline = true;
-      daysPast = Math.floor((today - deadline) / (24 * 60 * 60 * 1000));
-      deadlineText = "Deadline was " + deadline.toLocaleDateString() + " — that's " + daysPast + " day(s) ago.";
+      daysPast = Math.round((today - returnDeadline) / DAY_MS);
+      returnText = "The 45-day return deadline was " + fmt(returnDeadline) + ", which was " + daysPast + " day(s) ago.";
     } else {
-      const daysLeft = Math.ceil((deadline - today) / (24 * 60 * 60 * 1000));
-      deadlineText = "Deadline is " + deadline.toLocaleDateString() + " — " + daysLeft + " day(s) from today.";
+      const daysLeft = Math.round((returnDeadline - today) / DAY_MS);
+      returnText = "The 45-day return deadline is " + fmt(returnDeadline) + ", " + daysLeft + " day(s) from today.";
+    }
+    if (today > statementDeadline) {
+      pastStatement = true;
+      statementText = "The 30-day itemized statement deadline was " + fmt(statementDeadline) + ". If deductions were taken and no itemized statement arrived by then, that is a separate problem from the return deadline.";
+    } else {
+      const left = Math.round((statementDeadline - today) / DAY_MS);
+      statementText = "An itemized statement, if any deductions are claimed, is due by " + fmt(statementDeadline) + " (" + left + " day(s) from today).";
     }
   }
 
-  return { deposit, interestOwed, deadlineText, pastDeadline, daysPast, name, address, landlord, moveoutStr };
+  return { deposit, interestOwed, returnText, statementText, pastDeadline, pastStatement, daysPast, returnDeadlineStr, name, address, landlord, moveoutStr };
 }
 
 function runDepositTool() {
@@ -349,18 +510,19 @@ function runDepositTool() {
   const box = document.getElementById('result-box');
   box.style.display = 'block';
   if (r.error) {
-    box.innerHTML = '<p>' + r.error + '</p>';
+    box.innerHTML = '<p class="err">' + esc(r.error) + '</p>';
     return;
   }
   const penalty = r.deposit * 2;
   let flag = r.pastDeadline
-    ? '<span class="flag bad">Deadline appears missed</span>'
-    : '<span class="flag ok">Deadline not yet passed</span>';
+    ? '<span class="flag bad">Return deadline appears missed</span>'
+    : '<span class="flag ok">Return deadline not yet passed</span>';
   let html = '<h3>Your numbers</h3>' + flag;
   html += '<p><strong>Estimated interest (2026 rate, 0.01%):</strong> $' + r.interestOwed.toFixed(2) + '</p>';
-  html += '<p><strong>45-day return deadline:</strong> ' + r.deadlineText + '</p>';
-  if (r.pastDeadline) {
-    html += '<p><strong>Potential statutory penalty (2x deposit):</strong> $' + penalty.toFixed(2) + ', plus the deposit itself, interest, and attorney fees — if a violation is confirmed.</p>';
+  html += '<p><strong>Return deadline:</strong> ' + esc(r.returnText) + '</p>';
+  html += '<p><strong>Itemized statement:</strong> ' + esc(r.statementText) + '</p>';
+  if (r.pastDeadline || r.pastStatement) {
+    html += '<p><strong>Potential statutory damages (2x deposit):</strong> $' + penalty.toFixed(2) + ', plus interest and attorney fees, if a violation is confirmed. Whether the original deposit is awarded on top depends on whether the landlord still holds it, so treat this as an upper-end figure.</p>';
   }
   html += '<p style="color:#5b6470;font-size:0.85rem;">This is an estimate for informational purposes only, not a legal determination or legal advice.</p>';
   box.innerHTML = html;
@@ -373,36 +535,42 @@ function buildLetter(r) {
   const address = r.address || "[Rental Address]";
   const landlord = r.landlord || "[Landlord / Property Manager Name]";
   const deposit = isNaN(r.deposit) ? "[Deposit Amount]" : ("$" + r.deposit.toFixed(2));
-  const interest = isNaN(r.interestOwed) ? "[Interest Amount]" : ("$" + r.interestOwed.toFixed(2));
+  const hasInterest = !isNaN(r.interestOwed) && r.interestOwed > 0;
+  const interest = hasInterest ? ("$" + r.interestOwed.toFixed(2)) : "";
 
   let lines = [];
   lines.push(today);
   lines.push("");
   lines.push(landlord);
   lines.push("");
-  lines.push("Re: Return of Security Deposit — " + address);
+  lines.push("Re: Return of Security Deposit for " + address);
   lines.push("");
   lines.push("Dear " + landlord + ",");
   lines.push("");
-  lines.push("I vacated the above unit on " + (r.moveoutStr || "[move-out date]") + ". Under Section 5-12-080 of the Chicago Residential Landlord and Tenant Ordinance, my security deposit of " + deposit + (interest !== "[Interest Amount]" ? (" plus accrued interest of approximately " + interest) : "") + " was due to be returned, or accompanied by an itemized statement of deductions, within 45 days of my move-out date.");
+  lines.push("I vacated the above unit on " + (r.moveoutStr || "[move-out date]") + ". Under Section 5-12-080 of the Chicago Residential Landlord and Tenant Ordinance, my security deposit of " + deposit + (hasInterest ? (" plus accrued interest of approximately " + interest) : "") + " was due to be returned within 45 days of my move-out date, and any itemized statement of deductions was due within 30 days.");
   lines.push("");
-  lines.push("That deadline has passed and I have not received my deposit, interest, or an itemized statement of deductions.");
+  lines.push("Those deadlines have passed and I have not received my deposit, interest, or an itemized statement of deductions.");
   lines.push("");
-  lines.push("Please return my full security deposit plus accrued interest within 7 days of this letter. If I do not receive payment or a valid itemized statement within that time, I will pursue my remedies under the RLTO, which include statutory damages of two times the deposit amount plus attorney's fees and court costs.");
+  lines.push("Please return my full security deposit plus accrued interest within 7 days of this letter. If I do not receive payment or a valid itemized statement within that time, I will pursue my remedies under the RLTO, which include damages of two times the deposit amount plus interest, and attorney's fees and court costs.");
   lines.push("");
-  lines.push("Please contact me to arrange prompt payment.");
+  lines.push("Please send payment to the address above, or contact me to arrange prompt payment.");
   lines.push("");
   lines.push("Sincerely,");
   lines.push(name);
   lines.push("");
-  lines.push("---");
-  lines.push("This letter is a general template generated for informational purposes and is not legal advice. Consider having it reviewed by an attorney before sending.");
+  lines.push("-----");
+  lines.push("This letter is a general template generated for informational purposes and is not legal advice. Consider having it reviewed by an attorney before sending, and keep a copy plus proof of delivery.");
   return lines.join("\n");
 }
 
 function downloadLetter() {
   const r = computeDeposit();
-  if (r.error) { alert(r.error); return; }
+  if (r.error) {
+    const box = document.getElementById('result-box');
+    box.style.display = 'block';
+    box.innerHTML = '<p class="err">' + esc(r.error) + '</p>';
+    return;
+  }
   const text = buildLetter(r);
   const blob = new Blob([text], {type: 'text/plain'});
   const url = URL.createObjectURL(blob);

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/cook-county-eviction-process/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -55,22 +55,74 @@
     {
       "@type": "Question",
       "name": "Can my Chicago landlord evict me without going to court?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Self-help evictions, such as changing the locks, removing belongings, or shutting off utilities, are generally not permitted. A landlord must generally file a case in Cook County court and obtain a court order before a sheriff can remove a tenant." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally no. Self-help evictions, such as changing the locks, removing belongings, or shutting off utilities, are generally not permitted. A landlord must generally file a case in Cook County court and obtain a court order before a sheriff can remove a tenant."
+      }
     },
     {
       "@type": "Question",
       "name": "How much notice does a Chicago landlord have to give before ending my tenancy?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Under the Chicago Fair Notice Ordinance, the required notice for ending a tenancy without cause, non-renewal, or a rent increase depends on how long you've lived there: 30 days for under 6 months, 60 days for 6 months to 3 years, and 120 days for more than 3 years. These tiers don't apply to nonpayment of rent or lease violations, which use the shorter statewide 5-day and 10-day notices." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the Chicago Fair Notice Ordinance, the required notice for ending a tenancy without cause, non-renewal, or a rent increase depends on how long you've lived there: 30 days for under 6 months, 60 days for 6 months to 3 years, and 120 days for more than 3 years. These tiers don't apply to nonpayment of rent or lease violations, which use the shorter statewide 5-day and 10-day notices."
+      }
     },
     {
       "@type": "Question",
       "name": "What happens if my landlord doesn't give the correct notice period?",
-      "acceptedAnswer": { "@type": "Answer", "text": "If a Chicago landlord fails to give the required Fair Notice Ordinance period, the tenant generally has the right to remain in the unit for the full required period, or pay the prior rent amount for that period, even if a shorter notice was served." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a Chicago landlord fails to give the required Fair Notice Ordinance period, the tenant generally has the right to remain in the unit for the full required period, or pay the prior rent amount for that period, even if a shorter notice was served."
+      }
     },
     {
       "@type": "Question",
       "name": "How long does an eviction case take in Cook County?",
-      "acceptedAnswer": { "@type": "Answer", "text": "After a valid notice period expires, the landlord can file in Cook County court, where the summons return date is set at least 7 days after service. Timelines vary by case load and whether the tenant contests the case, but the process runs through a court hearing, a possible judgment, and sheriff enforcement, not a self-help removal." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After a valid notice period expires, the landlord can file in Cook County court, where the summons return date is set at least 7 days after service. Timelines vary by case load and whether the tenant contests the case, but the process runs through a court hearing, a possible judgment, and sheriff enforcement, not a self-help removal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I miss my eviction court date in Cook County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you were served and do not appear, the landlord may get a default judgment. A tenant typically has about 30 days after an order is entered to ask the court to vacate a default, but that is not guaranteed. Contact a legal aid organization immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an expired eviction notice mean I have to leave?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. An expired notice means the landlord can file a case. You do not have to leave until a court order is entered and carried out by the Cook County Sheriff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I stop an eviction for unpaid rent by paying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paying the full amount demanded within the notice period generally prevents a filing on that notice. After a case is filed, the result depends on the court, the landlord, and options such as court-based rental assistance or an agreed order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is an eviction notice counted in Illinois?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notice periods are generally counted in calendar days, weekends included, and the day of service is not counted. For example, a 5-day notice served on a Thursday ends the following Tuesday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I get free help with an eviction in Cook County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eviction Help Illinois (evictionhelpillinois.org, 855-631-0811) and Cook County Legal Aid for Housing and Debt (cookcountylegalaid.org, 855-956-5763) are good starting points. Court-based rental assistance information is at illinoishousinghelp.org."
+      }
     }
   ]
 }
@@ -109,8 +161,8 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #eviction-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #eviction-tool h2 { border: none; margin-top: 0; }
+  #eviction-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
+  #eviction-tool-box h2 { border: none; margin-top: 0; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -126,6 +178,14 @@
   #result-box h3 { margin-top: 0; }
   #result-box pre { white-space: pre-wrap; font-family: inherit; font-size: 0.9rem; }
   .flag { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; background: var(--card); color: var(--ink); }
+  .flag { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin: 2px 4px 2px 0; background: #e3f4e8; color: #1f6b3a; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 22px; margin: 0 0 24px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.1rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  #eviction-tool-box .q-block label { display: block; }
+  #eviction-tool-box .q-block label input[type=checkbox] { margin-right: 8px; }
+  #result-box ul { padding-left: 20px; }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
 </style>
 </head>
@@ -171,7 +231,18 @@
 
 <div class="disclaimer">
   <strong>This is not legal advice.</strong>
-  This article explains the general eviction process for informational purposes only. If you've received a notice or an eviction filing, contact a licensed Illinois attorney or a tenant rights organization immediately — deadlines in eviction cases move fast and missing one can cost you the case.
+  This article explains the general eviction process for informational purposes only. If you've received a notice or an eviction filing, contact a licensed Illinois attorney or a tenant rights organization immediately. Deadlines in eviction cases move fast and missing one can cost you the case.
+</div>
+
+<div class="glance">
+  <h2>The short version</h2>
+  <ul>
+    <li>A landlord cannot lock you out, remove your belongings or cut your utilities. Only a court order, carried out by the Cook County Sheriff, can remove you.</li>
+    <li>The notice comes first: 5 days for unpaid rent, 10 days for a lease violation, 30, 60 or 120 days for a no-cause termination, non-renewal or rent increase in Chicago.</li>
+    <li>An expired notice is not an eviction. The landlord still has to file, serve you and win.</li>
+    <li>If you are served with court papers, <strong>go to the court date</strong>. If you do not, the landlord may get a default judgment.</li>
+    <li>Free legal help and court-based rental assistance exist. Ask early.</li>
+  </ul>
 </div>
 
 <nav class="toc" aria-label="Table of contents">
@@ -181,8 +252,14 @@
     <li><a href="#notice-types">The notice types</a></li>
     <li><a href="#fair-notice">The Fair Notice Ordinance tiers</a></li>
     <li><a href="#eviction-tool">Free tool: notice &amp; deadline calculator</a></li>
+    <li><a href="#served">Was the notice served correctly?</a></li>
+    <li><a href="#examples">Three worked examples</a></li>
     <li><a href="#court">What happens in court</a></li>
+    <li><a href="#served-papers">If you are served with court papers</a></li>
+    <li><a href="#judgment">After judgment: the order and the sheriff</a></li>
     <li><a href="#defenses">Common defenses</a></li>
+    <li><a href="#settle">Settling a case</a></li>
+    <li><a href="#help">Free help</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ol>
@@ -190,6 +267,14 @@
 
 <h2 id="no-selfhelp">1. Rule one: no self-help evictions</h2>
 <p>A Chicago landlord generally cannot legally remove you by changing the locks, taking your belongings, shutting off utilities, or simply telling you to leave. Evictions generally have to go through Cook County court and end in a court order before a sheriff (not the landlord, not a property manager, not a private security guard) can remove you.</p>
+<p>Under the City's RLTO summary, a landlord who locks out a tenant can be fined $200 to $500 for each day the lockout occurs or continues. If a landlord has locked you out or cut service, document it, call 311, and call 911 if you are in danger. Our <a href="/chicago-heat-law-utility-complaints">heat and utilities guide</a> covers utility shutoffs in more detail.</p>
+<p>A few things that are <strong>not</strong> an eviction, so you know the difference:</p>
+<ul class="plain">
+  <li>A text, call or verbal statement that you have to leave.</li>
+  <li>A notice taped to the door. A notice starts a clock. It does not remove you.</li>
+  <li>A letter from a lawyer or a "pay or quit" threat.</li>
+  <li>Someone knocking and saying they are there to "enforce" something without a court order.</li>
+</ul>
 
 <h2 id="notice-types">2. The notice types</h2>
 <table>
@@ -200,19 +285,30 @@
 </table>
 <p>The 5-day and 10-day notices are unaffected by how long you've lived in the unit. The tiered Fair Notice periods only apply when the landlord isn't citing nonpayment, a lease violation, disturbance of others, or abandonment.</p>
 
+<h3>The 5-day notice for unpaid rent</h3>
+<p>A 5-day notice demands the rent and gives you 5 days to pay or move out. Most commonly cited elements of a valid notice are the date, the name of each tenant, the address including the unit, the exact amount owed, the period it covers, a demand to pay or leave within 5 days, where to pay, the landlord's name and address, and a signature. If you pay the full amount demanded within the period, the landlord generally cannot file. Count calendar days, weekends included, and do not count the day you were served. Keep proof of every payment, and ask for a receipt.</p>
+
+<h3>The 10-day notice for a lease violation</h3>
+<p>A 10-day notice describes something the landlord says you did or did not do, such as having an unauthorized occupant, keeping a pet the lease forbids, or damaging the unit. In many Cook County cases, the tenant has 10 days to cure the violation. If you can fix the issue, do so and document it with dated photos, receipts or a written confirmation. If you think the claim is wrong, write back and say so, and keep records.</p>
+
+<h3>No-cause notices</h3>
+<p>If you are current on rent and have not violated the lease, a landlord who wants you out, wants to decline renewal, or wants to raise the rent must give a Fair Notice period (next section). A landlord also generally cannot end a fixed-term lease early without cause unless the lease allows it.</p>
+
 <h2 id="fair-notice">3. The Fair Notice Ordinance tiers</h2>
 <p>Chicago's Fair Notice Ordinance (Municipal Code 5-12-130) requires longer notice the longer you've lived somewhere:</p>
-<ul class="plain">
-  <li><strong>Under 6 months:</strong> 30 days' notice</li>
-  <li><strong>6 months to 3 years:</strong> 60 days' notice</li>
-  <li><strong>More than 3 years:</strong> 120 days' notice</li>
-</ul>
-<p>This applies to ending a tenancy without cause, declining to renew, and raising the rent. If the landlord serves a shorter notice than your tenancy length requires, you generally have the right to stay for the full required period, or pay the prior rent for that period — the defective notice doesn't shorten your time, it usually just starts a longer clock. Owner-occupied buildings of six units or fewer are exempt from these tiers, similar to the general RLTO exemption.</p>
+<table>
+  <tr><th>How long you have lived there</th><th>Notice required</th></tr>
+  <tr><td>Under 6 months</td><td>30 days</td></tr>
+  <tr><td>6 months to 3 years</td><td>60 days</td></tr>
+  <tr><td>More than 3 years</td><td>120 days</td></tr>
+</table>
+<p>This applies to ending a tenancy without cause, declining to renew, and raising the rent. If the landlord serves a shorter notice than your tenancy length requires, you generally have the right to stay for the full required period, or pay the prior rent for that period. The defective notice doesn't shorten your time, it usually just starts a longer clock. Owner-occupied buildings of six units or fewer are exempt from these tiers, similar to the general RLTO exemption.</p>
+<p>If you get a rent increase notice, read it for two things: whether it gives you the full tier, and whether the new rent starts only after that period ends. A rent increase that takes effect early is the kind of defect worth raising in writing.</p>
 
 <h2 id="eviction-tool">4. Free tool: Eviction Notice &amp; Deadline Calculator</h2>
-<p class="tool-sub">No signup. Runs in your browser. Enter your situation to see which notice type should apply and the earliest date a landlord could file, then download a timeline to keep for your records.</p>
+<p class="tool-sub">No signup. Runs in your browser. Enter your situation to see which notice type should apply, when the notice period ends, and the earliest a landlord could file. The tool also flags common service problems, then downloads a timeline to keep for your records.</p>
 
-<div id="eviction-tool">
+<div id="eviction-tool-box">
   <div class="q-block">
     <label for="q-reason">What does the notice say, or what's the situation?</label>
     <select id="q-reason">
@@ -231,44 +327,127 @@
       </select>
     </div>
     <div class="q-block">
-      <label for="q-noticedate">Date you received the notice</label>
+      <label for="q-noticedate">Date the notice was served on you</label>
       <input type="date" id="q-noticedate">
     </div>
   </div>
+  <div class="q-block">
+    <label for="q-service">How was it delivered?</label>
+    <select id="q-service">
+      <option value="unsure">I am not sure</option>
+      <option value="hand">Handed to me or to someone 13 or older who lives here</option>
+      <option value="mail">Certified or registered mail with return receipt</option>
+      <option value="posted">Taped or posted on the door</option>
+      <option value="regularmail">Regular mail</option>
+    </select>
+  </div>
+  <div class="q-block">
+    <label style="font-weight:400;"><input type="checkbox" id="q-ownersmall"> My landlord lives in the building and it has six units or fewer</label>
+  </div>
+  <div class="q-block">
+    <label>Check everything your notice includes (optional)</label>
+    <label style="font-weight:400;"><input type="checkbox" id="c-amount"> The exact amount owed (unpaid rent notices)</label>
+    <label style="font-weight:400;"><input type="checkbox" id="c-names"> The name of every tenant</label>
+    <label style="font-weight:400;"><input type="checkbox" id="c-address"> The full address with unit number</label>
+    <label style="font-weight:400;"><input type="checkbox" id="c-owner"> The landlord or agent's name and address</label>
+    <label style="font-weight:400;"><input type="checkbox" id="c-sign"> A signature</label>
+  </div>
   <div class="tool-actions">
-    <button class="primary" onclick="runEvictionTool()">Check my timeline</button>
-    <button class="secondary" onclick="downloadTimeline()">Download timeline (.txt)</button>
+    <button class="primary" type="button" onclick="runEvictionTool()">Check my timeline</button>
+    <button class="secondary" type="button" onclick="downloadTimeline()">Download timeline (.txt)</button>
   </div>
   <div id="result-box"></div>
 </div>
 
-<h2 id="court">5. What happens in court</h2>
+<h2 id="served">5. Was the notice served correctly?</h2>
+<p>A notice only counts if it was delivered in a way the law accepts. Commonly accepted methods are hand delivery to the tenant, hand delivery to a person at least 13 years old who lives at the property, or certified or registered mail with a return receipt. Taping a notice to the door is generally only accepted when the property is vacant. A faulty or improperly served notice has to be redone and re-served, and a landlord proves service with an affidavit of service.</p>
+<p>Defects worth noticing include:</p>
+<ul class="plain">
+  <li>Wrong notice for the situation (a 5-day notice used for a lease violation, for example).</li>
+  <li>A period that is too short for the type of notice or the Fair Notice tier.</li>
+  <li>Missing tenant names, address or unit, amount owed, or signature.</li>
+  <li>Served by regular mail only, or only posted, when you live there.</li>
+  <li>A notice that demands more than you actually owe, such as unrelated fees mixed into the rent figure.</li>
+</ul>
+<p>Spotting a defect is useful in court. It is not a reason to ignore the notice. If you can safely resolve the problem, do. If you cannot, keep the notice, the envelope, and a note of how and when you got it.</p>
+
+<h2 id="examples">6. Three worked examples</h2>
+
+<h3>Example 1: unpaid rent</h3>
+<p>Ana's rent of $1,350 was due October 1 and she has not paid. On Thursday, October 8, 2026, her landlord hands her a 5-day notice for $1,350. The day of service is not counted, so the five days are October 9, 10, 11, 12 and 13. The period ends Tuesday, October 13, and the landlord generally cannot file before Wednesday, October 14.</p>
+<p>If Ana pays the full $1,350 by October 13, gets a receipt, and keeps proof, the landlord generally cannot file on that notice. If she can only pay part, she should call a legal aid organization before anyone accepts a partial payment, because what a landlord does with a partial payment can matter later.</p>
+
+<h3>Example 2: a no-cause non-renewal</h3>
+<p>Dev has lived in his apartment for 2 years and is current on rent. His lease runs month to month. On March 15, 2027, his landlord serves a 30-day notice saying the tenancy ends April 14. Dev has lived there between 6 months and 3 years, so the Fair Notice tier is 60 days. Sixty days from March 15 is May 14, 2027. Because the notice was too short, Dev generally has the right to stay through the full 60-day period, or pay the prior rent for it. If the landlord files before then, the notice defect is a defense.</p>
+
+<h3>Example 3: a lease violation</h3>
+<p>Mei's lease bans pets and a 10-day notice says there is a cat in her unit. She has 10 days from service to cure. If she rehomes the cat and sends the landlord a dated written confirmation with a photo of the empty unit or a note from the new owner, she has documentation of the cure. If she keeps the cat, the landlord may move forward after the 10 days. Whether the violation is real, serious, or waived by earlier tolerance is the kind of question to bring to a lawyer.</p>
+
+<h2 id="court">7. What happens in court</h2>
 <ol class="steps">
   <li><strong>Notice period expires.</strong> Only after this can the landlord file.</li>
-  <li><strong>Landlord files an eviction case</strong> in Cook County court and has you served with a summons and complaint. In Cook County, the summons return date is set at least 7 days after service.</li>
-  <li><strong>Court date.</strong> You can appear and raise defenses (see below), negotiate, or in some cases request a jury trial.</li>
-  <li><strong>Judgment.</strong> If the landlord wins, the court issues an eviction order.</li>
-  <li><strong>Sheriff enforcement.</strong> Only the Cook County Sheriff can physically carry out an eviction order — this is scheduled separately and takes time.</li>
+  <li><strong>Landlord files an eviction case</strong> in Cook County court with a complaint, the notice and proof of service, a copy of the lease (or an explanation if there is none), and a summons. The plaintiff should be the property owner. A property manager cannot file the case on their own.</li>
+  <li><strong>You are served.</strong> In Cook County the Sheriff makes the first attempt to serve the summons. The summons sets your first court date and the return date is set at least 7 days after service. Under a Supreme Court order, residential eviction summonses include a notice about court-based rental assistance.</li>
+  <li><strong>Court date.</strong> You can appear and raise defenses (see below), negotiate, or in some cases request a jury trial. Many Cook County eviction hearings have been held by video, so read your summons for how and where to appear.</li>
+  <li><strong>Judgment.</strong> If the landlord wins, the court issues an eviction order. If you did not appear after being served, the landlord may get a default judgment.</li>
+  <li><strong>Sheriff enforcement.</strong> Only the Cook County Sheriff can physically carry out an eviction order. This is scheduled separately and takes time.</li>
 </ol>
 
-<h2 id="defenses">6. Common defenses</h2>
-<ul class="plain">
-  <li><strong>Defective notice</strong> — wrong notice type, wrong length, missing required details (full address, amount owed, signature), or served incorrectly.</li>
-  <li><strong>Retaliation</strong> — if the eviction follows soon after a building code complaint or organizing activity, Chicago law presumes retaliation unless the landlord rebuts it.</li>
-  <li><strong>Habitability / conditions</strong> — in some nonpayment cases, unresolved serious repair issues can be raised as a defense or offset.</li>
-  <li><strong>Partial payment accepted after a 5-day notice</strong> — depending on the circumstances, this can be argued to waive the notice, requiring the landlord to start over.</li>
-</ul>
-<p>These are general categories, not guarantees — whether any defense applies depends on your specific facts and documentation, which is exactly the kind of thing to bring to an attorney or a court-based legal aid table before your hearing.</p>
+<h2 id="served-papers">8. If you are served with court papers</h2>
+<ol class="steps">
+  <li><strong>Read the summons for the court date and how to appear.</strong> Write the date everywhere you will see it. That date is the one deadline you cannot miss.</li>
+  <li><strong>Get help right away.</strong> Use the free resources below. Do not wait until the week of the hearing.</li>
+  <li><strong>Gather your documents:</strong> lease, notice and envelope, rent receipts or bank records, texts and emails with the landlord, photos of any repair problems, your 311 or inspection records.</li>
+  <li><strong>Ask about rental assistance.</strong> If the case is about unpaid rent, a court-based rental assistance program may be able to pay what you owe. Ask legal aid or the court staff whether it is available.</li>
+  <li><strong>Show up, on time.</strong> If you cannot attend, contact the court or a legal aid organization before the date to ask what to do, rather than simply not appearing.</li>
+  <li><strong>Do not leave without checking.</strong> Moving out because of a notice or a filing can end your ability to raise defenses or negotiate. Talk to a lawyer first.</li>
+</ol>
+<p>If you miss the hearing, the landlord may obtain a default judgment. A tenant typically has about 30 days after an order is entered to ask the court to vacate a default, but do not rely on that window. Call legal aid immediately if you missed a date.</p>
 
-<h2 id="related">7. Related articles</h2>
+<h2 id="judgment">9. After judgment: the order and the sheriff</h2>
+<p>A judgment does not mean you are out the next day. A landlord with an eviction order generally has to ask the Sheriff to schedule enforcement, and in Cook County the landlord may need to submit a verification about rental assistance before the Sheriff will schedule it. The Sheriff's office does not enforce eviction orders on some dates, such as in extreme weather. Check the Cook County Sheriff's current schedule and notices.</p>
+<p>The court can also give a stay, meaning extra time to move, especially when the parties agree. If you have lost and cannot stay, use the time before enforcement to find housing, document the unit's condition on move-out (see our <a href="/chicago-move-out-documentation">move-out documentation guide</a>), and claim your deposit rights (see our <a href="/chicago-security-deposit-law">deposit law guide</a>).</p>
+
+<h2 id="defenses">10. Common defenses</h2>
+<ul class="plain">
+  <li><strong>Defective notice.</strong> Wrong notice type, wrong length, missing required details (full address, amount owed, signature), or served incorrectly.</li>
+  <li><strong>Retaliation.</strong> If the eviction follows soon after a building code complaint or organizing activity, Chicago law presumes retaliation unless the landlord rebuts it. The presumption applies to certain landlord actions within one year of a protected act. See our <a href="/chicago-landlord-entry-retaliation">entry and retaliation guide</a>.</li>
+  <li><strong>Habitability / conditions.</strong> In some nonpayment cases, unresolved serious repair issues can be raised as a defense or offset. See our <a href="/chicago-habitability-violations">habitability guide</a>.</li>
+  <li><strong>Partial payment accepted after a 5-day notice.</strong> Depending on the circumstances, this can be argued to waive the notice, requiring the landlord to start over.</li>
+  <li><strong>Payment or cure.</strong> You paid or fixed the problem within the notice period. Proof is everything: receipts, bank records, photos.</li>
+  <li><strong>The landlord does not own or cannot show standing.</strong> A property manager is not the plaintiff, and an LLC owner generally needs a lawyer to appear for it.</li>
+</ul>
+<p>These are general categories, not guarantees. Whether any defense applies depends on your specific facts and documentation, which is exactly the kind of thing to bring to an attorney or a court-based legal aid table before your hearing.</p>
+
+<h2 id="settle">11. Settling a case</h2>
+<p>Many eviction cases end with an agreement rather than a trial. Courts can allow extra time to access rental assistance, legal aid and mediation, and approved statewide agreed orders exist to help parties resolve cases. A settlement can include a payment plan, more time to move, a waived late fee, or an agreement about what the record says. Before you sign anything:</p>
+<ul class="plain">
+  <li>Read it completely, including the part about what happens if you miss a date. Some agreed orders let the landlord get an eviction order immediately.</li>
+  <li>Make sure the amount matches your records.</li>
+  <li>Get a copy.</li>
+  <li>Ask a legal aid lawyer to look at it first if you can.</li>
+</ul>
+<p>An eviction filing can appear on tenant screening reports even when the case is later dismissed. Ask a legal aid organization about options such as dismissal terms and sealing.</p>
+
+<h2 id="help">12. Free help</h2>
+<ul class="plain">
+  <li><strong>Eviction Help Illinois:</strong> evictionhelpillinois.org, 855-631-0811.</li>
+  <li><strong>Cook County Legal Aid for Housing and Debt:</strong> cookcountylegalaid.org, 855-956-5763.</li>
+  <li><strong>Court-based rental assistance information:</strong> illinoishousinghelp.org.</li>
+  <li><strong>311:</strong> for conditions complaints and general City information.</li>
+</ul>
+<p>Contact details and programs change, so confirm them on the organization's website.</p>
+
+<h2 id="related">13. Related articles</h2>
 <div class="related">
+  <a href="/chicago-landlord-entry-retaliation"><span class="label">Deep dive</span>Landlord entry and retaliation in Chicago</a>
   <a href="/chicago-habitability-violations"><span class="label">Deep dive</span>What counts as a habitability violation</a>
   <a href="/chicago-heat-law-utility-complaints"><span class="label">Deep dive</span>Heat law and utility complaints</a>
   <a href="/chicago-security-deposit-law"><span class="label">Deep dive</span>Security deposit law in Chicago</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">8. FAQ</h2>
+<h2 id="faq">14. FAQ</h2>
 <h3>Can my landlord evict me without going to court?</h3>
 <p>Generally no. Self-help evictions are generally not permitted. A court order is generally required before a sheriff can remove you.</p>
 <h3>How much notice does my landlord have to give?</h3>
@@ -277,79 +456,169 @@
 <p>You generally get to stay for the full required period, or pay the prior rent for that period, even though a shorter notice was served.</p>
 <h3>How long does an eviction case take?</h3>
 <p>Varies with court load and whether the case is contested, but it generally runs through filing, a court date, judgment, and separate sheriff enforcement rather than a same-day removal.</p>
+<h3>What if I miss my court date?</h3>
+<p>The landlord may get a default judgment. Contact a legal aid organization immediately. A tenant typically has about 30 days after an order is entered to ask to vacate a default, but it is not guaranteed.</p>
+<h3>Can I stop an eviction by paying?</h3>
+<p>For unpaid rent, paying the full amount demanded within the notice period generally prevents a filing. After a case is filed, the outcome depends on the court, the landlord and any rental assistance or agreed order.</p>
+<h3>Does an expired notice mean I have to leave?</h3>
+<p>No. It means the landlord can start a court case. You do not have to leave until a court order is obtained and enforced by the sheriff.</p>
+<h3>Where can I get free help?</h3>
+<p>Eviction Help Illinois (evictionhelpillinois.org, 855-631-0811) and Cook County Legal Aid for Housing and Debt (cookcountylegalaid.org, 855-956-5763) are good places to start.</p>
 
 <footer>
-  Sources: Chicago Municipal Code 5-12-130 (Fair Notice Ordinance); Chicago Municipal Code Chapter 5-12 (RLTO); 735 ILCS 5/9-209, 5/9-210 (Illinois eviction notice statutes). This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: Chicago Municipal Code 5-12-130 (Fair Notice Ordinance); Chicago Municipal Code Chapter 5-12 (RLTO) and the City's RLTO Summary; 735 ILCS 5/9-209, 5/9-210 (Illinois eviction notice statutes); Illinois Courts, Eviction Early Resolution Program resources; Chicago Volunteer Legal Services, Cook County Residential Eviction Filing Procedures. This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
+
 
 </div>
 
 <script>
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+var DAY_MS = 24 * 60 * 60 * 1000;
+
+// Parse YYYY-MM-DD as a UTC calendar day, so adding days never drifts across a daylight saving change.
+function parseDay(str) {
+  if (!str) return null;
+  var p = str.split('-').map(Number);
+  if (p.length !== 3 || isNaN(p[0]) || isNaN(p[1]) || isNaN(p[2])) return null;
+  return new Date(Date.UTC(p[0], p[1] - 1, p[2]));
+}
+
+function addDays(d, n) {
+  return new Date(d.getTime() + n * DAY_MS);
+}
+
+function fmtDay(d) {
+  return d.toLocaleDateString('en-US', { timeZone: 'UTC', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function checked(id) {
+  var el = document.getElementById(id);
+  return !!(el && el.checked);
+}
+
 function computeEviction() {
-  const reason = document.getElementById('q-reason').value;
-  const tenlength = document.getElementById('q-tenlength').value;
-  const noticeStr = document.getElementById('q-noticedate').value;
+  var reason = document.getElementById('q-reason').value;
+  var tenlength = document.getElementById('q-tenlength').value;
+  var noticeStr = document.getElementById('q-noticedate').value;
+  var service = document.getElementById('q-service').value;
+  var ownerSmall = checked('q-ownersmall');
 
-  let noticeType = "";
-  let days = 0;
-  if (reason === "nonpayment") { noticeType = "5-Day Notice (nonpayment of rent)"; days = 5; }
-  else if (reason === "violation") { noticeType = "10-Day Notice (lease violation)"; days = 10; }
-  else {
+  var noticeType = "";
+  var days = 0;
+  var cureNote = "";
+  var tierApplies = false;
+  if (reason === "nonpayment") {
+    noticeType = "5-Day Notice (nonpayment of rent)";
+    days = 5;
+    cureNote = "You can generally stop the case by paying the full amount demanded in the notice before the 5 days run out. Get a receipt. Accepting only part of the rent, or rent after the period, can raise waiver questions, so ask a legal aid organization before you or your landlord handle partial payments.";
+  } else if (reason === "violation") {
+    noticeType = "10-Day Notice (lease violation)";
+    days = 10;
+    cureNote = "In many Cook County cases a tenant has 10 days to cure the violation described in the notice. Fix it, document the fix with dated photos or receipts, and tell the landlord in writing.";
+  } else {
+    tierApplies = true;
     if (tenlength === "under6") { noticeType = "30-Day Notice (Fair Notice Ordinance, under 6 months)"; days = 30; }
-    else if (tenlength === "6mo3yr") { noticeType = "60-Day Notice (Fair Notice Ordinance, 6 months–3 years)"; days = 60; }
+    else if (tenlength === "6mo3yr") { noticeType = "60-Day Notice (Fair Notice Ordinance, 6 months to 3 years)"; days = 60; }
     else { noticeType = "120-Day Notice (Fair Notice Ordinance, over 3 years)"; days = 120; }
+    cureNote = "A no-cause termination, non-renewal or rent increase is not a claim that you did something wrong, so there is nothing to cure. If the notice is shorter than the tier above, you can generally stay for the full period, or pay the prior rent for it.";
   }
 
-  let earliestFileText = "Enter the date you received the notice to calculate the earliest filing date.";
-  let earliestFileDate = null;
-  if (noticeStr) {
-    const notice = new Date(noticeStr + "T00:00:00");
-    earliestFileDate = new Date(notice.getTime() + days * 24 * 60 * 60 * 1000);
-    earliestFileText = "Earliest the landlord could file in court: " + earliestFileDate.toLocaleDateString();
+  var notice = parseDay(noticeStr);
+  var periodEnd = null, earliestFile = null;
+  var earliestFileText = "Enter the date the notice was served on you to calculate the period.";
+  if (notice) {
+    // The day of service is not counted. Calendar days, weekends included.
+    periodEnd = addDays(notice, days);
+    earliestFile = addDays(periodEnd, 1);
+    earliestFileText = "Notice period ends: " + fmtDay(periodEnd) + ". The landlord generally cannot file before: " + fmtDay(earliestFile) + ".";
   }
 
-  return { noticeType, days, noticeStr, earliestFileText };
+  var warnings = [];
+  if (service === "posted") {
+    warnings.push("A notice that was only posted on the door is generally not valid service unless the property is vacant. Ask a legal aid organization or attorney whether this notice was served correctly.");
+  }
+  if (service === "regularmail") {
+    warnings.push("Regular first-class mail alone is generally not an accepted method of service for eviction notices. Acceptable methods generally include hand delivery to you, hand delivery to a person 13 or older living at the home, or certified or registered mail with a return receipt.");
+  }
+  if (tierApplies && ownerSmall) {
+    warnings.push("Owner-occupied buildings of six units or fewer are generally exempt from the Fair Notice tiers, so a shorter notice may be legal in your case. Confirm with a legal aid organization.");
+  }
+  var missing = [];
+  var anyChecked = checked('c-amount') || checked('c-names') || checked('c-address') || checked('c-sign') || checked('c-owner');
+  if (reason === 'nonpayment' && !checked('c-amount')) missing.push("the exact amount owed (for nonpayment notices)");
+  if (!checked('c-names')) missing.push("the name of every tenant");
+  if (!checked('c-address')) missing.push("the full address with unit number");
+  if (!checked('c-sign')) missing.push("the landlord or agent's signature");
+  if (!checked('c-owner')) missing.push("a landlord or agent name and address");
+  if (anyChecked && missing.length) {
+    warnings.push("Based on the boxes you checked, your notice may be missing: " + missing.join("; ") + ". Missing required details can make a notice defective. Do not ignore it on that basis; ask for help.");
+  }
+
+  return { reason: reason, noticeType: noticeType, days: days, noticeStr: noticeStr, periodEnd: periodEnd, earliestFile: earliestFile,
+           earliestFileText: earliestFileText, cureNote: cureNote, warnings: warnings, service: service };
 }
 
 function runEvictionTool() {
-  const r = computeEviction();
-  const box = document.getElementById('result-box');
+  var r = computeEviction();
+  var box = document.getElementById('result-box');
   box.style.display = 'block';
-  let html = '<h3>Your timeline</h3>';
-  html += '<span class="flag">' + r.noticeType + '</span>';
-  html += '<p><strong>Required notice period:</strong> ' + r.days + ' days</p>';
-  html += '<p><strong>' + r.earliestFileText + '</strong></p>';
-  html += '<p style="color:#5b6470;font-size:0.85rem;">This is a general estimate based on the notice type and tenancy length you entered, not a legal determination. Actual deadlines depend on how and when the notice was served, and whether it meets all legal requirements.</p>';
+  var html = '<h3>Your timeline</h3>';
+  html += '<span class="flag">' + escHtml(r.noticeType) + '</span>';
+  html += '<p><strong>Required notice period:</strong> ' + r.days + ' calendar days, not counting the day you were served.</p>';
+  html += '<p><strong>' + escHtml(r.earliestFileText) + '</strong></p>';
+  html += '<p>' + escHtml(r.cureNote) + '</p>';
+  if (r.warnings.length) {
+    html += '<h3>Things to check</h3><ul>';
+    r.warnings.forEach(function (w) { html += '<li>' + escHtml(w) + '</li>'; });
+    html += '</ul>';
+  }
+  html += '<p>A notice period ending does not mean you must leave. After it ends, the landlord has to file a case, serve you, win in court and then have the sheriff carry out an order. If you receive court papers, the court date on them is the deadline that matters most.</p>';
+  html += '<p style="color:#5b6470;font-size:0.85rem;">This is a general estimate based on what you entered, not a legal determination. Actual deadlines depend on how and when the notice was served, your lease, whether the building is covered by the ordinance, and whether the notice meets all legal requirements.</p>';
   box.innerHTML = html;
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 function buildTimelineText(r) {
-  let lines = [];
+  var lines = [];
   lines.push("Cook County Eviction Timeline Summary");
   lines.push("Generated: " + new Date().toLocaleDateString());
   lines.push("");
   lines.push("Notice type: " + r.noticeType);
-  lines.push("Required notice period: " + r.days + " days");
-  lines.push("Date notice received: " + (r.noticeStr || "[not entered]"));
+  lines.push("Required notice period: " + r.days + " calendar days (day of service not counted)");
+  lines.push("Date notice served on me: " + (r.noticeStr || "[not entered]"));
+  lines.push("How it was served: " + ({hand: "hand delivered", mail: "certified or registered mail", posted: "posted on the door", regularmail: "regular mail", unsure: "not sure"}[r.service] || "not sure"));
   lines.push(r.earliestFileText);
   lines.push("");
-  lines.push("Reminders:");
-  lines.push("- A landlord generally cannot remove you without a Cook County court order.");
-  lines.push("- Keep a copy of the notice and the envelope/delivery method it arrived in.");
-  lines.push("- If served notice, you can still appear in court and raise defenses.");
-  lines.push("- Consider contacting a tenant rights organization or attorney promptly.");
+  lines.push("What this means:");
+  lines.push(r.cureNote);
+  if (r.warnings.length) {
+    lines.push("");
+    lines.push("Things to check:");
+    r.warnings.forEach(function (w) { lines.push("- " + w); });
+  }
+  lines.push("");
+  lines.push("Keep records:");
+  lines.push("- The notice itself, and the envelope or a note of how it arrived.");
+  lines.push("- Proof of any payment or cure, with dates.");
+  lines.push("- Every message with the landlord.");
+  lines.push("- If you receive court papers: the summons, the complaint, and the court date. Do not miss the court date.");
+  lines.push("");
+  lines.push("Help (verify current contact details): evictionhelpillinois.org (855-631-0811); Cook County Legal Aid for Housing and Debt, cookcountylegalaid.org (855-956-5763); court-based rental assistance information at illinoishousinghelp.org.");
   lines.push("");
   lines.push("This is a general informational summary, not legal advice.");
   return lines.join("\n");
 }
 
 function downloadTimeline() {
-  const r = computeEviction();
-  const text = buildTimelineText(r);
-  const blob = new Blob([text], {type: 'text/plain'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
+  var r = computeEviction();
+  var text = buildTimelineText(r);
+  var blob = new Blob([text], {type: 'text/plain'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
   a.href = url;
   a.download = 'cook-county-eviction-timeline.txt';
   document.body.appendChild(a);

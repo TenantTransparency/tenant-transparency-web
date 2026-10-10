@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/chicago-deposit-not-returned/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -66,6 +66,16 @@
       "@type": "Question",
       "name": "Do I need a lawyer to sue for my deposit in small claims court?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Illinois small claims court, including Cook County's Pro Se Small Claims Division, is designed for people to represent themselves. An attorney isn't required, though many attorneys take strong RLTO deposit cases on contingency because of the fee-shifting provision." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my deposit claim is more than the $10,000 small claims limit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You may be able to reduce the claim to fit the limit or file a regular civil case instead. Ask the Clerk of the Circuit Court's self-help staff or an attorney before filing, since the choice can affect how much you recover." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I send my landlord first when my deposit isn't returned?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A short written demand letter citing Section 5-12-080 of the Chicago RLTO, stating the amount owed and giving a firm deadline, usually seven days, sent by a method that proves delivery such as certified mail." }
     }
   ]
 }
@@ -104,8 +114,7 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #deposit-dispute-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #deposit-dispute-tool h2 { border: none; margin-top: 0; }
+  #deposit-dispute-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -122,6 +131,22 @@
   #result-box pre { white-space: pre-wrap; font-family: inherit; font-size: 0.9rem; }
   #result-box table { margin: 8px 0 0; }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+
+  figure.lead-image { margin: 0 0 24px; }
+  .lead-image img { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .lead-image figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 20px; margin: 20px 0 28px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.05rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  .callout { background: var(--card); border-left: 4px solid var(--accent); border-radius: 4px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem; }
+  .callout strong.t { display: block; margin-bottom: 4px; }
+  .example { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 0.95rem; }
+  .example strong.t { display: block; color: var(--accent); margin-bottom: 4px; }
+  .scroll-x { overflow-x: auto; }
+  .note { color: var(--muted); font-size: 0.85rem; }
+  .err { color: #a13327; font-weight: 600; }
+  th, td { vertical-align: top; }
 </style>
 </head>
 <body>
@@ -166,16 +191,32 @@
 
 <div class="disclaimer">
   <strong>This is not legal advice.</strong>
-  This article explains general escalation options for informational purposes only. Small claims procedures and deadlines are strict — consult a licensed Illinois attorney or a tenant rights organization about your specific case before filing.
+  This article explains general escalation options for informational purposes only. Small claims procedures and deadlines are strict, so consult a licensed Illinois attorney or a tenant rights organization about your specific case before filing.
+</div>
+
+<div class="glance">
+  <h2>At a glance</h2>
+  <ul>
+    <li>If 45 days have passed since you moved out and you have no deposit, you likely have a claim under Section 5-12-080 of the RLTO.</li>
+    <li>Start with a written demand letter that cites the ordinance and gives a firm deadline, usually 7 days.</li>
+    <li>If that fails, file in the Pro Se Small Claims Division of the Circuit Court of Cook County. No lawyer is required, and the claim limit is $10,000.</li>
+    <li>You can ask for the deposit, interest, damages of two times the deposit plus interest, and costs and attorney's fees if you win.</li>
+  </ul>
 </div>
 
 <nav class="toc" aria-label="Table of contents">
   <h2>What's in this article</h2>
   <ol>
     <li><a href="#already-late">If the 45-day deadline has already passed</a></li>
+    <li><a href="#gather">Before you send anything: gather your facts</a></li>
     <li><a href="#escalation">The escalation path</a></li>
     <li><a href="#deposit-dispute-tool">Free tool: damages calculator &amp; filing prep sheet</a></li>
+    <li><a href="#excuses">What landlords say, and how to respond</a></li>
     <li><a href="#small-claims">Filing in Cook County small claims court</a></li>
+    <li><a href="#hearing">Preparing for the hearing</a></li>
+    <li><a href="#settlement">Settling before or after filing</a></li>
+    <li><a href="#after">After you win</a></li>
+    <li><a href="#help">Where to get free help</a></li>
     <li><a href="#evidence">What to bring</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -183,20 +224,39 @@
 </nav>
 
 <h2 id="already-late">1. If the 45-day deadline has already passed</h2>
-<p>Under RLTO Section 5-12-080, your landlord had 45 days after your move-out date to return your deposit and interest, or 30 days to send an itemized statement if deductions were being made. If both deadlines have passed with nothing from your landlord, you likely have a claim for the deposit itself plus statutory damages — see our <a href="/chicago-security-deposit-law">security deposit law breakdown</a> for how those deadlines and the interest rate work.</p>
+<p>Under RLTO Section 5-12-080, your landlord had 45 days after your move-out date to return your deposit and interest, and 30 days to send an itemized statement if deductions were being made. Those are two separate obligations. If both deadlines have passed with nothing from your landlord, you likely have a claim for the deposit, interest and statutory damages. If only one was missed, you still may have a claim, because each requirement stands on its own. See our <a href="/chicago-security-deposit-law">security deposit law breakdown</a> for how the deadlines and the interest rate work.</p>
+<p>Before treating this as a fight, rule out the boring explanations. Check every address the landlord might have used, including your old unit, your email spam folder and any forwarding service. Confirm the exact date you returned keys. A message from the landlord confirming that date is the best evidence you can have.</p>
 
-<h2 id="escalation">2. The escalation path</h2>
+<h2 id="gather">2. Before you send anything: gather your facts</h2>
+<p>Every step after this one goes better if you can answer these questions in writing:</p>
+<ul class="plain">
+  <li>What is the exact amount of the deposit, and how and when did you pay it?</li>
+  <li>When did you move out, and how can you prove it?</li>
+  <li>Did you give a forwarding address, and when?</li>
+  <li>Did you ever receive a deposit receipt, a bank name and address, or any interest payment?</li>
+  <li>Has the landlord said anything about deductions, in writing or out loud?</li>
+  <li>What was the condition of the unit at move-in and at move-out? Do you have photos?</li>
+  <li>Who exactly is the landlord? The owner's name on the lease may differ from the property manager's.</li>
+</ul>
+<p>To identify the owner, look at the lease, your rent payments and any city records for the building. You can also search the address on our <a href="/search">property search</a>. A claim has to name the right defendant, and the person on the lease is usually the right start.</p>
+
+<h2 id="escalation">3. The escalation path</h2>
 <ol class="steps">
-  <li><strong>Send a written demand letter</strong> citing Section 5-12-080 and giving a firm deadline (a generator for this is in our <a href="/chicago-security-deposit-law">security deposit law article</a>).</li>
-  <li><strong>Give it a reasonable window</strong> — many landlords settle once they see a letter that cites the ordinance and the 2x penalty specifically.</li>
-  <li><strong>If there's no response, file in small claims court.</strong> No attorney is required, and the fee-shifting provision means you can recover your costs if you win.</li>
-  <li><strong>Keep every piece of documentation</strong> — your original receipt, lease, move-out photos, the demand letter, and proof it was sent.</li>
+  <li><strong>Send a written demand letter.</strong> Cite Section 5-12-080, state the amount, and give a firm deadline. Seven days is common. A generator for this is in our <a href="/chicago-security-deposit-law">security deposit law article</a>. Send it by a method that proves delivery, such as certified mail with a return receipt, and also by email.</li>
+  <li><strong>Give it a reasonable window.</strong> Many landlords settle once they see a letter that cites the ordinance and the penalty specifically. Write the date on your calendar.</li>
+  <li><strong>Send one follow-up.</strong> If the deadline passes with no reply, send a short second note saying you will file in small claims court on a specific date.</li>
+  <li><strong>File in small claims court.</strong> No attorney is required, and the fee-shifting provision means you can recover your costs if you win.</li>
+  <li><strong>Keep every piece of documentation.</strong> Your original receipt, lease, move-out photos, the demand letter, proof it was sent, and any replies.</li>
 </ol>
+<div class="callout">
+  <strong class="t">Tone matters</strong>
+  Keep every letter factual and short. A judge reading your file wants dates, amounts and what you asked for. Anger and speculation about the landlord's motives do not help and can distract from a strong claim.
+</div>
 
-<h2 id="deposit-dispute-tool">3. Free tool: Deposit Dispute Damages Calculator &amp; Filing Prep Sheet</h2>
+<h2 id="deposit-dispute-tool">4. Free tool: Deposit Dispute Damages Calculator &amp; Filing Prep Sheet</h2>
 <p class="tool-sub">No signup. Runs in your browser. Enter your deposit details to see your potential claim total, and download a filing prep sheet that organizes the facts the way a small claims complaint needs them.</p>
 
-<div id="deposit-dispute-tool">
+<div id="deposit-dispute-tool-box">
   <div class="q-row">
     <div class="q-block">
       <label for="q-deposit">Security deposit amount ($)</label>
@@ -248,42 +308,112 @@
   <div id="result-box"></div>
 </div>
 
-<h2 id="small-claims">4. Filing in Cook County small claims court</h2>
+<h2 id="excuses">5. What landlords say, and how to respond</h2>
+<p>You will hear some version of the same few responses. Having a calm, written answer ready makes a difference.</p>
+<div class="scroll-x">
+<table>
+  <tr><th>What you hear</th><th>How to respond</th></tr>
+  <tr><td>"You damaged the unit."</td><td>Ask for the itemized statement, the invoices and the date of the work. Point to your move-in and move-out photos. Remember the statement was due within 30 days, regardless of the amount.</td></tr>
+  <tr><td>"I mailed you the check."</td><td>Ask for the date, the address used and a copy of the check. Remind them of the 45-day deadline and that you provided a forwarding address, if you did.</td></tr>
+  <tr><td>"I'm still waiting for repair invoices."</td><td>The itemized statement, with estimates, was due within 30 days. A landlord cannot wait for invoices to start the clock.</td></tr>
+  <tr><td>"The lease says the deposit is non-refundable."</td><td>A deposit must be accounted for under the ordinance. A separate non-refundable fee is a different thing. Ask what the lease calls it. See our <a href="/chicago-lease-red-flags">lease red flags guide</a>.</td></tr>
+  <tr><td>"You owe me rent."</td><td>Unpaid rent can be a lawful deduction, but only if it is real and itemized in time. Check your payment records.</td></tr>
+  <tr><td>"The building was sold, ask the new owner."</td><td>Write to both the old and new owner and ask who holds your deposit. Keep the replies.</td></tr>
+  <tr><td>"I'll pay you after the unit is rented."</td><td>The return deadline does not depend on re-renting. Decline and restate the deadline in writing.</td></tr>
+</table>
+</div>
+
+<h2 id="small-claims">6. Filing in Cook County small claims court</h2>
+<div class="scroll-x">
 <table>
   <tr><th>Detail</th><th>What to know</th></tr>
-  <tr><td>Where</td><td>Circuit Court of Cook County, Pro Se Small Claims Division — commonly the Richard J. Daley Center in Chicago, or a suburban branch depending on where the property is located</td></tr>
+  <tr><td>Where</td><td>Circuit Court of Cook County, Pro Se Small Claims Division, commonly the Richard J. Daley Center in Chicago, or a suburban branch depending on where the property or landlord is located</td></tr>
   <tr><td>Claim limit</td><td>$10,000</td></tr>
-  <tr><td>Filing fee</td><td>Roughly $75–$268 depending on claim amount and location — ask the clerk about a fee waiver if cost is a barrier</td></tr>
-  <tr><td>Attorney required?</td><td>No — the Pro Se division exists specifically for self-represented filers</td></tr>
+  <tr><td>Filing fee</td><td>Varies with the amount claimed. Check the Clerk of the Circuit Court's current fee schedule, and ask about a fee waiver if cost is a barrier.</td></tr>
+  <tr><td>Attorney required?</td><td>No. The Pro Se division exists for self-represented filers.</td></tr>
   <tr><td>What to file</td><td>A Small Claims Complaint form naming the landlord, describing what happened, citing RLTO 5-12-080, and stating the amount claimed</td></tr>
 </table>
+</div>
+<h3>The filing steps</h3>
+<ol class="steps">
+  <li><strong>Prepare your prep sheet.</strong> Use the tool above to organize the facts and the numbers. Bring a printed copy.</li>
+  <li><strong>Fill out the complaint.</strong> Name the landlord exactly as it appears on the lease. If the owner is a company, use the company's legal name. Describe the claim in short paragraphs: the lease, the deposit, the move-out date, the deadlines, and what you are asking for.</li>
+  <li><strong>File with the Clerk and pay the fee or request a waiver.</strong> The Clerk assigns a case number and a first court date.</li>
+  <li><strong>Serve the landlord.</strong> The court explains how the defendant must be served with the summons and complaint. Service has to be done properly, so follow the instructions you are given and keep proof of it.</li>
+  <li><strong>Attend the first date.</strong> Come on time with your documents. Some cases settle at the courthouse. If the landlord does not appear after proper service, you may be able to ask for a judgment by default.</li>
+</ol>
+<h3>When your total is over $10,000</h3>
+<p>Because the possible damages are three times the deposit in the worst case, a larger deposit can push your total above the small claims limit. For example, a $4,000 deposit could lead to a total claim over $10,000. You may be able to reduce your claim to fit the limit, or file a regular civil case instead. Ask the Clerk's self-help staff or an attorney which option makes sense, because choosing the wrong one can cost you money you would otherwise recover.</p>
 
-<h2 id="evidence">5. What to bring</h2>
+<h2 id="hearing">7. Preparing for the hearing</h2>
+<p>Small claims hearings are short, so your clarity matters more than volume. A simple structure works well:</p>
+<ol class="steps">
+  <li><strong>A 60-second summary.</strong> Practice saying this out loud: who you are, when you moved in, what you paid, when you moved out, what deadlines passed, and what you are asking for.</li>
+  <li><strong>The numbered exhibits.</strong> Bring three copies of each document, labeled 1, 2, 3 and so on: lease, receipt, move-out photos, demand letter and proof of sending, and the landlord's replies.</li>
+  <li><strong>A one-page timeline.</strong> Dates in order, one line each. The judge can follow your case on one sheet.</li>
+  <li><strong>The legal basis, briefly.</strong> Say that you are bringing the claim under Section 5-12-080 of the Chicago RLTO and that the landlord did not return the deposit or send an itemized statement within the required time.</li>
+  <li><strong>Listen, then respond.</strong> If the landlord claims damages, ask the judge to look at your photos and ask the landlord for the itemized statement and invoices.</li>
+</ol>
+<p>Dress simply, arrive early and speak to the judge, not to the landlord. Do not argue with the other side directly.</p>
+
+<h2 id="settlement">8. Settling before or after filing</h2>
+<p>Many deposit cases end in a settlement, sometimes in the hallway before the judge calls the case. A settlement can be a good outcome, because it is faster and certain. Some things to keep in mind:</p>
 <ul class="plain">
-  <li>Your lease and original deposit receipt</li>
-  <li>Move-in and move-out photos/video</li>
-  <li>Your written demand letter and proof it was sent</li>
-  <li>Any communication from the landlord (or lack of response)</li>
-  <li>A clear, short written timeline of dates</li>
+  <li><strong>Know your range.</strong> Your calculator numbers show the upper end. A realistic settlement is often less, but a landlord who has clearly missed the deadlines is exposed to far more than the deposit.</li>
+  <li><strong>Get it in writing.</strong> Any agreement should state the amount, the payment date and how it will be paid.</li>
+  <li><strong>Be careful about releasing your claims.</strong> Read any release before you sign it, and make sure the payment arrives before you drop the case, or ask the court to hold the case open until payment.</li>
+  <li><strong>Prefer traceable payment.</strong> A cashier's check or bank transfer is safer than cash.</li>
 </ul>
 
-<h2 id="related">6. Related articles</h2>
+<h2 id="after">9. After you win</h2>
+<p>A judgment says what the landlord owes. It does not move money on its own. If the landlord does not pay, Illinois has collection tools, such as a citation to discover assets and wage deduction. The Clerk's office and Illinois Legal Aid Online explain how they work. Keep your judgment paper somewhere safe, and note any payment deadlines. An attorney or legal aid organization can help you pick the right collection step.</p>
+
+<h2 id="help">10. Where to get free help</h2>
+<ul class="plain">
+  <li><strong>Lawyers' Committee for Better Housing</strong> is a Chicago organization that helps tenants with housing problems.</li>
+  <li><strong>Illinois Legal Aid Online</strong> has plain-language guides on small claims and collections.</li>
+  <li><strong>The Clerk of the Circuit Court of Cook County</strong> has forms and self-help information for self-represented filers.</li>
+  <li><strong>A private attorney</strong> may take a strong RLTO case on contingency, because the ordinance lets a winning tenant recover attorney's fees.</li>
+</ul>
+
+<h2 id="evidence">11. What to bring</h2>
+<ul class="plain">
+  <li>Your lease and original deposit receipt</li>
+  <li>Move-in and move-out photos and video, with dates visible</li>
+  <li>Your written demand letter and proof it was sent</li>
+  <li>Any communication from the landlord, or a note that there was none</li>
+  <li>A clear one-page timeline of dates</li>
+  <li>Proof of your move-out date and the date keys were returned</li>
+  <li>Your calculator printout or prep sheet, with the math shown</li>
+  <li>Photo ID and your case paperwork from the Clerk</li>
+</ul>
+
+<h2 id="related">12. Related articles</h2>
 <div class="related">
   <a href="/chicago-security-deposit-law"><span class="label">Deep dive</span>Security deposit law in Chicago</a>
   <a href="/chicago-move-out-documentation"><span class="label">Deep dive</span>How to document issues before moving out</a>
+  <a href="/chicago-lease-red-flags"><span class="label">Deep dive</span>Chicago lease red flags: clauses and fees that can't be enforced</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">7. FAQ</h2>
+<h2 id="faq">13. FAQ</h2>
 <h3>What can I sue for?</h3>
-<p>Generally the deposit, any interest that may be owed, statutory damages of two times the deposit, plus attorney's fees and costs, if a violation is established. Outcomes depend on the facts of your situation.</p>
+<p>Generally the deposit, any interest that may be owed, damages of two times the deposit plus interest, and attorney's fees and costs, if a violation is established. Outcomes depend on the facts of your situation.</p>
 <h3>Where do I file in Cook County?</h3>
 <p>The Pro Se Small Claims Division of the Circuit Court of Cook County, commonly at the Daley Center or a suburban branch.</p>
 <h3>Do I need a lawyer?</h3>
-<p>No — small claims court is built for self-represented filers, though attorneys often take strong RLTO cases on contingency.</p>
+<p>No. Small claims court is built for self-represented filers, though attorneys often take strong RLTO cases on contingency.</p>
+<h3>What if my claim is more than $10,000?</h3>
+<p>You may be able to reduce the claim to fit the limit or file a regular civil case. Ask the Clerk's self-help staff or an attorney before you file.</p>
+<h3>What should I send first?</h3>
+<p>A short written demand letter citing Section 5-12-080, stating the amount and giving a firm deadline, sent by a method that proves delivery.</p>
+<h3>What if the landlord offers a partial payment?</h3>
+<p>You can accept a settlement, but get it in writing and make sure you understand what claims you are releasing. Do not drop a filed case until payment is in your hands.</p>
+<h3>Does winning mean I get paid automatically?</h3>
+<p>No. A judgment states what is owed. If the landlord does not pay, there are collection steps, which the Clerk and legal aid sites explain.</p>
 
 <footer>
-  Sources: Chicago Municipal Code Section 5-12-080 (RLTO Security Deposits); Illinois Supreme Court Rules 281–289 (Small Claims); Circuit Court of Cook County Pro Se Small Claims Division. This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: Chicago Municipal Code Sections 5-12-080 and 5-12-180 (RLTO); Illinois Supreme Court Rules 281 to 289 (Small Claims); Circuit Court of Cook County Pro Se Small Claims Division. This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
 
 </div>
@@ -320,15 +450,15 @@ function runDisputeTool() {
   const r = computeDispute();
   const box = document.getElementById('result-box');
   box.style.display = 'block';
-  if (r.error) { box.innerHTML = '<p>' + r.error + '</p>'; return; }
+  if (r.error) { box.innerHTML = '<p class="err">' + r.error + '</p>'; return; }
   let html = '<h3>Your potential claim</h3>';
   html += '<table>' +
     '<tr><td>Deposit</td><td>$' + r.deposit.toFixed(2) + '</td></tr>' +
     '<tr><td>Estimated interest</td><td>$' + r.interest.toFixed(2) + '</td></tr>' +
     '<tr><td>Statutory damages (2x deposit)</td><td>$' + r.statutory.toFixed(2) + '</td></tr>' +
-    '<tr><th>Potential total</th><th>$' + r.total.toFixed(2) + '</th></tr>' +
+    '<tr><th>Upper-end total</th><th>$' + r.total.toFixed(2) + '</th></tr>' +
   '</table>';
-  html += '<p style="color:#5b6470;font-size:0.85rem;margin-top:10px;">This is an estimate for informational purposes only, not a legal determination. Attorney\'s fees and court costs may also be recoverable but aren\'t included in this total. Confirm the $10,000 small claims limit isn\'t exceeded.</p>';
+  html += (r.total > 10000 ? '<p><span class="flag bad">Over the $10,000 small claims limit</span> Your total is above the small claims limit. Ask the Clerk or an attorney whether to reduce the claim or file a regular civil case.</p>' : '') + '<p style="color:#5b6470;font-size:0.85rem;margin-top:10px;">This is an upper-end estimate for informational purposes only, not a legal determination. The ordinance sets damages at two times the deposit plus interest, and whether a judge also orders the original deposit returned depends on whether the landlord still holds it. Attorney\'s fees and court costs may also be recoverable but are not included.</p>';
   box.innerHTML = html;
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
@@ -353,7 +483,7 @@ function buildPrepSheet(r) {
     lines.push("  Deposit: $" + r.deposit.toFixed(2));
     lines.push("  Interest: $" + (r.interest || 0).toFixed(2));
     lines.push("  Statutory damages (2x deposit): $" + r.statutory.toFixed(2));
-    lines.push("  Total: $" + r.total.toFixed(2));
+    lines.push("  Upper-end total: $" + r.total.toFixed(2));
   }
   lines.push("");
   lines.push("Legal basis: Chicago Municipal Code Section 5-12-080 (RLTO Security Deposits)");
@@ -365,6 +495,7 @@ function buildPrepSheet(r) {
   lines.push("  - Any landlord correspondence");
   lines.push("");
   lines.push("File at: Circuit Court of Cook County, Pro Se Small Claims Division");
+  lines.push("Reminder: the small claims limit is $10,000. Check your total against it.");
   lines.push("");
   lines.push("This is a personal organizing document, not a legal filing or legal advice. Review Illinois Supreme Court Rules 281-289 and consider having this reviewed by an attorney before filing.");
   return lines.join("\n");
@@ -372,7 +503,7 @@ function buildPrepSheet(r) {
 
 function downloadPrepSheet() {
   const r = computeDispute();
-  if (r.error) { alert(r.error); return; }
+  if (r.error) { const b = document.getElementById('result-box'); b.style.display = 'block'; b.innerHTML = '<p class="err">' + r.error + '</p>'; return; }
   const text = buildPrepSheet(r);
   const blob = new Blob([text], {type: 'text/plain'});
   const url = URL.createObjectURL(blob);

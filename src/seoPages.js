@@ -51,10 +51,10 @@ export const PAGES = {
   '/resources': {
     title: 'Chicago Housing Resource Center | Tenant Transparency',
     description:
-      'Free guides and tools on Chicago tenant rights: security deposits, habitability, heat, eviction, and move-out documentation.',
+      'Free guides and tools on Chicago tenant rights: lease red flags, security deposits, habitability, heat, landlord entry, retaliation, eviction, and move-out documentation.',
     h1: 'Chicago Housing Resource Center',
     intro:
-      'Free, plain-language guides and tools on Chicago tenant rights, including security deposits, habitability, heat and utilities, eviction, and move-out documentation.',
+      'Free, plain-language guides and tools on Chicago tenant rights, including lease red flags, security deposits, habitability, heat and utilities, landlord entry, retaliation, eviction, and move-out documentation.',
     links: [
       ['/chicago-renters-rights-guide/', 'Chicago renters’ rights: the complete guide'],
       ['/chicago-security-deposit-law/', 'Security deposit law'],
@@ -63,6 +63,8 @@ export const PAGES = {
       ['/cook-county-eviction-process/', 'Cook County eviction process'],
       ['/chicago-move-out-documentation/', 'Move-out documentation'],
       ['/chicago-deposit-not-returned/', 'Deposit not returned'],
+      ['/chicago-lease-red-flags/', 'Chicago lease red flags'],
+      ['/chicago-landlord-entry-retaliation/', 'Landlord entry and retaliation'],
     ],
   },
   '/about': {

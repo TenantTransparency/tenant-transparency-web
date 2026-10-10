@@ -10,7 +10,7 @@ const GUIDES = [
     label: 'Start Here',
     icon: '⚖️',
     title: "Chicago Renters' Rights: A General Guide",
-    description: 'A general overview of the RLTO — deposits, habitability, heat, eviction — plus a free rights checker tool.',
+    description: 'A general overview of the RLTO: leases, deposits, habitability, heat, entry, retaliation and eviction, plus a free rights checker tool.',
     tool: 'RLTO Coverage Checker',
   },
   {
@@ -19,7 +19,7 @@ const GUIDES = [
     icon: '💰',
     title: 'Chicago Security Deposit Law',
     description: 'Typical deadlines, interest, and potential penalties, with a free interest calculator and demand letter generator.',
-    tool: 'Deposit Interest Calculator',
+    tool: 'Deposit Interest & Demand Letter Generator',
   },
   {
     slug: 'chicago-habitability-violations',
@@ -27,7 +27,7 @@ const GUIDES = [
     icon: '🔧',
     title: 'What Counts as a Habitability Violation',
     description: 'What landlords may be legally required to fix, and how to document a possible violation.',
-    tool: 'Violation Checklist',
+    tool: 'Remedy Picker & Notice Generator',
   },
   {
     slug: 'chicago-heat-law-utility-complaints',
@@ -35,7 +35,7 @@ const GUIDES = [
     icon: '🌡️',
     title: 'Heat Law and Utility Complaints',
     description: "Chicago's general minimum temperature requirements and how to report a concern to the city.",
-    tool: 'Complaint Letter Generator',
+    tool: 'Temperature Log & Complaint Generator',
   },
   {
     slug: 'cook-county-eviction-process',
@@ -43,7 +43,7 @@ const GUIDES = [
     icon: '🏛️',
     title: 'How Eviction Generally Works in Cook County',
     description: 'An overview of the court process, notice requirements, and why self-help evictions are generally not allowed.',
-    tool: 'Eviction Timeline Guide',
+    tool: 'Notice & Deadline Calculator',
   },
   {
     slug: 'chicago-move-out-documentation',
@@ -51,7 +51,7 @@ const GUIDES = [
     icon: '📷',
     title: 'How to Document Issues Before Moving Out',
     description: 'Ways to help protect your deposit with photos, timestamps, and written notice.',
-    tool: 'Move-Out Checklist',
+    tool: 'Move-Out Condition Report Generator',
   },
   {
     slug: 'chicago-deposit-not-returned',
@@ -59,7 +59,23 @@ const GUIDES = [
     icon: '📋',
     title: "What to Do If Your Landlord Won't Return Your Deposit",
     description: 'General steps to consider when the 45-day deadline has already passed.',
-    tool: 'Demand Letter Template',
+    tool: 'Damages Calculator & Filing Prep Sheet',
+  },
+  {
+    slug: 'chicago-lease-red-flags',
+    label: 'Leases',
+    icon: '§',
+    title: 'Chicago Lease Red Flags',
+    description: 'Banned clauses, the late fee cap, required disclosures and legal-but-risky terms to look for before you sign.',
+    tool: 'Lease Red Flag Checker & Late Fee Calculator',
+  },
+  {
+    slug: 'chicago-landlord-entry-retaliation',
+    label: 'Entry & Retaliation',
+    icon: '¶',
+    title: 'Landlord Entry and Retaliation in Chicago',
+    description: 'When a landlord may enter, what counts as retaliation, and how to keep the evidence that matters.',
+    tool: 'Entry Notice Checker & Retaliation Timeline Builder',
   },
 ]
 

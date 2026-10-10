@@ -19,7 +19,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Chicago Heat Law & Utility Complaints: Tenant Rights",
-  "description": "A guide to Chicago's Heat Ordinance and RLTO utility protections: required temperatures, the September 15–June 1 heating season, illegal utility shutoffs, and how to document and file a complaint.",
+  "description": "A guide to Chicago's Heat Ordinance and RLTO utility protections: required temperatures, the September 15 to June 1 heating season, illegal utility shutoffs, and how to document and file a complaint.",
   "author": { "@type": "Organization", "name": "Tenant Transparency", "url": "https://tenanttransparency.com" },
   "publisher": {
     "@type": "Organization",
@@ -27,7 +27,7 @@
     "logo": { "@type": "ImageObject", "url": "https://tenanttransparency.com/logo.png" }
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-10-09",
   "mainEntityOfPage": "https://tenanttransparency.com/chicago-heat-law-utility-complaints/",
   "isPartOf": { "@type": "CreativeWork", "name": "Chicago Renters' Rights: The Complete Guide", "url": "https://tenanttransparency.com/chicago-renters-rights-guide" },
   "about": [
@@ -55,17 +55,74 @@
     {
       "@type": "Question",
       "name": "What temperature is my Chicago landlord required to maintain?",
-      "acceptedAnswer": { "@type": "Answer", "text": "From September 15 through June 1, at least 68°F from 8:30 a.m. to 10:30 p.m., and at least 66°F from 10:30 p.m. to 8:30 a.m. This applies regardless of the reason heat is out." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With central heat, at least 68°F from 8:30 a.m. to 10:30 p.m. and 66°F from 10:30 p.m. to 8:30 a.m., from September 15 through June 1. Two-pipe buildings have lower early fall and late spring windows, and units with individual heating equipment must have equipment capable of maintaining 68°F. The reason heat is out does not change the landlord's liability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure the temperature for a heat complaint in Chicago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Measure 3 feet above the floor and at least 3 feet from any exterior wall, with windows and exterior doors closed and cooking appliances and portable space heaters turned off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the heat ordinance apply to every room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It applies to habitable spaces and to bathrooms and toilet rooms. Closets, hallways, storage areas and utility rooms have no minimum temperature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my landlord give me a space heater instead of heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A portable space heater can be a temporary stopgap, but it cannot be used to meet the minimum temperature requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the fines for a landlord who does not provide heat in Chicago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Owners face fines of $500 to $1,000 per day, per violation, for inadequate heat or non-working heating equipment, enforced by the Department of Buildings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I withhold rent if I have no heat in Chicago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The RLTO treats heat as an essential service. After written notice and a request to correct the failure within 24 hours, a tenant may withhold an amount of rent that reasonably reflects the reduced value of the premises. Withholding carries risk, so consider advice from a tenant rights organization or attorney first."
+      }
     },
     {
       "@type": "Question",
       "name": "Can my landlord shut off my utilities to force me out?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Under RLTO Section 5-12-160, willfully interrupting utility service without a court order is generally prohibited. A landlord who does this may be liable for the tenant's actual damages or two months' rent, whichever is greater, plus attorney's fees and court costs, and the tenant can also recover possession of the unit." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Willfully interrupting utility service or locking out a tenant is prohibited under the RLTO, including Section 5-12-160. A landlord who does this may face fines and civil liability, and the tenant may be able to recover possession or end the lease and recover damages. Check the current text of 5-12-160 for the exact remedy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my landlord retaliate if I call 311 about no heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Retaliation for a good-faith complaint to a government agency is prohibited under RLTO Section 5-12-150, and certain landlord actions within a year of a protected act raise a presumption of retaliation."
+      }
     },
     {
       "@type": "Question",
       "name": "How do I report a heat complaint in Chicago?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Call 311 or file online with the Department of Buildings to request a heat inspection. It's also worth notifying your landlord in writing at the same time, since written notice matters for any later RLTO remedy." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call 311 or file online to request an inspection, get a service request number, and notify your landlord in writing at the same time. Written notice matters for any later RLTO remedy."
+      }
     }
   ]
 }
@@ -104,8 +161,8 @@
   .related a:hover { border-color: var(--accent); }
   .related span.label { color: var(--accent); font-weight: 600; display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
 
-  #heat-tool { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
-  #heat-tool h2 { border: none; margin-top: 0; }
+  #heat-tool-box { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 12px; padding: 24px; margin: 20px 0 40px; }
+  #heat-tool-box h2 { border: none; margin-top: 0; }
   .tool-sub { color: var(--muted); font-size: 0.92rem; margin-top: -8px; margin-bottom: 18px; }
   .q-block { margin-bottom: 16px; }
   .q-block label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
@@ -114,8 +171,9 @@
   .q-block select, .q-block input[type=text], .q-block textarea, .q-block input[type=date], .q-block input[type=time], .q-block input[type=number] {
     width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 6px; font-size: 0.95rem; font-family: inherit;
   }
+  .entry-card input { width: 100%; padding: 8px 9px; border: 1px solid var(--line); border-radius: 6px; font-size: 0.92rem; font-family: inherit; }
   #entry-list { margin: 10px 0 16px; display: flex; flex-direction: column; gap: 10px; }
-  .entry-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 8px; align-items: center; }
+  .entry-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr 1.2fr auto; gap: 8px; align-items: center; }
   @media (max-width: 620px) { .entry-card { grid-template-columns: 1fr 1fr; } }
   .entry-remove { background: none; border: none; color: #a13327; cursor: pointer; font-size: 0.85rem; justify-self: start; }
   .tool-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -128,6 +186,15 @@
   .flag { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin: 2px 4px 2px 0; }
   .flag.bad { background: #fbe6e4; color: #a13327; }
   .flag.ok { background: #e3f4e8; color: #1f6b3a; }
+  .flag.warn { background: #fff3d6; color: #8a5a00; }
+  .flag.neutral { background: #eceff2; color: #4a5260; }
+  .glance { background: var(--accent-soft); border: 1px solid #bfd9cf; border-radius: 10px; padding: 16px 22px; margin: 0 0 24px; }
+  .glance h2 { margin: 0 0 8px; border: none; font-size: 1.1rem; padding: 0; }
+  .glance ul { margin: 0; padding-left: 20px; }
+  .glance li { margin-bottom: 6px; }
+  .lead-image { margin: 0 0 24px; }
+  .lead-image img { max-width: 100%; height: auto; border-radius: 8px; }
+  .lead-image figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
 </style>
 </head>
@@ -173,7 +240,19 @@
 
 <div class="disclaimer">
   <strong>This is not legal advice.</strong>
-  This article explains general rules for informational purposes only. If you have no heat in cold weather, this can be an urgent safety issue — call 311 to report it and consult a licensed Illinois attorney or a tenant rights organization about your specific situation.
+  This article explains general rules for informational purposes only. If you have no heat in cold weather, this can be an urgent safety issue. Call 311 to report it. If anyone is in immediate danger, call 911. Consider speaking with a licensed Illinois attorney or a tenant rights organization about your specific situation.
+</div>
+
+<div class="glance">
+  <h2>The short version</h2>
+  <ul>
+    <li><strong>Season:</strong> September 15 through June 1.</li>
+    <li><strong>Central heat minimums:</strong> 68&deg;F from 8:30 a.m. to 10:30 p.m., and 66&deg;F from 10:30 p.m. to 8:30 a.m.</li>
+    <li><strong>How to measure:</strong> 3 feet above the floor, at least 3 feet from an exterior wall, windows and exterior doors closed, cooking appliances and space heaters off.</li>
+    <li><strong>Fines:</strong> $500 to $1,000 per day, per violation. The reason heat is out does not change the landlord's liability.</li>
+    <li><strong>Report it:</strong> 311 for the City, and written notice to your landlord the same day.</li>
+    <li><strong>Heat is an "essential service" under the RLTO,</strong> which puts it on a faster remedy track than ordinary repairs.</li>
+  </ul>
 </div>
 
 <nav class="toc" aria-label="Table of contents">
@@ -181,8 +260,12 @@
   <ol>
     <li><a href="#heat-rules">The heat ordinance rules</a></li>
     <li><a href="#heat-tool">Free tool: temperature log &amp; complaint generator</a></li>
+    <li><a href="#first-night">When the heat goes out: the first 72 hours</a></li>
+    <li><a href="#excuses">Common landlord responses, and what they mean</a></li>
+    <li><a href="#remedies">Your remedies under the RLTO</a></li>
     <li><a href="#utility-shutoffs">Illegal utility shutoffs</a></li>
-    <li><a href="#remedies">Your remedies</a></li>
+    <li><a href="#retaliation">Retaliation for a heat complaint</a></li>
+    <li><a href="#building-wide">When the whole building is cold</a></li>
     <li><a href="#how-to-report">How to report a violation</a></li>
     <li><a href="#related">Related articles</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -190,22 +273,61 @@
 </nav>
 
 <h2 id="heat-rules">1. The heat ordinance rules</h2>
-<p>From <strong>September 15 through June 1</strong>, Chicago's Heat Ordinance (part of the Chicago Building Code, layered with RLTO habitability obligations) requires landlords to maintain:</p>
+<p>Chicago's Heat Ordinance is Section 14X-8-803 of the Municipal Code, part of the Chicago Minimum Requirements for Existing Buildings, and the Department of Buildings enforces it. It runs <strong>September 15 through June 1</strong>. A landlord may turn heating equipment off or run air conditioning during that window, as long as the required temperatures are maintained.</p>
+
+<h3>The temperatures</h3>
 <table>
-  <tr><th>Time</th><th>Minimum temperature</th></tr>
-  <tr><td>8:30 a.m. – 10:30 p.m.</td><td>68°F</td></tr>
-  <tr><td>10:30 p.m. – 8:30 a.m.</td><td>66°F</td></tr>
+  <tr><th>Building type</th><th>What is required</th></tr>
+  <tr><td>Central heat, no central cooling</td><td>68&deg;F from 8:30 a.m. to 10:30 p.m., and 66&deg;F from 10:30 p.m. to 8:30 a.m., for the whole season</td></tr>
+  <tr><td>"Two-pipe" building (one system provides both heating and cooling)</td><td>The same 68/66 schedule for most of the season, with two lower windows: 64&deg;F at all hours from September 15 until the first night outdoor temperature drops below 45&deg;F or October 15, whichever comes first, and 64&deg;F at all hours from the first May day the outdoor temperature exceeds 75&deg;F until the season ends</td></tr>
+  <tr><td>Individual heating equipment in each unit</td><td>The equipment must be capable of maintaining 68&deg;F under expected Chicago winter conditions</td></tr>
 </table>
-<p>This applies regardless of the reason heat is out — equipment failure, an unpaid gas bill on the building account, or anything else. Landlords who don't comply face city fines of $500–$1,000 per day, per violation, enforced by the Department of Buildings.</p>
+<p>If you are not sure which type you have, ask your landlord in writing. Most older Chicago buildings with a boiler and radiators are central heat. The two-pipe category mostly matters in the early fall and late spring, when it can be warm outside and the building has not switched over.</p>
+
+<h3>Where heat is required</h3>
+<p>Heat must be provided in all <strong>habitable spaces</strong> (rooms used for sleeping, eating, cooking, work or recreation) and in <strong>bathrooms and toilet rooms</strong>, even though a bathroom is not a habitable space. Closets, hallways, storage areas and utility rooms have no minimum temperature. So a cold hallway is not by itself a violation, but a cold bedroom, kitchen or bathroom is.</p>
+
+<h3>How temperature is measured</h3>
+<p>This matters because a landlord or inspector will use the same method. Measure:</p>
+<ul class="plain">
+  <li>3 feet above the floor</li>
+  <li>at least 3 feet away from any exterior wall</li>
+  <li>with windows and exterior doors closed</li>
+  <li>with cooking appliances and portable space heaters turned off</li>
+</ul>
+<p>A reading taken on the window sill, next to a cold exterior wall, or with a space heater running can be waved away. Take readings the way the City would, and write down that you did.</p>
+
+<h3>What does not count as heat</h3>
+<p>The ordinance recognizes permanent systems: steam or hot water radiators and other hydronic systems, warm-air furnaces, and heat pumps. A landlord cannot meet the requirement with a stove or oven, a water heater, a fireplace, or portable space heaters. The City's guidance says space heaters cannot be used to meet the minimum temperature requirement, though a landlord may offer them as a stopgap while repairs happen (more on that below).</p>
+
+<h3>Fines and fault</h3>
+<p>Owners face fines of <strong>$500 to $1,000 per day, per violation</strong> for inadequate heat or non-working heating equipment. If the equipment fails during the heat season, the City treats that as an immediate violation. The cause does not matter: a broken boiler, a delayed part, a contractor who did not show up, or an unpaid gas bill on the building account all leave the landlord just as responsible.</p>
+<p>The City also expects landlords to inspect heating equipment in late summer, keep windows, doors and walls in a condition that holds heat, and communicate often with tenants during repairs. A judge or hearing officer may weigh those efforts when setting a fine, which is one reason your written record of what the landlord did and did not do is useful.</p>
+
+<h3>If you pay your own gas or electric bill</h3>
+<p>If your unit has individual heating equipment, you may be required to pay the associated gas or electric bills. That does not shift the landlord's duty to provide equipment that works and can keep the unit at 68&deg;F. It does mean that a gas shutoff for your own unpaid bill is a different problem from a landlord failing to supply heat.</p>
 
 <h2 id="heat-tool">2. Free tool: Temperature Log &amp; Complaint Generator</h2>
-<p class="tool-sub">No signup. Runs in your browser. Log each temperature reading with the date and time — the tool flags any reading below the legal minimum for that time of day — then download a dated record to file with 311 or send to your landlord.</p>
+<p class="tool-sub">No signup. Runs in your browser. Log each reading with the date, time and room. The tool checks each one against the minimum for that time of day, skips dates outside the September 15 to June 1 season, and handles two-pipe and individual-system buildings. Then download a dated record to file with 311 or send to your landlord.</p>
 
-<div id="heat-tool">
+<div id="heat-tool-box">
+  <div class="q-block">
+    <label for="q-system">What kind of heat does your unit have?</label>
+    <select id="q-system">
+      <option value="central">Central heat from the building (no central cooling)</option>
+      <option value="twopipe">Two-pipe building (one system for heating and cooling)</option>
+      <option value="individual">Individual heating equipment in my unit</option>
+    </select>
+  </div>
+
   <div id="entry-list"></div>
-  <button class="tertiary" onclick="addEntry()">+ Add a reading</button>
+  <button class="tertiary" type="button" onclick="addEntry()">+ Add a reading</button>
 
-  <div class="q-row" style="margin-top:18px;">
+  <div class="q-block" style="margin-top:16px;">
+    <label style="font-weight:400;"><input type="checkbox" id="q-measured"> I measured 3 feet above the floor, at least 3 feet from exterior walls, with windows and exterior doors closed and cooking appliances and space heaters off.</label>
+  </div>
+
+  <div class="q-row" style="margin-top:10px;">
     <div class="q-block">
       <label for="q-name">Your name</label>
       <input type="text" id="q-name" placeholder="e.g. Jordan Reyes">
@@ -217,55 +339,139 @@
   </div>
 
   <div class="tool-actions">
-    <button class="primary" onclick="runHeatTool()">Check my readings</button>
-    <button class="secondary" onclick="downloadHeatLog()">Download complaint log (.txt)</button>
+    <button class="primary" type="button" onclick="runHeatTool()">Check my readings</button>
+    <button class="secondary" type="button" onclick="downloadHeatLog()">Download complaint log (.txt)</button>
   </div>
   <div id="result-box"></div>
 </div>
 
-<h2 id="utility-shutoffs">3. Illegal utility shutoffs</h2>
-<p>Under RLTO Section 5-12-160, a landlord generally may not change your locks, remove doors or windows, or willfully shut off utility service to try to force you out — with or without a stated reason. This generally applies even if there's a dispute about rent or the lease. A landlord who does this may be liable for your actual damages or <strong>two months' rent</strong>, whichever is greater, plus attorney's fees and court costs, and you may also be able to recover possession of the unit.</p>
+<h2 id="first-night">3. When the heat goes out: the first 72 hours</h2>
+<p>The order of steps matters. Here is a practical sequence.</p>
+<table>
+  <tr><th>When</th><th>What to do</th></tr>
+  <tr><td>Right away</td><td>Take two or three readings the correct way, in different rooms, and photograph the thermometer with a visible clock or phone timestamp. Check that your own thermostat or controls are not the issue. Dress in layers and use extra blankets.</td></tr>
+  <tr><td>Same day</td><td>Send the landlord or property manager a short written notice (email or text, plus a letter if you can) saying the heat is out, since when, and what the readings are. Call 311 and get a service request number. Keep a copy of both.</td></tr>
+  <tr><td>Within 24 hours</td><td>Because heat is an essential service, the City's RLTO summary describes a request that the landlord correct the failure within 24 hours. Put that request in writing and state the date and time you gave notice.</td></tr>
+  <tr><td>Day 2 to 3</td><td>Keep logging readings at different times of day. Note every contact with the landlord and any repair visit. If a City inspector comes, let them in and keep the result. If the problem is still not fixed, read the remedies section below and consider talking to a tenant organization or attorney before you withhold any rent.</td></tr>
+</table>
 
-<h2 id="remedies">4. Your remedies</h2>
+<h3>Staying safe in the meantime</h3>
 <ul class="plain">
-  <li><strong>Report to the city.</strong> Call 311 or file online with the Department of Buildings for a heat inspection — this creates an independent city record.</li>
-  <li><strong>Written notice to your landlord.</strong> Document the problem in writing, which matters if you later pursue habitability remedies (see our <a href="/chicago-habitability-violations">habitability violations guide</a>).</li>
-  <li><strong>Habitability remedies.</strong> Persistent, unaddressed heat failures can support rent withholding, repair-and-deduct, or lease termination under RLTO 5-12-110, following the same 14-day notice process.</li>
-  <li><strong>Possible shutoff claim.</strong> If utilities were deliberately cut to pressure you, that may be a separate claim under 5-12-160 with its own damages.</li>
+  <li><strong>Never heat your home with the oven or stove.</strong> It is a fire risk and a carbon monoxide risk.</li>
+  <li>If you use a portable space heater for supplemental warmth, follow the City's rules: keep it at least 3 feet from anything combustible, on a solid flat floor and not on furniture, plugged directly into a wall outlet (never an extension cord or power strip), with an automatic tip-over shutoff and a label from a recognized testing lab such as UL, ETL or CSA. Turn it off when no one is in the room, and do not use it in a child's bedroom or with a damaged cord.</li>
+  <li>Test your smoke alarms before running any heater.</li>
+  <li>If it is dangerously cold, you have infants, older adults or anyone with a medical vulnerability in the home, or you cannot stay warm, go to a warm place such as a relative's home or a City warming center, and call 911 for an emergency. Keep your receipts if you pay for a hotel or other temporary housing, because they can support a later claim for your costs.</li>
 </ul>
 
-<h2 id="how-to-report">5. How to report a violation</h2>
+<h2 id="excuses">4. Common landlord responses, and what they mean</h2>
+<table>
+  <tr><th>What you hear</th><th>What to know</th></tr>
+  <tr><td>"The part is on order."</td><td>The reason is not a defense to the ordinance, though documented repair effort and interim measures can affect how a fine is set. Ask for a date, ask in writing, and ask what is being provided in the meantime.</td></tr>
+  <tr><td>"The building meets code, it is just your unit."</td><td>The minimums apply to each habitable room and bathroom. A unit that is cold because of a failed radiator, a leaking window or poor insulation can still be a violation. Report it.</td></tr>
+  <tr><td>"It is only a few degrees under."</td><td>The minimums are minimums. Two or three degrees below 68 is still below 68.</td></tr>
+  <tr><td>"Use a space heater."</td><td>A space heater is not an acceptable way to meet the requirement. A landlord can offer one as a stopgap, and a rent credit for electricity or alternative housing may be offered as well, but that does not replace working heat.</td></tr>
+  <tr><td>"Heating season has not started."</td><td>It starts September 15. Before that date, the minimums do not apply, though the lease may still require heat. After that date they do.</td></tr>
+  <tr><td>"You left a window open."</td><td>This is why readings should note that windows and exterior doors were closed.</td></tr>
+  <tr><td>"The gas company shut us off, it is not my fault."</td><td>The City's guidance is explicit that the reason heat is out does not affect liability.</td></tr>
+  <tr><td>"If you keep complaining I will not renew your lease."</td><td>See the retaliation section below. Save that message.</td></tr>
+</table>
+
+<h2 id="remedies">5. Your remedies under the RLTO</h2>
+<p>The Chicago RLTO treats heat as an <strong>essential service</strong>, along with running and hot water, electricity, gas and plumbing. Under the City's RLTO summary, if an essential service is not provided contrary to the lease, a tenant may request that the landlord correct the failure within 24 hours and, if the landlord does not, withhold from the monthly rent an amount that reasonably reflects the reduced value of the premises. The ordinance also gives other remedies for habitability failures, including in some cases arranging the repair and deducting the cost within limits, and ending the lease. Our <a href="/chicago-habitability-violations">habitability guide</a> covers how each works and the caps that apply.</p>
+
+<h3>A worked example of "reduced value"</h3>
+<p>Marcus pays $1,400 a month. His heat goes out on November 3. He sends written notice that afternoon and a second message the next day, calls 311, and the boiler is repaired on November 10. That is 7 days without heat.</p>
+<ul class="plain">
+  <li>One way to think about it: $1,400 divided by 30 days is about $46.67 a day, or about $327 for 7 days.</li>
+  <li>If the unit was largely unusable, a reduction near the full daily rate could be argued. If it stayed cool but not dangerous in some rooms, a smaller percentage may be more defensible. At 50 percent, the reduction would be about $163.</li>
+</ul>
+<p>This is an illustration of how to reason about the number, not a formula in the ordinance. "Reasonably reflects the reduced value" is a judgment, and a landlord who disagrees may dispute it. Keep your readings, photos, notices and the 311 record, because they are the evidence for the number you chose.</p>
+
+<h3>Rent withholding carries risk</h3>
+<p>Withholding is a remedy the ordinance recognizes, but it is also how many tenants end up facing an eviction filing for nonpayment. If you withhold, put the notice in writing first, withhold only a defensible amount, keep paying the rest on time, and set the withheld amount aside so you can show you were able to pay. Speaking with a tenant organization or attorney before withholding is a good idea. Our <a href="/cook-county-eviction-process">eviction process guide</a> explains what happens if a landlord files.</p>
+
+<h3>Other practical remedies</h3>
+<ul class="plain">
+  <li><strong>The City inspection and fines.</strong> Your 311 complaint puts the Department of Buildings on record and can lead to inspection and enforcement against the owner.</li>
+  <li><strong>Your costs.</strong> If you spent money on heaters, extra electricity, or temporary lodging, keep receipts and include them in your written demand.</li>
+  <li><strong>Court.</strong> A tenant can raise the condition of the unit in a housing court case, and in some situations may file a claim for damages. Whether and how to do that is worth discussing with a tenant legal aid organization.</li>
+</ul>
+
+<h2 id="utility-shutoffs">6. Illegal utility shutoffs</h2>
+<p>A landlord may not use utilities as a weapon. The RLTO prohibits lockouts and, under Section 5-12-160, the willful interruption of utility service to force a tenant out, with or without a stated reason. Self-help eviction is illegal in Illinois even when the tenant owes rent or the lease has ended; a landlord has to go through court. Under the City's RLTO summary, a landlord who locks out a tenant can be fined $200 to $500 for each day the lockout occurs or continues.</p>
+<p>The ordinance also lets a tenant recover possession or end the lease and recover money damages. The remedy is generally described as the greater of two months' rent or twice the tenant's actual damages, plus attorney's fees and court costs, but you should check the current text of 5-12-160 or ask a housing attorney to confirm the exact formula before relying on a specific number.</p>
+
+<h3>If a service is cut off</h3>
+<ul class="plain">
+  <li>Photograph the shutoff, the meter, the panel or the valve, and write down the date and time.</li>
+  <li>If the utility is in the landlord's name, call the utility provider to report the outage and ask when service will be restored.</li>
+  <li>Notify the landlord in writing and request immediate restoration.</li>
+  <li>Call 311. If you have been locked out or are in danger, call 911.</li>
+  <li>Keep receipts for any food spoilage, hotel nights or other costs.</li>
+</ul>
+
+<h3>The shutoff notice duty</h3>
+<p>Under RLTO Section 5-12-100, a landlord must give tenants notice of any notice of intent by a utility provider to shut off water, electrical or gas service to the building. If a landlord knew a shutoff was coming because the building account was unpaid and said nothing, that is worth documenting. Tenants should also know about the utility-side protections available through the provider, which vary, so ask the utility directly.</p>
+
+<h3>A different problem: your own account</h3>
+<p>If you hold the account and fall behind on your own gas or electric bill, a shutoff by the utility after proper notice is not the same as a landlord cutting service. Contact the utility early about payment plans and assistance programs.</p>
+
+<h2 id="retaliation">7. Retaliation for a heat complaint</h2>
+<p>Calling 311 or sending a written repair request is protected activity. Under RLTO Section 5-12-150, a landlord may not retaliate by terminating or threatening to terminate your tenancy, increasing rent, decreasing services, bringing or threatening to bring an eviction action, or refusing to renew a lease because you made a good-faith complaint to a government agency or exercised a right under the ordinance. If the landlord does one of these things within a year of a protected act, the law treats that as a rebuttable presumption of retaliation, which the landlord must then answer. Our <a href="/chicago-landlord-entry-retaliation">entry and retaliation guide</a> explains the timeline and evidence in detail, including a tool for building a dated retaliation record.</p>
+
+<h2 id="building-wide">8. When the whole building is cold</h2>
+<p>If neighbors are cold too, the strongest move is to act together. Compare notes, have each unit file its own 311 complaint, and share your logs. Many complaints from one address are harder for a landlord to dismiss, and the City has taken landlords to court in building-wide heat cases. A tenant union or organizing group can help coordinate, and written notice from several tenants at once puts the landlord on notice about the scope of the failure. Each tenant should still keep their own record, because remedies like rent reductions are individual.</p>
+
+<h2 id="how-to-report">9. How to report a violation</h2>
 <ol class="steps">
-  <li><strong>Take temperature readings</strong> at different times of day, especially early morning and evening.</li>
-  <li><strong>Log the readings</strong> with date and time (use the tool above).</li>
-  <li><strong>Call 311</strong> or file online with the Department of Buildings to request an inspection.</li>
-  <li><strong>Notify your landlord in writing</strong> at the same time, referencing the specific readings.</li>
-  <li><strong>Keep the inspection result</strong> and any city violation notice for your records.</li>
+  <li><strong>Take readings the correct way</strong>, at different times of day and in different rooms, especially early morning and evening.</li>
+  <li><strong>Log them</strong> with date, time and room (use the tool above), and note how you measured.</li>
+  <li><strong>Call 311</strong> or file a service request online and say there is no heat or inadequate heat. Give the full address and unit and ask for a service request number.</li>
+  <li><strong>Notify your landlord in writing</strong> at the same time, referencing the specific readings, and keep proof of delivery.</li>
+  <li><strong>Be available for the inspection.</strong> If you cannot be home, ask whether someone else can let the inspector in, and tell your landlord a City inspection has been requested.</li>
+  <li><strong>Keep everything:</strong> the inspection result, any violation notice, repair receipts, photos, and every message.</li>
+  <li><strong>Follow up.</strong> If the problem is not resolved in a few days, call 311 again with your service request number and send the landlord a second written notice.</li>
 </ol>
 
-<h2 id="related">6. Related articles</h2>
+<h2 id="related">10. Related articles</h2>
 <div class="related">
   <a href="/chicago-habitability-violations"><span class="label">Deep dive</span>What counts as a habitability violation</a>
+  <a href="/chicago-landlord-entry-retaliation"><span class="label">Deep dive</span>Landlord entry and retaliation in Chicago</a>
   <a href="/cook-county-eviction-process"><span class="label">Deep dive</span>How eviction actually works in Cook County</a>
   <a href="/chicago-renters-rights-guide"><span class="label">Start here</span>Chicago Renters' Rights: The Complete Guide</a>
 </div>
 
-<h2 id="faq">7. FAQ</h2>
+<h2 id="faq">11. FAQ</h2>
 <h3>What temperature is my landlord required to maintain?</h3>
-<p>68°F from 8:30 a.m. to 10:30 p.m., and 66°F overnight, from September 15 through June 1.</p>
+<p>With central heat, 68&deg;F from 8:30 a.m. to 10:30 p.m. and 66&deg;F from 10:30 p.m. to 8:30 a.m., from September 15 through June 1. Two-pipe buildings have lower early fall and late spring windows, and units with individual heating equipment must have equipment capable of 68&deg;F.</p>
+<h3>Do the minimums apply in every room?</h3>
+<p>They apply in habitable rooms and in bathrooms and toilet rooms. Closets, hallways, storage areas and utility rooms have no minimum.</p>
+<h3>How do I measure the temperature?</h3>
+<p>3 feet above the floor, at least 3 feet from an exterior wall, with windows and exterior doors closed and cooking appliances and portable space heaters off.</p>
+<h3>Can my landlord give me a space heater instead?</h3>
+<p>A space heater can be a temporary stopgap while repairs are made, but it does not satisfy the heat requirement.</p>
+<h3>Can I withhold rent if I have no heat?</h3>
+<p>The RLTO recognizes rent withholding for failure of an essential service, in an amount that reasonably reflects the reduced value of the unit, after written notice and a request to correct within 24 hours. It carries risk, so get advice first if you can.</p>
 <h3>Can my landlord shut off my utilities to force me out?</h3>
-<p>Generally no. This is generally prohibited under RLTO 5-12-160 and may carry damages of actual harm or two months' rent, whichever is greater, plus fees and costs.</p>
+<p>No. Willfully interrupting utility service or locking a tenant out is prohibited under the RLTO, and landlords can face fines and civil liability. Check the current text of Section 5-12-160 for the exact remedy.</p>
+<h3>Can my landlord retaliate if I call 311?</h3>
+<p>Retaliation for a good-faith complaint is prohibited under RLTO 5-12-150, and certain actions within a year of a protected act raise a presumption of retaliation.</p>
 <h3>How do I report a heat complaint?</h3>
-<p>Call 311 or file online with the Department of Buildings, and notify your landlord in writing at the same time.</p>
+<p>Call 311 or file online, ask for a service request number, and notify your landlord in writing at the same time.</p>
 
 <footer>
-  Sources: Chicago Building Code Chapter 13-196 (Heat Ordinance); Chicago Municipal Code Sections 5-12-110 and 5-12-160 (RLTO). This page is for general information only and is not a substitute for advice from a licensed attorney.
+  Sources: City of Chicago Department of Buildings, Chicago Heat Ordinance (Municipal Code Section 14X-8-803); City of Chicago RLTO Summary; Chicago Municipal Code Sections 5-12-100, 5-12-110, 5-12-150 and 5-12-160 (RLTO). This page is for general information only and is not a substitute for advice from a licensed attorney.
 </footer>
+
 
 </div>
 
 <script>
 let entryCount = 0;
+
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 
 function addEntry() {
   entryCount++;
@@ -274,84 +480,179 @@ function addEntry() {
   div.className = 'entry-card';
   div.id = id;
   const now = new Date();
-  const dateStr = now.toISOString().slice(0,10);
+  const dateStr = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
   div.innerHTML =
-    '<input type="date" class="e-date" value="' + dateStr + '">' +
-    '<input type="time" class="e-time">' +
-    '<input type="number" class="e-temp" placeholder="Temp °F">' +
-    '<button class="entry-remove" onclick="document.getElementById(\'' + id + '\').remove()">Remove</button>';
+    '<input type="date" class="e-date" aria-label="Date" value="' + dateStr + '">' +
+    '<input type="time" class="e-time" aria-label="Time">' +
+    '<input type="number" class="e-temp" aria-label="Temperature in degrees F" placeholder="Temp F">' +
+    '<input type="text" class="e-room" aria-label="Room" placeholder="Room">' +
+    '<button type="button" class="entry-remove" onclick="document.getElementById(\'' + id + '\').remove()">Remove</button>';
   document.getElementById('entry-list').appendChild(div);
 }
 addEntry();
 addEntry();
 
+// Month and day from a YYYY-MM-DD string, no Date object, so no time zone surprises.
+function monthDay(dateStr) {
+  if (!dateStr) return null;
+  const p = dateStr.split('-').map(Number);
+  if (p.length !== 3 || isNaN(p[1]) || isNaN(p[2])) return null;
+  return { m: p[1], d: p[2] };
+}
+
+// Heating season runs September 15 through June 1.
+function inHeatSeason(dateStr) {
+  const md = monthDay(dateStr);
+  if (!md) return null;
+  if (md.m === 9) return md.d >= 15;
+  if (md.m >= 10 || md.m <= 5) return true;
+  if (md.m === 6) return md.d <= 1;
+  return false;
+}
+
+// Two-pipe buildings have lower-minimum windows in early fall and late spring.
+function inTwoPipeWindow(dateStr) {
+  const md = monthDay(dateStr);
+  if (!md) return false;
+  if (md.m === 9 && md.d >= 15) return true;
+  if (md.m === 10 && md.d <= 15) return true;
+  if (md.m === 5 || (md.m === 6 && md.d <= 1)) return true;
+  return false;
+}
+
 function requiredMin(timeStr) {
   if (!timeStr) return null;
-  const [h, m] = timeStr.split(':').map(Number);
-  const mins = h * 60 + m;
-  const dayStart = 8 * 60 + 30;   // 8:30
-  const dayEnd = 22 * 60 + 30;    // 22:30
+  const parts = timeStr.split(':').map(Number);
+  const mins = parts[0] * 60 + parts[1];
+  const dayStart = 8 * 60 + 30;   // 8:30 a.m.
+  const dayEnd = 22 * 60 + 30;    // 10:30 p.m.
   if (mins >= dayStart && mins < dayEnd) return 68;
   return 66;
 }
 
+function getSystem() {
+  const el = document.getElementById('q-system');
+  return el && el.value ? el.value : 'central';
+}
+
+// status: incomplete | offseason | below | maybe | meets | ref-below | ref-meets
+function evaluateEntry(date, time, temp, system) {
+  const min = requiredMin(time);
+  if (temp === null || min === null || !date) return { status: 'incomplete', min: min };
+  if (inHeatSeason(date) === false) return { status: 'offseason', min: min };
+  if (system === 'individual') {
+    return { status: temp < min ? 'ref-below' : 'ref-meets', min: min };
+  }
+  if (system === 'twopipe' && inTwoPipeWindow(date)) {
+    if (temp < 64) return { status: 'below', min: 64 };
+    if (temp < min) return { status: 'maybe', min: min };
+    return { status: 'meets', min: min };
+  }
+  return { status: temp < min ? 'below' : 'meets', min: min };
+}
+
 function collectEntries() {
+  const system = getSystem();
   return Array.from(document.querySelectorAll('.entry-card')).map(card => {
     const date = card.querySelector('.e-date').value;
     const time = card.querySelector('.e-time').value;
     const tempRaw = card.querySelector('.e-temp').value;
-    const temp = tempRaw ? parseFloat(tempRaw) : null;
-    const min = requiredMin(time);
-    const violation = (temp !== null && min !== null) ? (temp < min) : null;
-    return { date, time, temp, min, violation };
+    const room = card.querySelector('.e-room').value.trim();
+    const temp = tempRaw !== '' && !isNaN(parseFloat(tempRaw)) ? parseFloat(tempRaw) : null;
+    const ev = evaluateEntry(date, time, temp, system);
+    return { date, time, temp, room, status: ev.status, min: ev.min };
   });
 }
 
+function entryLabel(e) {
+  return (e.date || '[date]') + ' ' + (e.time || '[time]') + (e.room ? ' (' + e.room + ')' : '') + ': ' + (e.temp !== null ? (e.temp + 'F') : '[no temp]');
+}
+
+function statusText(e) {
+  switch (e.status) {
+    case 'below': return 'BELOW MINIMUM (' + e.min + 'F required)';
+    case 'maybe': return 'BELOW ' + e.min + 'F but at or above 64F: may be allowed in a two-pipe building during the early fall or late spring window, depending on outdoor temperature';
+    case 'meets': return 'meets minimum';
+    case 'ref-below': return 'below ' + e.min + 'F (reference only: for individual unit systems the standard is about the equipment being able to maintain 68F)';
+    case 'ref-meets': return 'at or above ' + e.min + 'F';
+    case 'offseason': return 'outside the September 15 to June 1 heating season, so the minimums do not apply';
+    default: return 'incomplete, add a date, time and temperature to check';
+  }
+}
+
+function systemLabel() {
+  const s = getSystem();
+  if (s === 'twopipe') return 'Two-pipe building (one system for heating and cooling)';
+  if (s === 'individual') return 'Individual heating equipment in my unit';
+  return 'Central heat from the building (no central cooling)';
+}
+
 function runHeatTool() {
-  const entries = collectEntries();
+  const entries = collectEntries().filter(e => e.date || e.time || e.temp !== null);
   const box = document.getElementById('result-box');
   box.style.display = 'block';
   let html = '<h3>Your readings</h3>';
-  let anyViolation = false;
+  if (entries.length === 0) {
+    html += '<p>Add at least one reading with a date, time and temperature.</p>';
+    box.innerHTML = html;
+    return;
+  }
+  let below = 0, maybe = 0, offseason = 0, incomplete = 0;
   entries.forEach(e => {
-    if (!e.date && !e.time && e.temp === null) return;
-    const label = (e.date || '[date]') + ' ' + (e.time || '[time]') + ': ' + (e.temp !== null ? (e.temp + '°F') : '[no temp]');
-    if (e.violation === true) {
-      anyViolation = true;
-      html += '<div><span class="flag bad">Below minimum (' + e.min + '°F required)</span> ' + label + '</div>';
-    } else if (e.violation === false) {
-      html += '<div><span class="flag ok">Meets minimum</span> ' + label + '</div>';
-    } else {
-      html += '<div>' + label + ' — enter time and temperature to check</div>';
-    }
+    let cls = '', label = '';
+    if (e.status === 'below' || e.status === 'ref-below') { below++; cls = 'bad'; label = 'Below minimum'; }
+    else if (e.status === 'maybe') { maybe++; cls = 'warn'; label = 'Check conditions'; }
+    else if (e.status === 'meets' || e.status === 'ref-meets') { cls = 'ok'; label = 'Meets minimum'; }
+    else if (e.status === 'offseason') { offseason++; cls = 'neutral'; label = 'Off season'; }
+    else { incomplete++; cls = 'neutral'; label = 'Incomplete'; }
+    html += '<div style="margin-bottom:6px;"><span class="flag ' + cls + '">' + label + '</span> ' + escHtml(entryLabel(e)) + '</div>';
   });
-  html += '<p style="margin-top:12px;color:#5b6470;font-size:0.85rem;">This tool applies the heating-season minimums (68°F day / 66°F night). It does not confirm whether the current date falls within the Sept 15–June 1 heating season, or account for building-specific system rules.</p>';
+  html += '<p style="margin-top:14px;"><strong>Summary:</strong> ' + below + ' reading(s) below the minimum';
+  if (maybe) html += ', ' + maybe + ' to check against two-pipe rules';
+  if (offseason) html += ', ' + offseason + ' outside the heating season';
+  if (incomplete) html += ', ' + incomplete + ' incomplete';
+  html += '.</p>';
+  if (below > 0) {
+    html += '<p>If heat is out right now, call 311 and notify your landlord in writing today. Readings below the minimum, taken correctly and on several different times and days, make a strong record.</p>';
+  }
+  html += '<p style="margin-top:12px;color:#5b6470;font-size:0.85rem;">System type used: ' + escHtml(systemLabel()) + '. The minimums apply in habitable rooms, bathrooms and toilet rooms, not closets, hallways or storage. Measure 3 feet above the floor, at least 3 feet from an exterior wall, with windows and exterior doors closed and cooking appliances and portable space heaters off. This tool is a general guide, not a legal determination.</p>';
   box.innerHTML = html;
   box.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 
 function buildHeatLogText() {
-  const entries = collectEntries();
+  const entries = collectEntries().filter(e => e.date || e.time || e.temp !== null);
   const name = document.getElementById('q-name').value.trim() || "[Your Name]";
   const address = document.getElementById('q-address').value.trim() || "[Rental Address]";
-  let lines = [];
+  const measured = document.getElementById('q-measured').checked;
+  const lines = [];
   lines.push("Chicago Heat Complaint Log");
   lines.push("Generated: " + new Date().toLocaleDateString());
   lines.push("Tenant: " + name);
   lines.push("Address: " + address);
+  lines.push("Heating system: " + systemLabel());
   lines.push("");
-  lines.push("Legal minimums: 68°F (8:30am–10:30pm), 66°F (10:30pm–8:30am), Sept 15–June 1");
+  lines.push("Minimums for central heat, September 15 through June 1: 68F from 8:30 a.m. to 10:30 p.m., 66F from 10:30 p.m. to 8:30 a.m.");
+  lines.push("Measurement method: " + (measured
+    ? "3 feet above the floor, at least 3 feet from any exterior wall, windows and exterior doors closed, cooking appliances and portable space heaters off."
+    : "[not confirmed, please confirm how each reading was taken]"));
   lines.push("");
   lines.push("Readings:");
+  if (entries.length === 0) lines.push("  (none entered)");
   entries.forEach(e => {
-    if (!e.date && !e.time && e.temp === null) return;
-    let status = "";
-    if (e.violation === true) status = " — BELOW MINIMUM (" + e.min + "°F required)";
-    else if (e.violation === false) status = " — meets minimum";
-    lines.push("  " + (e.date || "[date]") + " " + (e.time || "[time]") + ": " + (e.temp !== null ? (e.temp + "°F") : "[no temp]") + status);
+    lines.push("  " + entryLabel(e) + " - " + statusText(e));
   });
+  const belowCount = entries.filter(e => e.status === 'below' || e.status === 'ref-below').length;
   lines.push("");
-  lines.push("This log is a personal record created by the tenant for informational purposes, not a legal document or legal advice. File a complaint with 311 or the Department of Buildings and keep this log alongside your landlord correspondence.");
+  lines.push("Readings below the minimum: " + belowCount + " of " + entries.length);
+  lines.push("");
+  lines.push("Contact record (fill in):");
+  lines.push("  311 service request number: [number]   Date and time reported: [date, time]");
+  lines.push("  Landlord notified in writing: [date, method, to whom]");
+  lines.push("  Landlord response: [what was said or done, and when]");
+  lines.push("  City inspection date and result: [date, result]");
+  lines.push("");
+  lines.push("This log is a personal record created by the tenant for informational purposes, not a legal document or legal advice. Report no heat to 311 and keep this log with your landlord correspondence.");
   return lines.join("\n");
 }
 
