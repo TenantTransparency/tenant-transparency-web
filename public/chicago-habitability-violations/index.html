@@ -157,21 +157,26 @@
 <body>
 <style>
 .tt-nav{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid #e2e5eb;box-shadow:0 1px 3px rgba(0,0,0,0.07);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
-.tt-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.tt-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;height:94px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .tt-nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#1a1f2e;font-weight:700;font-size:0.95rem;flex-shrink:0;}
-.tt-nav-brand img{height:36px;width:auto;}
+.tt-nav-logo{height:78px;width:auto;}
 .tt-nav-links{display:flex;align-items:center;gap:20px;}
 .tt-nav-links a{color:#3d4354;text-decoration:none;font-size:0.85rem;font-weight:600;transition:color 0.15s;}
 .tt-nav-links a:hover{color:#2a7d6e;}
 .tt-nav-cta{padding:8px 18px;background:#2a7d6e;color:#fff;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background 0.15s;}
 .tt-nav-cta:hover{background:#1f5e52;}
-@media(max-width:600px){.tt-nav-links{display:none;}.tt-nav-brand span{display:none;}}
+@media(max-width:600px){.tt-nav-links{display:none;}.tt-nav-inner{height:60px;}.tt-nav-logo{height:48px;}}
 </style>
 <nav class="tt-nav" aria-label="Site navigation">
   <div class="tt-nav-inner">
-    <a href="/" class="tt-nav-brand">
-      <img src="/tt-logo-icon.png" alt="Tenant Transparency" />
-      <span>Tenant Transparency</span>
+    <a href="/" class="tt-nav-brand" aria-label="Tenant Transparency, home">
+      <div class="tt-logo tt-nav-logo" data-tt-logo>
+        <div class="tt-logo-icon-wrap"><img src="/tt-logo-icon.png" alt="" /></div>
+        <div class="tt-logo-text-band">
+          <div class="tt-logo-title">TENANT TRANSPARENCY</div>
+          <div class="tt-logo-tagline">Know Before You Lease</div>
+        </div>
+      </div>
     </a>
     <div class="tt-nav-links">
       <a href="/">Home</a>
@@ -182,6 +187,7 @@
     <a href="/search" class="tt-nav-cta">Search Properties</a>
   </div>
 </nav>
+<script src="/tt-logo.js"></script>
 <div class="wrap">
 
 <p class="breadcrumb"><a href="/chicago-renters-rights-guide">Chicago Renters' Rights: The Complete Guide</a> &nbsp;/&nbsp; Habitability</p>

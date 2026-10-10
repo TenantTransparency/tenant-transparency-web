@@ -74,23 +74,25 @@ export default function Logo({ className = '' }) {
 
         .tt-logo-title {
           display: flex;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
+          white-space: nowrap;
           justify-content: center;
           font-family: 'Cinzel', 'Times New Roman', serif;
           font-weight: 800;
-          font-size: clamp(9px, 7.0cqw, 46px);
+          font-size: clamp(6px, 7.0cqw, 46px);
           letter-spacing: 0.01em;
           line-height: 1;
         }
 
         .tt-logo-tagline {
           display: flex;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
+          white-space: nowrap;
           justify-content: center;
           font-family: 'EB Garamond', Georgia, serif;
           font-style: italic;
           font-weight: 600;
-          font-size: clamp(10px, 8.5cqw, 40px);
+          font-size: clamp(7px, 8.5cqw, 40px);
           line-height: 1.3;
           margin-top: 0px;
           letter-spacing: 0.01em;
