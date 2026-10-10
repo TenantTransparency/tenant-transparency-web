@@ -14,6 +14,7 @@ import FoundingCommunity from './components/FoundingCommunity.jsx'
 import PrivacyPolicy from './components/PrivacyPolicy.jsx'
 import TermsOfUse from './components/TermsOfUse.jsx'
 import AuthCallback from './components/AuthCallback.jsx'
+import AccountComingSoon from './components/AccountComingSoon.jsx'
 import SeoHead from './SeoHead.jsx'
 import Neighborhood, { NeighborhoodIndex } from './components/Neighborhoods.jsx'
 import { propertyPath, propertyIdFromSlug } from './propertyUrl.js'
@@ -93,6 +94,7 @@ export function AppRoutes() {
         <Route path="/terms" element={<SiteChrome><TermsOfUse /></SiteChrome>} />
         <Route path="/beta" element={<SiteChrome><BetaTester /></SiteChrome>} />
         <Route path="/founding-community" element={<SiteChrome><FoundingCommunity /></SiteChrome>} />
+        <Route path="/account" element={<SiteChrome><AccountComingSoon /></SiteChrome>} />
         <Route path="/auth/callback" element={<SiteChrome><AuthCallback /></SiteChrome>} />
         <Route
           path="/admin"

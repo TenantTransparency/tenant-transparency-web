@@ -2,14 +2,12 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from './Logo.jsx'
 
-const WAITLIST_URL = 'https://forms.office.com/r/KDtrZz26ga'
-
 const TABS = [
   { label: 'Home',       icon: '🏠', to: '/' },
   { label: 'Search',     icon: '🔍', to: '/search' },
   { label: 'Report',     icon: '➕', to: '/report-issue' },
   { label: 'Resources',  icon: '📚', to: '/resources' },
-  { label: 'Account',    icon: '👤', href: WAITLIST_URL },
+  { label: 'Account',    icon: '👤', to: '/account' },
 ]
 
 export default function SiteChrome({ children, hideFooter = false }) {
