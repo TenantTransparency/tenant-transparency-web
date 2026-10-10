@@ -3288,3 +3288,42 @@ section[id] {
 .sponsored-slot .sponsored-label { margin: 0 0 6px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #4a4f57; }
 .sponsored-slot h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .sponsored-slot .sponsored-disclosure { margin: 10px 0 0; font-size: 0.78rem; color: #4a4f57; }
+
+/* ============================================================
+   MOBILE FIXES (phone widths): stop horizontal overflow
+   ============================================================ */
+
+@media (max-width: 680px) {
+  .app-main > * { width: 100%; min-width: 0; box-sizing: border-box; }
+
+  .header-inner { gap: 8px; }
+  .brand-link { min-width: 0; flex: 0 1 auto; }
+  .brand-logo { height: 40px; max-width: 100%; width: auto; }
+  .header-right { gap: 8px; flex-shrink: 0; }
+  .header-right .cta-primary { padding: 8px 12px !important; white-space: nowrap; }
+
+  .hero-search input,
+  .search-box input { min-width: 0; }
+  .hero-search .cta-primary,
+  .hero-search button,
+  .search-box button { flex-shrink: 0; }
+
+  .cta-secondary,
+  .cta-primary { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+  .header-right .cta-primary { white-space: nowrap; }
+
+  .about-page > section { padding-left: 24px !important; padding-right: 24px !important; }
+  .about-hero,
+  .who-we-serve-grid,
+  .founder-intro { grid-template-columns: 1fr !important; }
+  .about-hero > *,
+  .founder-intro > * { min-width: 0; }
+  .founder-photo { position: static !important; }
+  .founder-stat-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 760px) {
+  .support-hero-inner { padding: 40px 20px 32px !important; }
+  .support-page { padding: 32px 20px 56px !important; }
+  .support-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+}

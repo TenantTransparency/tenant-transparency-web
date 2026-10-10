@@ -47,14 +47,14 @@ export default function SupportTT() {
           style={s.heroPhoto}
         />
         <div style={s.heroOverlay} />
-        <div style={s.heroInner}>
+        <div className="support-hero-inner" style={s.heroInner}>
           <div style={s.eyebrow}>Support Tenant Transparency</div>
           <h1 style={s.h1}>Help build a more transparent rental market</h1>
         </div>
       </section>
 
-      <div style={s.page}>
-        <div style={s.grid}>
+      <div className="support-page" style={s.page}>
+        <div className="support-grid" style={s.grid}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
             <p style={{ ...s.lead, margin: 0 }}>
               Tenant Transparency is building tools and resources designed to help renters
