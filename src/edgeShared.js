@@ -50,7 +50,7 @@ export async function renderPage(request, env, { title, description, canonical, 
     `<meta property="og:title" content="${esc(title)}">`,
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${esc(canonical)}">`,
-    `<meta property="og:image" content="${SITE}/logo.png">`,
+    `<meta property="og:image" content="${SITE}/tt-logo-icon.png">`,
     '<meta name="twitter:card" content="summary">',
     jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>` : '',
   ].join('')

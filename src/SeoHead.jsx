@@ -8,7 +8,7 @@ import { PAGES } from './seoPages.js'
 // picks these up. The static guides in /public carry their own head tags.
 
 export const SITE = 'https://tenanttransparency.com'
-export const DEFAULT_IMAGE = `${SITE}/logo.png`
+export const DEFAULT_IMAGE = `${SITE}/tt-logo-icon.png`
 
 export function setMeta(selector, create, value) {
   let el = document.head.querySelector(selector)

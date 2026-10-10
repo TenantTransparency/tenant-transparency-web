@@ -33,7 +33,7 @@ const ORGANIZATION = {
   '@type': 'Organization',
   name: 'Tenant Transparency',
   url: SITE,
-  logo: `${SITE}/logo.png`,
+  logo: `${SITE}/tt-logo-icon.png`,
   slogan: 'Know Before You Lease',
   areaServed: { '@type': 'City', name: 'Chicago' },
 }
@@ -97,7 +97,7 @@ export async function onRequest({ request, env, next }) {
       `<meta property="og:title" content="${esc(page.title)}">`,
       `<meta property="og:description" content="${esc(page.description)}">`,
       `<meta property="og:url" content="${esc(canonical)}">`,
-      `<meta property="og:image" content="${SITE}/logo.png">`,
+      `<meta property="og:image" content="${SITE}/tt-logo-icon.png">`,
       '<meta name="twitter:card" content="summary">',
       path === '/'
         ? `<script type="application/ld+json">${JSON.stringify(ORGANIZATION).replace(/</g, '\\u003c')}</script>`
