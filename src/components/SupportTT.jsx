@@ -2,9 +2,10 @@ const NAVY = '#0e2540'
 const NAVY_TEXT = '#14304f'
 const ORANGE = '#f5751f'
 
-// TEST MODE payment link — swap for the live link from Sheenita's activated
-// Stripe account before launch (see her setup steps).
-const STRIPE_PAYMENT_LINK = 'https://donate.stripe.com/test_bJe14nfZN1ox4797ogdIA00'
+// Live Stripe Payment Link from Sheenita's activated Stripe account. This is a
+// public URL, not a secret. Never put Stripe secret keys (sk_) or webhook
+// secrets (whsec_) in this repo.
+const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/bJe28t0Na6Ji9lEejcejK00'
 
 const FUNDS = [
   { title: 'Platform development', desc: 'Property records, renter experiences, and the tools that surface them.' },
