@@ -65,6 +65,7 @@ export const PAGES = {
       ['/chicago-deposit-not-returned/', 'Deposit not returned'],
       ['/chicago-lease-red-flags/', 'Chicago lease red flags'],
       ['/chicago-landlord-entry-retaliation/', 'Landlord entry and retaliation'],
+      ['/illinois-safe-homes-act-tenant-rights/', 'Illinois Safe Homes Act'],
     ],
   },
   '/about': {

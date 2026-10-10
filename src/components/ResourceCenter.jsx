@@ -77,6 +77,14 @@ const GUIDES = [
     description: 'When a landlord may enter, what counts as retaliation, and how to keep the evidence that matters.',
     tool: 'Entry Notice Checker & Retaliation Timeline Builder',
   },
+  {
+    slug: 'illinois-safe-homes-act-tenant-rights',
+    label: 'Safe Homes Act',
+    icon: '\u00a7',
+    title: 'Illinois Safe Homes Act: Rights for Survivors',
+    description: 'How survivors of domestic violence, sexual assault and stalking can end a lease early, change locks and avoid eviction.',
+    tool: 'Safe Homes Notice Builder',
+  },
 ]
 
 export default function ResourceCenter() {
