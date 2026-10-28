@@ -3,6 +3,7 @@
 // out). Cached at the edge for a day. Linked from robots.txt.
 
 import { propertyPath } from '../src/propertyUrl.js'
+import { snapshotJson } from '../src/edgeShared.js'
 
 const DEFAULT_API = 'https://tenanttransparency-api.onrender.com'
 const SITE = 'https://tenanttransparency.com'
@@ -10,12 +11,17 @@ const SITE = 'https://tenanttransparency.com'
 export async function onRequest({ env }) {
   const apiBase = (env.VITE_API_BASE_URL || DEFAULT_API).replace(/\/+$/, '')
   try {
-    const res = await fetch(`${apiBase}/api/sitemap/properties`, {
-      signal: AbortSignal.timeout(25000),
-      cf: { cacheEverything: true, cacheTtl: 86400 },
-    })
-    if (!res.ok) throw new Error(`api ${res.status}`)
-    const rows = await res.json()
+    // The weekly R2 snapshot of the same list, so serving the sitemap never
+    // needs the database; the API is the fallback.
+    let rows = await snapshotJson(env, 'sitemap-properties.json')
+    if (!rows) {
+      const res = await fetch(`${apiBase}/api/sitemap/properties`, {
+        signal: AbortSignal.timeout(25000),
+        cf: { cacheEverything: true, cacheTtl: 86400 },
+      })
+      if (!res.ok) throw new Error(`api ${res.status}`)
+      rows = await res.json()
+    }
     const urls = rows
       .map((r) => `<url><loc>${SITE}${propertyPath(r.property_id, r.address)}</loc></url>`)
       .join('')

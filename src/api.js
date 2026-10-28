@@ -32,7 +32,20 @@ export function searchProperties(query) {
   return request(`/api/properties/search?q=${encodeURIComponent(query)}`)
 }
 
-export function getPropertyDetail(propertyId) {
+// Property detail, cheapest source first: the copy the edge function
+// embedded in the page (first load), then the R2 snapshot served from this
+// site, and only then the API -- so viewing property pages doesn't wake the
+// database. Properties outside the sitemap have no snapshot and use the API.
+export async function getPropertyDetail(propertyId) {
+  const inline = typeof window !== 'undefined' ? window.__TT_DATA__?.property : null
+  if (inline && inline.property_id === propertyId) return inline
+
+  try {
+    const res = await fetch(`/data/property/${propertyId}`)
+    if (res.ok) return await res.json()
+  } catch {
+    // fall through to the API
+  }
   return request(`/api/properties/${propertyId}`)
 }
 

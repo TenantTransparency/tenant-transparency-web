@@ -42,7 +42,9 @@ export async function apiJson(env, path, ttl = 3600) {
 // Take the app shell and give it a page's own head tags and a plain-HTML
 // body inside #root. React replaces #root on load, so visitors see the app;
 // crawlers and link previews see the content.
-export async function renderPage(request, env, { title, description, canonical, noindex, jsonLd, bodyHtml }) {
+// inlineData, when given, is embedded as window.__TT_DATA__ so the React app
+// can use it instead of fetching the same thing again.
+export async function renderPage(request, env, { title, description, canonical, noindex, jsonLd, bodyHtml, inlineData }) {
   const headExtra = [
     `<link rel="canonical" href="${esc(canonical)}">`,
     noindex ? '<meta name="robots" content="noindex, follow">' : '',
@@ -53,6 +55,7 @@ export async function renderPage(request, env, { title, description, canonical, 
     `<meta property="og:image" content="${SITE}/tt-logo-icon.png">`,
     '<meta name="twitter:card" content="summary">',
     jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>` : '',
+    inlineData ? `<script>window.__TT_DATA__=${JSON.stringify(inlineData).replace(/</g, '\\u003c')}</script>` : '',
   ].join('')
 
   const base = await shell(request, env, {
@@ -65,6 +68,20 @@ export async function renderPage(request, env, { title, description, canonical, 
     .on('head', { element: (e) => e.append(headExtra, { html: true }) })
     .on('div#root', { element: (e) => e.setInnerContent(bodyHtml, { html: true }) })
     .transform(base)
+}
+
+// A snapshot from the SNAPSHOTS R2 binding (written weekly by the backend's
+// snapshot workflow; see Admin_Auth/snapshots.rs). Returns the parsed JSON,
+// or null when the binding is missing, the key is absent or anything fails,
+// so callers can fall back to the API.
+export async function snapshotJson(env, key) {
+  try {
+    if (!env.SNAPSHOTS) return null
+    const obj = await env.SNAPSHOTS.get(key)
+    return obj ? await obj.json() : null
+  } catch {
+    return null
+  }
 }
 
 export const notFound = (request, env) =>

@@ -1,7 +1,7 @@
 // Cloudflare Pages Function for /property/<address-slug>-<uuid>.
 //
 // The site is a single-page app, so without this every property URL would
-// return the same empty shell. This fetches the property from the API and
+// return the same empty shell. This loads the property (R2 snapshot, else the API) and
 // returns that shell with the property's own <title>, description,
 // canonical URL, structured data and a plain-HTML summary inside #root, so
 // crawlers and link previews see real content. React then takes over in the
@@ -9,7 +9,7 @@
 // this function must never be the reason a page does not load.
 
 import { propertyIdFromSlug, propertyPath, propertySeo } from '../../src/propertyUrl.js'
-import { SITE, esc, shell, apiJson, renderPage, notFound } from '../../src/edgeShared.js'
+import { SITE, esc, shell, apiJson, snapshotJson, renderPage, notFound } from '../../src/edgeShared.js'
 
 function summaryHtml(detail, seo) {
   const owners = (detail.owners || []).slice(0, 5).map((o) => `<li>${esc(o.entity_name)}</li>`).join('')
@@ -33,13 +33,18 @@ export async function onRequest({ request, env, params }) {
   const id = propertyIdFromSlug(slug)
   if (!id) return notFound(request, env)
 
-  const res = await apiJson(env, `/api/properties/${id}`)
-  if (res.status === 404) return notFound(request, env)
-  if (!res.ok) {
-    // API asleep or down: serve the normal app shell and let the browser load it.
-    return shell(request, env, { headers: { 'cache-control': 'no-store' } })
+  // The R2 snapshot first: crawling every property page must not wake the
+  // database. Properties outside the sitemap have no snapshot and use the API.
+  let detail = await snapshotJson(env, `properties/${id}.json`)
+  if (!detail) {
+    const res = await apiJson(env, `/api/properties/${id}`)
+    if (res.status === 404) return notFound(request, env)
+    if (!res.ok) {
+      // API asleep or down: serve the normal app shell and let the browser load it.
+      return shell(request, env, { headers: { 'cache-control': 'no-store' } })
+    }
+    detail = res.data
   }
-  const detail = res.data
 
   const canonicalPath = propertyPath(detail.property_id, detail.address)
   const url = new URL(request.url)
@@ -55,6 +60,8 @@ export async function onRequest({ request, env, params }) {
     canonical,
     noindex: !seo.indexable,
     bodyHtml: summaryHtml(detail, seo),
+    // The app reads this instead of fetching the property a second time.
+    inlineData: { property: detail },
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
