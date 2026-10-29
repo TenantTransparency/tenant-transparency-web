@@ -10,7 +10,7 @@ export default function TermsOfUse() {
   return (
     <div className="legal-page">
       <h1>Terms of Use</h1>
-      <span className="legal-date">Effective date: July 2026 &mdash; Review with counsel before publishing.</span>
+      <span className="legal-date">Effective date: July 2026</span>
 
       <p>
         These Terms of Use (&ldquo;Terms&rdquo;) govern your access to and use of the Tenant
@@ -157,15 +157,6 @@ export default function TermsOfUse() {
       <p>
         Questions about these Terms? Contact us at{' '}
         <a href="mailto:info@tenanttransparency.com">info@tenanttransparency.com</a>.
-      </p>
-
-      <p style={{ marginTop: '40px', padding: '16px', background: 'var(--amber-light)', borderRadius: 'var(--radius-md)', fontSize: 'var(--text-sm)', color: 'var(--amber-dark)' }}>
-        <strong>Note for site owner:</strong> This template should be reviewed by a licensed
-        attorney before publishing. Key areas requiring counsel review: the Section 230
-        language and your moderation practices (the extent of editing/review you do affects
-        how Section 230 applies); the landlord dispute/takedown procedure and what your legal
-        obligations are; jurisdiction-specific consumer protection requirements; and the
-        limitation of liability clause enforceability in Illinois.
       </p>
     </div>
   )

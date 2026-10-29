@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="legal-page">
       <h1>Privacy Policy</h1>
-      <span className="legal-date">Effective date: July 2026 &mdash; Review with counsel before publishing.</span>
+      <span className="legal-date">Effective date: July 2026</span>
 
       <p>
         Tenant Transparency (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the Tenant Transparency
@@ -148,14 +148,6 @@ export default function PrivacyPolicy() {
       <p>
         Questions or concerns about this Privacy Policy? Contact us at{' '}
         <a href="mailto:info@tenanttransparency.com">info@tenanttransparency.com</a>.
-      </p>
-
-      <p style={{ marginTop: '40px', padding: '16px', background: 'var(--amber-light)', borderRadius: 'var(--radius-md)', fontSize: 'var(--text-sm)', color: 'var(--amber-dark)' }}>
-        <strong>Note for site owner:</strong> This template should be reviewed by a licensed
-        attorney before publishing. Key areas to address with counsel: Illinois BIPA if any
-        biometric or voice data is ever collected; CCPA/CPRA compliance if California residents
-        use the platform; specific data retention periods; and the exact scope of your
-        third-party service providers.
       </p>
     </div>
   )

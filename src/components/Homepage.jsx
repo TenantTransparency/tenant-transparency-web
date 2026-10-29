@@ -51,7 +51,7 @@ const NEWS = [
 const RESOURCES = [
   { icon: '⚖️', title: "Tenant Rights Guide", desc: "An overview of tenant protections under Chicago law, in plain language.", href: '/chicago-renters-rights-guide' },
   { icon: '💸', title: "Hidden Fees", desc: "Common fees landlords may not lead with.", href: '/chicago-security-deposit-law' },
-  { icon: '🚩', title: "Lease Red Flags", desc: "Know it before you sign it.", href: '/chicago-habitability-violations' },
+  { icon: '🚩', title: "Lease Red Flags", desc: "Know it before you sign it.", href: '/chicago-lease-red-flags' },
   { icon: '❓', title: "FAQ", desc: "Answers to common renter questions.", href: '/resources' },
 ]
 
